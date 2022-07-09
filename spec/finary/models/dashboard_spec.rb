@@ -11,7 +11,7 @@ describe Finary::Dashboard do
 
   describe '#total' do
     it 'returns a status' do
-      expect(dashboard.total).to be_an_instance_of(Finary::Status)
+      expect(dashboard.total).to be_a(Finary::Status)
     end
   end
 
@@ -27,8 +27,8 @@ describe Finary::Dashboard do
   end
 
   describe '#timeseries' do
-    it 'returns timeseries' do
-      expect(dashboard.timeseries).to be_an_instance_of(Array)
+    it 'returns an array' do
+      expect(dashboard.timeseries).to be_a(Array)
     end
   end
 end
