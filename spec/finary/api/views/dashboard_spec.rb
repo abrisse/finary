@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Finary::Dashboard do
+describe Finary::Views::Dashboard do
   let(:dasboard_attributes) do
-    load_json('finary', 'etc', 'dashboard.json')
+    load_json('finary', 'etc', 'views', 'dashboard.json')
   end
 
   subject(:dashboard) do

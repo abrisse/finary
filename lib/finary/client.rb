@@ -28,6 +28,16 @@ module Finary
       )
     end
 
+    def get_user_view(type, params)
+      parse_response(
+        self.class.get(
+          "/users/me/views/#{type}",
+          query: params,
+          headers: auth_headers
+        )
+      )
+    end
+
     protected
 
     def parse_response(response)

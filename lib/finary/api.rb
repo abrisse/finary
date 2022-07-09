@@ -25,5 +25,6 @@ require_relative 'api/bank_account_type'
 require_relative 'api/bank'
 require_relative 'api/account'
 require_relative 'api/status'
-require_relative 'api/dashboard'
 require_relative 'api/investments'
+
+require_relative 'api/views'
