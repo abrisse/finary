@@ -1,4 +1,5 @@
 module Finary
+  # Status gives financial details on a given set of assets
   class Status < Dry::Struct
     attribute :amount, Types::Float.optional
     attribute :share, Types::Float.optional
@@ -6,7 +7,7 @@ module Finary
     attribute :upnl_percent, Types::Float.optional
     attribute :evolution, Types::Float.optional
     attribute :evolution_percent, Types::Float.optional
-    attribute :period_evolution, Types::Float.optional
-    attribute :period_evolution_percent, Types::Float.optional
+    attribute? :period_evolution, Types::Float.optional
+    attribute? :period_evolution_percent, Types::Float.optional
   end
 end
