@@ -45,12 +45,6 @@ describe Finary::Account do
     end
   end
 
-  describe '#display_upnl' do
-    it 'returns a float' do
-      expect(account.display_upnl).to be_a(Float)
-    end
-  end
-
   describe '#upnl_percent' do
     it 'returns a float' do
       expect(account.upnl_percent).to be_a(Float)
@@ -60,12 +54,6 @@ describe Finary::Account do
   describe '#unrealized_pnl' do
     it 'returns a float' do
       expect(account.unrealized_pnl).to be_a(Float)
-    end
-  end
-
-  describe '#display_unrealized_pnl' do
-    it 'returns a float' do
-      expect(account.display_unrealized_pnl).to be_a(Float)
     end
   end
 

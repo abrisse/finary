@@ -45,12 +45,6 @@ describe Finary::Security do
     end
   end
 
-  describe '#display_current_price' do
-    it 'returns a float' do
-      expect(security.display_current_price).to be_a(Float)
-    end
-  end
-
   describe '#subscription_fees_ratio' do
     it 'returns a float' do
       expect(security.subscription_fees_ratio).to be_a(Float)

@@ -33,21 +33,9 @@ describe Finary::SecurityEntry do
     end
   end
 
-  describe '#display_current_value' do
-    it 'returns a float' do
-      expect(security_entry.display_current_value).to be_a(Float)
-    end
-  end
-
   describe '#unrealized_pnl' do
     it 'returns a float' do
       expect(security_entry.unrealized_pnl).to be_a(Float)
-    end
-  end
-
-  describe '#display_unrealized_pnl' do
-    it 'returns a float' do
-      expect(security_entry.display_unrealized_pnl).to be_a(Float)
     end
   end
 
@@ -60,12 +48,6 @@ describe Finary::SecurityEntry do
   describe '#buying_price' do
     it 'returns a float' do
       expect(security_entry.buying_price).to be_a(Float)
-    end
-  end
-
-  describe '#display_buying_price' do
-    it 'returns a float' do
-      expect(security_entry.display_buying_price).to be_a(Float)
     end
   end
 end
