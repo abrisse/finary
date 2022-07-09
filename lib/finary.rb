@@ -20,7 +20,15 @@ module Finary
       password: configuration.password
     )
   end
+
+  # @return [Finary::User] the user <me>
+  def self.me
+    @user ||= User.new('me')
+  end
 end
 
 require_relative 'finary/configuration'
-require_relative 'finary/models'
+require_relative 'finary/api'
+
+require_relative 'finary/client'
+require_relative 'finary/user'
