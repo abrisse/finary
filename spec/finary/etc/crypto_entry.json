@@ -1,0 +1,38 @@
+{
+  "id": 22705781,
+  "crypto": {
+    "id": 13071,
+    "name": "Bitcoin",
+    "code": "BTC",
+    "symbol": null,
+    "correlation_id": "61a8d7bd2c1653d2c4808e8a",
+    "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/7eay4nsnqs7498qebixj5lxi4mnn?response-content-disposition=inline%3B%20filename%3D%22BTC.png%22%3B%20filename%2A%3DUTF-8%27%27BTC.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220709%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220709T172025Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=b8a620ce2e628ab775fd31ffe0d6d592854349aae83e1bfc03e5b6c407ec4304"
+  },
+  "owning_type": "hodled",
+  "quantity": 2.7785262,
+  "current_price": 21616.84063566876,
+  "display_current_price": 21219.83012698472,
+  "buying_price": 19400.67291202912,
+  "buying_price_currency": {
+    "id": 28,
+    "name": "United States Dollar",
+    "code": "USD",
+    "symbol": "$",
+    "correlation_id": "6246d8632a89de8c1452c688",
+    "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/x13rg2fdr91t47qmtgs8of7qkm32?response-content-disposition=inline%3B%20filename%3D%22USD.png%22%3B%20filename%2A%3DUTF-8%27%27USD.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220709%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220709T172025Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=6b6768cbdef2c2a35f180589ee8f4a9e9adfd61f6a59400efe70eb29628297b7"
+  },
+  "display_buying_price": 19044.364090058705,
+  "current_value": 60062.95806743031,
+  "display_current_value": 58959.85396737638,
+  "unrealized_pnl": 6157.680083727104,
+  "display_unrealized_pnl": 6044.58938080911,
+  "unrealized_pnl_percent": 11.423148741740487,
+  "display_currency": {
+    "id": 1,
+    "name": "Euro",
+    "code": "EUR",
+    "symbol": "€",
+    "correlation_id": "6246d83d2a89de8c1452c622",
+    "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/toz8479pw1hfk5as1j77pt80lxsb?response-content-disposition=inline%3B%20filename%3D%22EUR.png%22%3B%20filename%2A%3DUTF-8%27%27EUR.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220709%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220709T172025Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=f5feffc712a79ad961c27f89ce05f509389e02fc3b481b27565f309804bc347b"
+  }
+}

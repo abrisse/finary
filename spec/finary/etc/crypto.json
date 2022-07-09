@@ -1,0 +1,8 @@
+{
+  "id": 13071,
+  "name": "Bitcoin",
+  "code": "BTC",
+  "symbol": "BTC",
+  "correlation_id": "61a8d7bd2c1653d2c4808e8a",
+  "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/7eay4nsnqs7498qebixj5lxi4mnn?response-content-disposition=inline%3B%20filename%3D%22BTC.png%22%3B%20filename%2A%3DUTF-8%27%27BTC.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220709%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220709T172025Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=b8a620ce2e628ab775fd31ffe0d6d592854349aae83e1bfc03e5b6c407ec4304"
+}
