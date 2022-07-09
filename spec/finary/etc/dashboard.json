@@ -1,0 +1,55 @@
+{
+  "total": {
+    "upnl": 840253.4260677749,
+    "share": 93.89298508282445,
+    "amount": 1258815.325381426,
+    "evolution": -13189.50236198539,
+    "upnl_percent": 200.74770958503493,
+    "evolution_percent": -1.0006376313251428,
+    "period_evolution": 473812.4033245796,
+    "period_evolution_percent": 60.35804326474445
+  },
+  "timeseries": [
+    [
+      "2022-07-07T00:31:18.348Z",
+      1333840.446498344,
+      9850.219496819656,
+      0.7266455049933267
+    ],
+    [
+      "2022-07-08T00:31:41.545Z",
+      1318109.768120409,
+      11318.24370759493,
+      0.8485455466062732
+    ],
+    [
+      "2022-07-09T13:05:54.830Z",
+      1258815.325381426,
+      -13189.50236198539,
+      -1.0006376313251428
+    ]
+  ],
+  "distribution": {
+    "checking_accounts": {
+      "amount": 4647.01,
+      "share": 0.3466129080352027,
+      "upnl": null,
+      "upnl_percent": 0.0,
+      "evolution": null,
+      "evolution_percent": null,
+      "period_evolution": 4647.01,
+      "period_evolution_percent": null
+    },
+    "savings_accounts": {
+      "amount": 9524.0,
+      "share": 0.7103796497376315,
+      "upnl": null,
+      "upnl_percent": 0.0,
+      "evolution": null,
+      "evolution_percent": null,
+      "period_evolution": 9524.0,
+      "period_evolution_percent": null
+    }
+  },
+  "last_user_sync_at": "2022-06-23T09:19:41.144Z"
+}
