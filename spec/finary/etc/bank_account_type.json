@@ -1,0 +1,9 @@
+{
+  "id": "6d4f2e44-6c7a-4ce3-b7f7-53bb4a894d41",
+  "slug": "investment-personal-brokerage",
+  "account_type": "investment",
+  "subtype": "personal",
+  "name": "brokerage",
+  "display_name": "Brokerage",
+  "priority": 0
+}

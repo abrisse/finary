@@ -14,6 +14,8 @@ module Finary
   end
 end
 
+require_relative 'models/bank_account_type'
+require_relative 'models/bank'
 require_relative 'models/account'
 require_relative 'models/status'
 require_relative 'models/dashboard'

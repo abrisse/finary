@@ -74,4 +74,10 @@ describe Finary::Account do
       expect(account.unrealized_pnl_percent).to be_a(Float)
     end
   end
+
+  describe '#bank' do
+    it 'returns a bank' do
+      expect(account.bank).to be_a(Finary::Bank)
+    end
+  end
 end

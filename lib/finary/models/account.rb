@@ -14,5 +14,7 @@ module Finary
     attribute :display_unrealized_pnl, Types::RoundedFloat.optional
     attribute :unrealized_pnl_percent, Types::RoundedFloat.optional
     attribute :transactions_count, Types::Integer
+
+    attribute :bank, Finary::Bank
   end
 end

@@ -1,0 +1,11 @@
+{
+  "id": "48899f91-89fc-44ae-acd1-39c1d98649fe",
+  "slug": "default",
+  "name": "Default",
+  "countries": [
+    "FR"
+  ],
+  "twitter_handle": "http://twitter",
+  "logo_url": "http://logo",
+  "is_requestable": false
+}
