@@ -80,4 +80,14 @@ describe Finary::Account do
       expect(account.bank).to be_a(Finary::Bank)
     end
   end
+
+  describe '#securities' do
+    it 'returns the securities entries' do
+      expect(account.securities).to match_array(
+        [
+          an_instance_of(Finary::SecurityEntry)
+        ]
+      )
+    end
+  end
 end

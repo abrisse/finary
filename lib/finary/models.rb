@@ -14,6 +14,8 @@ module Finary
   end
 end
 
+require_relative 'models/security'
+require_relative 'models/security_entry'
 require_relative 'models/bank_account_type'
 require_relative 'models/bank'
 require_relative 'models/account'

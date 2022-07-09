@@ -16,5 +16,6 @@ module Finary
     attribute :transactions_count, Types::Integer
 
     attribute :bank, Finary::Bank
+    attribute :securities, Types::Array.of(SecurityEntry)
   end
 end

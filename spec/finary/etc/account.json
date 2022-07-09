@@ -71,5 +71,45 @@
   },
   "institution_connection": null,
   "provider_connection": null,
-  "securities": []
+  "securities": [
+    {
+      "id": 5902,
+      "correlation_id": null,
+      "security": {
+        "slug": "0p00001n6w-fr0000994782",
+        "name": "Allianz Actions Euro PME-ETI",
+        "symbol": "0P00001N6W",
+        "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/mkrtr2cve96p2ipoahs8zcaj9bqk?response-content-disposition=inline%3B%20filename%3D%2260dabf61fe43d817b02b0f61.png%22%3B%20filename%2A%3DUTF-8%27%2760dabf61fe43d817b02b0f61.png\u0026response-content-type=image%2Fpng\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220709%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20220709T151924Z\u0026X-Amz-Expires=300\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=43448e933f62a9dacc356cba541665a15347ab353e909d75ba697d9b2c8e506c",
+        "security_type": "fund",
+        "current_price": 290.9,
+        "display_current_price": 290.9,
+        "subscription_fees_ratio": 0.01,
+        "expense_ratio": 0.0204,
+        "currency": {
+          "id": 1,
+          "name": "Euro",
+          "code": "EUR",
+          "symbol": "€",
+          "correlation_id": "6246d83d2a89de8c1452c622",
+          "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/toz8479pw1hfk5as1j77pt80lxsb?response-content-disposition=inline%3B%20filename%3D%22EUR.png%22%3B%20filename%2A%3DUTF-8%27%27EUR.png\u0026response-content-type=image%2Fpng\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220709%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20220709T151924Z\u0026X-Amz-Expires=300\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=4faf6fe8a574f1e2a9efa4039e846db4401c1b6e207dafd0ad90610bbe0966e9"
+        },
+        "display_currency": {
+          "id": 1,
+          "name": "Euro",
+          "code": "EUR",
+          "symbol": "€",
+          "correlation_id": "6246d83d2a89de8c1452c622",
+          "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/toz8479pw1hfk5as1j77pt80lxsb?response-content-disposition=inline%3B%20filename%3D%22EUR.png%22%3B%20filename%2A%3DUTF-8%27%27EUR.png\u0026response-content-type=image%2Fpng\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220709%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20220709T151924Z\u0026X-Amz-Expires=300\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=4faf6fe8a574f1e2a9efa4039e846db4401c1b6e207dafd0ad90610bbe0966e9"
+        }
+      },
+      "quantity": 10.0,
+      "current_value": 2909.0,
+      "display_current_value": 2909.0,
+      "unrealized_pnl": -212.368786312137,
+      "display_unrealized_pnl": -212.368786312137,
+      "unrealized_pnl_percent": -6.803706990453006,
+      "buying_price": 312.1368786312137,
+      "display_buying_price": 312.1368786312137
+    }
+  ]
 }
