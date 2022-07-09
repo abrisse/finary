@@ -1,0 +1,32 @@
+{
+  "id": 23206,
+  "name": "Anaxago - Opération Nantes",
+  "updated_at": "2022-06-16T11:52:04.101Z",
+  "category": "real_estate_crowdfunding",
+  "quantity": 1,
+  "buying_price": 43000,
+  "display_buying_price": 43000,
+  "current_price": 48000,
+  "display_current_price": 48000,
+  "current_value": 48000,
+  "display_current_value": 48000,
+  "unrealized_pnl": 5000,
+  "display_unrealized_pnl": 5000,
+  "unrealized_pnl_percent": 11.627906976744185,
+  "display_currency": {
+    "id": 1,
+    "name": "Euro",
+    "code": "EUR",
+    "symbol": "€",
+    "correlation_id": "6246d83d2a89de8c1452c622",
+    "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/toz8479pw1hfk5as1j77pt80lxsb?response-content-disposition=inline%3B%20filename%3D%22EUR.png%22%3B%20filename%2A%3DUTF-8%27%27EUR.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220709%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220709T165139Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=bc5d5dac16ef59ff9565946c10b800e10e4a09711184f892de407285dcbdd618"
+  },
+  "currency": {
+    "id": 1,
+    "name": "Euro",
+    "code": "EUR",
+    "symbol": "€",
+    "correlation_id": "6246d83d2a89de8c1452c622",
+    "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/toz8479pw1hfk5as1j77pt80lxsb?response-content-disposition=inline%3B%20filename%3D%22EUR.png%22%3B%20filename%2A%3DUTF-8%27%27EUR.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220709%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220709T165139Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=bc5d5dac16ef59ff9565946c10b800e10e4a09711184f892de407285dcbdd618"
+  }
+}

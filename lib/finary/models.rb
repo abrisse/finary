@@ -8,12 +8,13 @@ module Finary
       end
     end
 
-    RoundedFloat = Types::Float.constructor do |value|
+    RoundedFloat = Types::Coercible::Float.constructor do |value|
       value.round(2)
     end
   end
 end
 
+require_relative 'models/generic_asset'
 require_relative 'models/security'
 require_relative 'models/security_entry'
 require_relative 'models/bank_account_type'
