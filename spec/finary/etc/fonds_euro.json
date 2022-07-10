@@ -1,0 +1,31 @@
+{
+  "id": 232941,
+  "correlation_id": null,
+  "name": "Eurossima ",
+  "buying_price": 150,
+  "display_buying_price": 150,
+  "current_price": 7402,
+  "display_current_price": 7402,
+  "annual_yield": 1.5,
+  "current_value": 7402,
+  "display_current_value": 7402,
+  "unrealized_pnl": 7252,
+  "display_unrealized_pnl": 7252,
+  "unrealized_pnl_percent": 4834.666666666667,
+  "currency": {
+    "id": 1,
+    "name": "Euro",
+    "code": "EUR",
+    "symbol": "€",
+    "correlation_id": "6246d83d2a89de8c1452c622",
+    "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/toz8479pw1hfk5as1j77pt80lxsb?response-content-disposition=inline%3B%20filename%3D%22EUR.png%22%3B%20filename%2A%3DUTF-8%27%27EUR.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220709%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220709T171749Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=01b1a9737bf984b84b31e4bc9c9b8f93aa219be4fa7293d5581edf9b5f824cc5"
+  },
+  "display_currency": {
+    "id": 1,
+    "name": "Euro",
+    "code": "EUR",
+    "symbol": "€",
+    "correlation_id": "6246d83d2a89de8c1452c622",
+    "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/toz8479pw1hfk5as1j77pt80lxsb?response-content-disposition=inline%3B%20filename%3D%22EUR.png%22%3B%20filename%2A%3DUTF-8%27%27EUR.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220709%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220709T171749Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=01b1a9737bf984b84b31e4bc9c9b8f93aa219be4fa7293d5581edf9b5f824cc5"
+  }
+}

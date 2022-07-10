@@ -78,4 +78,24 @@ describe Finary::Account do
       )
     end
   end
+
+  describe '#cryptos' do
+    it 'returns the cryptos entries' do
+      expect(account.cryptos).to match_array(
+        [
+          an_instance_of(Finary::CryptoEntry)
+        ]
+      )
+    end
+  end
+
+  describe '#fonds_euro' do
+    it 'returns the fonds euro' do
+      expect(account.fonds_euro).to match_array(
+        [
+          an_instance_of(Finary::FondsEuro)
+        ]
+      )
+    end
+  end
 end

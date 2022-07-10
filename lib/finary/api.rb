@@ -17,6 +17,7 @@ end
 require_relative 'api/generic_asset'
 require_relative 'api/security'
 require_relative 'api/crypto'
+require_relative 'api/fonds_euro'
 
 require_relative 'api/security_entry'
 require_relative 'api/crypto_entry'
