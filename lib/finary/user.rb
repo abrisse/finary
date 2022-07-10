@@ -11,6 +11,15 @@ module Finary
       @id = id
     end
 
+    # Returns the user cryptos
+    #
+    # @return [Array<Finary::CryptoEntry>] the user cryptos
+    def get_cryptos
+      Finary.client.get_user_cryptos.map do |crypto_attributes|
+        CryptoEntry.new(crypto_attributes)
+      end
+    end
+
     # Returns the user generic assets
     #
     # @return [Array<Finary::GenericAsset>] the user generic assets

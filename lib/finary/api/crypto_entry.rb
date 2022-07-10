@@ -12,5 +12,6 @@ module Finary
     attribute :unrealized_pnl_percent, Types::Coercible::Float
 
     attribute :crypto, Crypto
+    attribute? :account, Account
   end
 end

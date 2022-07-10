@@ -54,6 +54,18 @@ module Finary
       )
     end
 
+    # Retrieves the user cryptos
+    #
+    # @return [Hash] the user cryptos
+    def get_user_cryptos
+      parse_response(
+        self.class.get(
+          "/users/me/cryptos",
+          headers: auth_headers
+        )
+      )
+    end
+
     # Get a specific user view
     #
     # @param [String] the view type

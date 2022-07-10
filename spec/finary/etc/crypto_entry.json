@@ -6,12 +6,12 @@
     "code": "BTC",
     "symbol": null,
     "correlation_id": "61a8d7bd2c1653d2c4808e8a",
-    "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/7eay4nsnqs7498qebixj5lxi4mnn?response-content-disposition=inline%3B%20filename%3D%22BTC.png%22%3B%20filename%2A%3DUTF-8%27%27BTC.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220709%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220709T172025Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=b8a620ce2e628ab775fd31ffe0d6d592854349aae83e1bfc03e5b6c407ec4304"
+    "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/7eay4nsnqs7498qebixj5lxi4mnn?response-content-disposition=inline%3B%20filename%3D%22BTC.png%22%3B%20filename%2A%3DUTF-8%27%27BTC.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220710%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220710T131430Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=893da9d3379cf7e84875b60980d036d9c9c88ab550022669eef9f538e75861c5"
   },
   "owning_type": "hodled",
-  "quantity": 2.7785262,
-  "current_price": 21616.84063566876,
-  "display_current_price": 21219.83012698472,
+  "quantity": 2.53514359,
+  "current_price": 21301.48196553513,
+  "display_current_price": 20904.300260584034,
   "buying_price": 19400.67291202912,
   "buying_price_currency": {
     "id": 28,
@@ -19,20 +19,132 @@
     "code": "USD",
     "symbol": "$",
     "correlation_id": "6246d8632a89de8c1452c688",
-    "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/x13rg2fdr91t47qmtgs8of7qkm32?response-content-disposition=inline%3B%20filename%3D%22USD.png%22%3B%20filename%2A%3DUTF-8%27%27USD.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220709%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220709T172025Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=6b6768cbdef2c2a35f180589ee8f4a9e9adfd61f6a59400efe70eb29628297b7"
+    "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/x13rg2fdr91t47qmtgs8of7qkm32?response-content-disposition=inline%3B%20filename%3D%22USD.png%22%3B%20filename%2A%3DUTF-8%27%27USD.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220710%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220710T131430Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=a24907c3928aaa33c1c1fe44d2eec8d46a0afe1850e89a880bf65f6d9770a61d"
   },
-  "display_buying_price": 19044.364090058705,
-  "current_value": 60062.95806743031,
-  "display_current_value": 58959.85396737638,
-  "unrealized_pnl": 6157.680083727104,
-  "display_unrealized_pnl": 6044.58938080911,
-  "unrealized_pnl_percent": 11.423148741740487,
+  "display_buying_price": 19038.933181579116,
+  "current_value": 54002.31546242699,
+  "display_current_value": 52995.40280905494,
+  "unrealized_pnl": 4818.823887809725,
+  "display_unrealized_pnl": 4728.973393336342,
+  "unrealized_pnl_percent": 9.797644968940425,
   "display_currency": {
     "id": 1,
     "name": "Euro",
     "code": "EUR",
     "symbol": "€",
     "correlation_id": "6246d83d2a89de8c1452c622",
-    "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/toz8479pw1hfk5as1j77pt80lxsb?response-content-disposition=inline%3B%20filename%3D%22EUR.png%22%3B%20filename%2A%3DUTF-8%27%27EUR.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220709%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220709T172025Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=f5feffc712a79ad961c27f89ce05f509389e02fc3b481b27565f309804bc347b"
+    "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/toz8479pw1hfk5as1j77pt80lxsb?response-content-disposition=inline%3B%20filename%3D%22EUR.png%22%3B%20filename%2A%3DUTF-8%27%27EUR.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220710%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220710T131430Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2b3226e5398e567d47b60bdd8ca2485eb48a07214e8f94f0802e1c17403665de"
+  },
+  "account": {
+    "slug": "wallet-bitcoin-187a16ef-997e-4324-98ad-9267a6c69192",
+    "id": "5ef38146-60b5-43e1-b109-8681fc24c81f",
+    "name": "Wallet Bitcoin",
+    "manual_type": null,
+    "connection_id": "a85d13e2-1807-4145-9fd9-39804bbb637f",
+    "connection_state": null,
+    "last_sync_at": "2022-07-09T20:26:42.415Z",
+    "last_sync": "2022-07-09T20:27:02.261Z",
+    "currency": {
+      "id": 28,
+      "name": "United States Dollar",
+      "code": "USD",
+      "symbol": "$",
+      "correlation_id": "6246d8632a89de8c1452c688",
+      "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/x13rg2fdr91t47qmtgs8of7qkm32?response-content-disposition=inline%3B%20filename%3D%22USD.png%22%3B%20filename%2A%3DUTF-8%27%27USD.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220710%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220710T131430Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=a24907c3928aaa33c1c1fe44d2eec8d46a0afe1850e89a880bf65f6d9770a61d"
+    },
+    "display_currency": {
+      "id": 1,
+      "name": "Euro",
+      "code": "EUR",
+      "symbol": "€",
+      "correlation_id": "6246d83d2a89de8c1452c622",
+      "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/toz8479pw1hfk5as1j77pt80lxsb?response-content-disposition=inline%3B%20filename%3D%22EUR.png%22%3B%20filename%2A%3DUTF-8%27%27EUR.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220710%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220710T131430Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2b3226e5398e567d47b60bdd8ca2485eb48a07214e8f94f0802e1c17403665de"
+    },
+    "annual_yield": null,
+    "balance": 54002.31546242699,
+    "display_balance": 52995.40280905494,
+    "transactions_count": 0,
+    "upnl": null,
+    "display_upnl": null,
+    "upnl_percent": null,
+    "unrealized_pnl": 4818.823887809725,
+    "display_unrealized_pnl": 4728.973393336342,
+    "unrealized_pnl_percent": 9.797644968940423,
+    "bank": {
+      "id": "42555546-b021-4b4a-8bfa-d0bb6ad2e55c",
+      "slug": "bitcoin",
+      "name": "Bitcoin",
+      "countries": [],
+      "twitter_handle": null,
+      "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/uysms4owozaeo66dgeeqyg15hq7o?response-content-disposition=inline%3B%20filename%3D%22bitcoin-42555546-b021-4b4a-8bfa-d0bb6ad2e55c.png%22%3B%20filename%2A%3DUTF-8%27%27bitcoin-42555546-b021-4b4a-8bfa-d0bb6ad2e55c.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220710%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220710T131430Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ea7c8f6dd40ee0b56b78a58800fbd4b027c28e89c2b515f3b64de93b15a284ce",
+      "is_requestable": false
+    },
+    "exchange": {
+      "id": "42555546-b021-4b4a-8bfa-d0bb6ad2e55c",
+      "slug": "bitcoin",
+      "name": "Bitcoin",
+      "countries": [],
+      "twitter_handle": null,
+      "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/uysms4owozaeo66dgeeqyg15hq7o?response-content-disposition=inline%3B%20filename%3D%22bitcoin-42555546-b021-4b4a-8bfa-d0bb6ad2e55c.png%22%3B%20filename%2A%3DUTF-8%27%27bitcoin-42555546-b021-4b4a-8bfa-d0bb6ad2e55c.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220710%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220710T131430Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ea7c8f6dd40ee0b56b78a58800fbd4b027c28e89c2b515f3b64de93b15a284ce",
+      "is_requestable": false
+    },
+    "institution": {
+      "id": "42555546-b021-4b4a-8bfa-d0bb6ad2e55c",
+      "slug": "bitcoin",
+      "name": "Bitcoin",
+      "countries": [],
+      "twitter_handle": null,
+      "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/uysms4owozaeo66dgeeqyg15hq7o?response-content-disposition=inline%3B%20filename%3D%22bitcoin-42555546-b021-4b4a-8bfa-d0bb6ad2e55c.png%22%3B%20filename%2A%3DUTF-8%27%27bitcoin-42555546-b021-4b4a-8bfa-d0bb6ad2e55c.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220710%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220710T131430Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ea7c8f6dd40ee0b56b78a58800fbd4b027c28e89c2b515f3b64de93b15a284ce",
+      "is_requestable": false
+    },
+    "institution_connection": {
+      "id": "de5c48f4-69f9-4f1d-bd5f-c066f0f66b22",
+      "connection_state": null,
+      "last_sync_at": "2022-07-09T20:27:02.261Z",
+      "last_successful_sync_at": "2022-07-09T20:26:07.228Z",
+      "manual_sync": false,
+      "last_provider_update_at": "2022-07-09T20:26:07.228Z",
+      "name": "Wallet Bitcoin",
+      "correlation_id": "a85d13e2-1807-4145-9fd9-39804bbb637f",
+      "original_connection_state": null,
+      "institution": {
+        "id": "42555546-b021-4b4a-8bfa-d0bb6ad2e55c",
+        "slug": "bitcoin",
+        "name": "Bitcoin",
+        "countries": [],
+        "twitter_handle": null,
+        "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/uysms4owozaeo66dgeeqyg15hq7o?response-content-disposition=inline%3B%20filename%3D%22bitcoin-42555546-b021-4b4a-8bfa-d0bb6ad2e55c.png%22%3B%20filename%2A%3DUTF-8%27%27bitcoin-42555546-b021-4b4a-8bfa-d0bb6ad2e55c.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220710%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220710T131430Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ea7c8f6dd40ee0b56b78a58800fbd4b027c28e89c2b515f3b64de93b15a284ce",
+        "is_requestable": false
+      },
+      "provider_connection": {
+        "id": "436d61f0-dcb2-4366-b31e-9ae3db38f927",
+        "last_sync_at": "2022-07-09T20:26:38.295Z",
+        "provider": {
+          "name": "Bitcoin",
+          "correlation_id": "bitcoin"
+        }
+      },
+      "institution_provider": {
+        "id": "df11f46f-98b4-4308-b491-a7a803d2a19d",
+        "correlation_id": "bitcoin",
+        "capabilities": [
+          "crypto"
+        ],
+        "status": "stable",
+        "is_enabled": true,
+        "provider": {
+          "name": "Bitcoin",
+          "correlation_id": "bitcoin"
+        }
+      }
+    },
+    "provider_connection": {
+      "id": "436d61f0-dcb2-4366-b31e-9ae3db38f927",
+      "last_sync_at": "2022-07-09T20:26:38.295Z",
+      "provider": {
+        "name": "Bitcoin",
+        "correlation_id": "bitcoin"
+      }
+    }
   }
 }
