@@ -1,0 +1,882 @@
+{
+  "timeseries": [
+    [
+      "2022-07-02T00:31:06.932Z",
+      {
+        "checking_accounts": {
+          "upnl": null,
+          "share": 0.22878172277531925,
+          "amount": 4647.01,
+          "evolution": null,
+          "upnl_percent": 0.0,
+          "evolution_percent": null,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "savings_accounts": {
+          "upnl": null,
+          "share": 0.46888582716889793,
+          "amount": 9524.0,
+          "evolution": null,
+          "upnl_percent": 0.0,
+          "evolution_percent": null,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "investment_accounts": {
+          "upnl": 212296.7194888561,
+          "share": 17.272100019995992,
+          "amount": 350830.5669712368,
+          "evolution": 938.449613335717,
+          "upnl_percent": 153.2453789070262,
+          "evolution_percent": 0.2683105562145554,
+          "period_evolution": 1068.102692610875,
+          "period_evolution_percent": 0.3053794508263782
+        },
+        "cryptos": {
+          "upnl": 14751.27408338509,
+          "share": 8.533721578717117,
+          "amount": 173336.7903364364,
+          "evolution": -1615.893800441952,
+          "upnl_percent": 9.301778896281307,
+          "evolution_percent": -2.165086790103295,
+          "period_evolution": 98702.65521408136,
+          "period_evolution_percent": 132.2486755588022
+        },
+        "fonds_euro": {
+          "upnl": 9442.0,
+          "share": 1.3436404866750906,
+          "amount": 27292.0,
+          "evolution": 0.0,
+          "upnl_percent": 52.896358543417364,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "startups": {
+          "upnl": 323317.83,
+          "share": 16.261768383783934,
+          "amount": 330308.73,
+          "evolution": 0.0,
+          "upnl_percent": 4624.838432819832,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "commodities": {
+          "upnl": 134879.5,
+          "share": 7.276961326220204,
+          "amount": 147809.5,
+          "evolution": -1971.200000000012,
+          "upnl_percent": 1043.15158546017,
+          "evolution_percent": -1.3160574092656874,
+          "period_evolution": -1971.200000000012,
+          "period_evolution_percent": -1.316057409265687
+        },
+        "other_assets": {
+          "upnl": 36000.0,
+          "share": 7.507884149858981,
+          "amount": 152500.0,
+          "evolution": 0.0,
+          "upnl_percent": 30.90128755364807,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "real_estates": {
+          "upnl": 79939.5,
+          "share": 41.10625650480447,
+          "amount": 834949.5,
+          "evolution": 0.0,
+          "upnl_percent": 10.587873008304525,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        }
+      }
+    ],
+    [
+      "2022-07-03T00:34:55.580Z",
+      {
+        "checking_accounts": {
+          "upnl": null,
+          "share": 0.23176946258686396,
+          "amount": 4647.01,
+          "evolution": null,
+          "upnl_percent": 0.0,
+          "evolution_percent": null,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "savings_accounts": {
+          "upnl": null,
+          "share": 0.4750091696977825,
+          "amount": 9524.0,
+          "evolution": null,
+          "upnl_percent": 0.0,
+          "evolution_percent": null,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "investment_accounts": {
+          "upnl": 211996.8881331514,
+          "share": 17.482612310570875,
+          "amount": 350528.8113739214,
+          "evolution": -299.8313557046931,
+          "upnl_percent": 153.03107267535626,
+          "evolution_percent": -0.08546329309135571,
+          "period_evolution": -301.7555973154376,
+          "period_evolution_percent": -0.0860117748349383
+        },
+        "cryptos": {
+          "upnl": 14828.29319132951,
+          "share": 7.295683700568076,
+          "amount": 146279.4741592432,
+          "evolution": 77.01910794441574,
+          "upnl_percent": 11.280456426594588,
+          "evolution_percent": 0.044433214550082666,
+          "period_evolution": -27057.31617719316,
+          "period_evolution_percent": -15.60967877891158
+        },
+        "fonds_euro": {
+          "upnl": 9442.0,
+          "share": 1.3611875534850777,
+          "amount": 27292.0,
+          "evolution": 0.0,
+          "upnl_percent": 52.896358543417364,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "startups": {
+          "upnl": 323317.83,
+          "share": 16.47413645329998,
+          "amount": 330308.73,
+          "evolution": 0.0,
+          "upnl_percent": 4624.838432819832,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "commodities": {
+          "upnl": 135054.4,
+          "share": 7.38071681774722,
+          "amount": 147984.4,
+          "evolution": 174.8999999999942,
+          "upnl_percent": 1044.5042536736273,
+          "evolution_percent": 0.1183279829780861,
+          "period_evolution": 174.8999999999942,
+          "period_evolution_percent": 0.1183279829780861
+        },
+        "other_assets": {
+          "upnl": 36000.0,
+          "share": 7.6059322111415195,
+          "amount": 152500.0,
+          "evolution": 0.0,
+          "upnl_percent": 30.90128755364807,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "real_estates": {
+          "upnl": 80939.5,
+          "share": 41.692952320902606,
+          "amount": 835949.5,
+          "evolution": 1000.0,
+          "upnl_percent": 10.720321585144568,
+          "evolution_percent": 0.11976772247902419,
+          "period_evolution": 1000.0,
+          "period_evolution_percent": 0.1197677224790242
+        }
+      }
+    ],
+    [
+      "2022-07-04T00:31:16.921Z",
+      {
+        "checking_accounts": {
+          "upnl": null,
+          "share": 0.23457197190482534,
+          "amount": 4647.01,
+          "evolution": null,
+          "upnl_percent": 0.0,
+          "evolution_percent": null,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "savings_accounts": {
+          "upnl": null,
+          "share": 0.4807528842032956,
+          "amount": 9524.0,
+          "evolution": null,
+          "upnl_percent": 0.0,
+          "evolution_percent": null,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "investment_accounts": {
+          "upnl": 211995.5045013202,
+          "share": 17.69401040874952,
+          "amount": 350528.848957814,
+          "evolution": -1.383631831267849,
+          "upnl_percent": 153.02850395552025,
+          "evolution_percent": -0.00039472699144033557,
+          "period_evolution": 0.03758389258291572,
+          "period_evolution_percent": 1.072205518159923e-05
+        },
+        "cryptos": {
+          "upnl": 14647.45157465251,
+          "share": 6.1747200194658,
+          "amount": 122324.8687584039,
+          "evolution": -180.8416166769948,
+          "upnl_percent": 13.603085918801943,
+          "evolution_percent": -0.12362747249154481,
+          "period_evolution": -23954.60540083933,
+          "period_evolution_percent": -16.37591708510094
+        },
+        "fonds_euro": {
+          "upnl": 9442.0,
+          "share": 1.3776467572108717,
+          "amount": 27292.0,
+          "evolution": 0.0,
+          "upnl_percent": 52.896358543417364,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "startups": {
+          "upnl": 323317.83,
+          "share": 16.673338368860524,
+          "amount": 330308.73,
+          "evolution": 0.0,
+          "upnl_percent": 4624.838432819832,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "commodities": {
+          "upnl": 135054.4,
+          "share": 7.469962948035928,
+          "amount": 147984.4,
+          "evolution": 0.0,
+          "upnl_percent": 1044.5042536736273,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "other_assets": {
+          "upnl": 36000.0,
+          "share": 7.697901600273265,
+          "amount": 152500.0,
+          "evolution": 0.0,
+          "upnl_percent": 30.90128755364807,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "real_estates": {
+          "upnl": 80939.5,
+          "share": 42.197095041295974,
+          "amount": 835949.5,
+          "evolution": 0.0,
+          "upnl_percent": 10.720321585144568,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        }
+      }
+    ],
+    [
+      "2022-07-05T00:31:03.179Z",
+      {
+        "checking_accounts": {
+          "upnl": null,
+          "share": 0.2223528146274294,
+          "amount": 4647.01,
+          "evolution": null,
+          "upnl_percent": 0.0,
+          "evolution_percent": null,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "savings_accounts": {
+          "upnl": null,
+          "share": 0.45570984493505234,
+          "amount": 9524.0,
+          "evolution": null,
+          "upnl_percent": 0.0,
+          "evolution_percent": null,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "investment_accounts": {
+          "upnl": 212330.6829207997,
+          "share": 16.788039826696302,
+          "amount": 350857.6632401763,
+          "evolution": 335.1784194795473,
+          "upnl_percent": 153.27749325890682,
+          "evolution_percent": 0.09562077999459778,
+          "period_evolution": 328.8142823623493,
+          "period_evolution_percent": 0.09380519844228913
+        },
+        "cryptos": {
+          "upnl": 18321.0065270686,
+          "share": 11.047371196140523,
+          "amount": 230881.918487053,
+          "evolution": 3673.554952416085,
+          "upnl_percent": 8.619179489838475,
+          "evolution_percent": 3.0031137492340094,
+          "period_evolution": 108557.0497286491,
+          "period_evolution_percent": 88.74487324654586
+        },
+        "fonds_euro": {
+          "upnl": 9442.0,
+          "share": 1.3058833565694508,
+          "amount": 27292.0,
+          "evolution": 0.0,
+          "upnl_percent": 52.896358543417364,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "startups": {
+          "upnl": 323317.83,
+          "share": 15.804802617492028,
+          "amount": 330308.73,
+          "evolution": 0.0,
+          "upnl_percent": 4624.838432819832,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "commodities": {
+          "upnl": 135035.5,
+          "share": 7.079938582605784,
+          "amount": 147965.5,
+          "evolution": -18.89999999999418,
+          "upnl_percent": 1044.3580819798917,
+          "evolution_percent": -0.012771616467677795,
+          "period_evolution": -18.89999999999418,
+          "period_evolution_percent": -0.0127716164676778
+        },
+        "other_assets": {
+          "upnl": 36000.0,
+          "share": 7.296907953863449,
+          "amount": 152500.0,
+          "evolution": 0.0,
+          "upnl_percent": 30.90128755364807,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "real_estates": {
+          "upnl": 80939.5,
+          "share": 39.998993807069986,
+          "amount": 835949.5,
+          "evolution": 0.0,
+          "upnl_percent": 10.720321585144568,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        }
+      }
+    ],
+    [
+      "2022-07-06T00:31:12.035Z",
+      {
+        "checking_accounts": {
+          "upnl": null,
+          "share": 0.22322537375129795,
+          "amount": 4647.01,
+          "evolution": null,
+          "upnl_percent": 0.0,
+          "evolution_percent": null,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "savings_accounts": {
+          "upnl": null,
+          "share": 0.4574981460352704,
+          "amount": 9524.0,
+          "evolution": null,
+          "upnl_percent": 0.0,
+          "evolution_percent": null,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "investment_accounts": {
+          "upnl": 225675.6531313377,
+          "share": 17.51594784603708,
+          "amount": 364639.4826544197,
+          "evolution": 13344.97021053798,
+          "upnl_percent": 162.39884429340142,
+          "evolution_percent": 3.803528213491751,
+          "period_evolution": 13781.81941424333,
+          "period_evolution_percent": 3.928037166686914
+        },
+        "cryptos": {
+          "upnl": 21680.38209400802,
+          "share": 10.02745470702987,
+          "amount": 208747.2473000796,
+          "evolution": 3359.375566939427,
+          "upnl_percent": 11.589643131147287,
+          "evolution_percent": 1.455018907046984,
+          "period_evolution": -22134.67118697346,
+          "period_evolution_percent": -9.58700938212045
+        },
+        "fonds_euro": {
+          "upnl": 9442.0,
+          "share": 1.3110079170090927,
+          "amount": 27292.0,
+          "evolution": 0.0,
+          "upnl_percent": 52.896358543417364,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "startups": {
+          "upnl": 323317.83,
+          "share": 15.866823980918173,
+          "amount": 330308.73,
+          "evolution": 0.0,
+          "upnl_percent": 4624.838432819832,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "commodities": {
+          "upnl": 135219.1,
+          "share": 7.116541220788941,
+          "amount": 148149.1,
+          "evolution": 183.6000000000058,
+          "upnl_percent": 1045.7780355761795,
+          "evolution_percent": 0.12408297880249505,
+          "period_evolution": 183.6000000000058,
+          "period_evolution_percent": 0.1240829788024951
+        },
+        "other_assets": {
+          "upnl": 36000.0,
+          "share": 7.325542552538716,
+          "amount": 152500.0,
+          "evolution": 0.0,
+          "upnl_percent": 30.90128755364807,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "real_estates": {
+          "upnl": 80939.5,
+          "share": 40.15595825589156,
+          "amount": 835949.5,
+          "evolution": 0.0,
+          "upnl_percent": 10.720321585144568,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        }
+      }
+    ],
+    [
+      "2022-07-07T00:31:18.348Z",
+      {
+        "checking_accounts": {
+          "upnl": null,
+          "share": 0.22558046405913773,
+          "amount": 4647.01,
+          "evolution": null,
+          "upnl_percent": 0.0,
+          "evolution_percent": null,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "savings_accounts": {
+          "upnl": null,
+          "share": 0.46232487980426723,
+          "amount": 9524.0,
+          "evolution": null,
+          "upnl_percent": 0.0,
+          "evolution_percent": null,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "investment_accounts": {
+          "upnl": 231793.4436539124,
+          "share": 18.006909961553607,
+          "amount": 370946.5312497198,
+          "evolution": 6117.79052257468,
+          "upnl_percent": 166.57441646368193,
+          "evolution_percent": 1.6777641516052453,
+          "period_evolution": 6307.048595300119,
+          "period_evolution_percent": 1.729666943740568
+        },
+        "cryptos": {
+          "upnl": 24414.61106825303,
+          "share": 8.723599400495708,
+          "amount": 179708.1756134256,
+          "evolution": 2734.228974245005,
+          "upnl_percent": 15.72158584920059,
+          "evolution_percent": 1.3098275592178132,
+          "period_evolution": -29039.071686654,
+          "period_evolution_percent": -13.91111598463839
+        },
+        "fonds_euro": {
+          "upnl": 9442.0,
+          "share": 1.324839418271531,
+          "amount": 27292.0,
+          "evolution": 0.0,
+          "upnl_percent": 52.896358543417364,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "startups": {
+          "upnl": 323317.83,
+          "share": 16.034223424564274,
+          "amount": 330308.73,
+          "evolution": 0.0,
+          "upnl_percent": 4624.838432819832,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "commodities": {
+          "upnl": 133877.3,
+          "share": 7.126487539572553,
+          "amount": 146807.3,
+          "evolution": -1341.800000000017,
+          "upnl_percent": 1035.400618716164,
+          "evolution_percent": -0.9057091808185249,
+          "period_evolution": -1341.800000000017,
+          "period_evolution_percent": -0.9057091808185249
+        },
+        "other_assets": {
+          "upnl": 36000.0,
+          "share": 7.402829081284203,
+          "amount": 152500.0,
+          "evolution": 0.0,
+          "upnl_percent": 30.90128755364807,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "real_estates": {
+          "upnl": 83279.5,
+          "share": 40.69320583039472,
+          "amount": 838289.5,
+          "evolution": 2340.0,
+          "upnl_percent": 11.030251254950265,
+          "evolution_percent": 0.2799212153365723,
+          "period_evolution": 2340.0,
+          "period_evolution_percent": 0.2799212153365723
+        }
+      }
+    ],
+    [
+      "2022-07-08T00:31:41.545Z",
+      {
+        "checking_accounts": {
+          "upnl": null,
+          "share": 0.22731628885406377,
+          "amount": 4647.01,
+          "evolution": null,
+          "upnl_percent": 0.0,
+          "evolution_percent": null,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "savings_accounts": {
+          "upnl": null,
+          "share": 0.4658824351671512,
+          "amount": 9524.0,
+          "evolution": null,
+          "upnl_percent": 0.0,
+          "evolution_percent": null,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "investment_accounts": {
+          "upnl": 241923.4107135231,
+          "share": 18.643999307190803,
+          "amount": 381137.8923053357,
+          "evolution": 10129.96705961076,
+          "upnl_percent": 173.7774748340197,
+          "evolution_percent": 2.730842912988801,
+          "period_evolution": 10191.36105561594,
+          "period_evolution_percent": 2.747393545177851
+        },
+        "cryptos": {
+          "upnl": 28761.5877162371,
+          "share": 7.6772199145726105,
+          "amount": 156944.8361798745,
+          "evolution": 4346.976647984073,
+          "upnl_percent": 22.437867709676663,
+          "evolution_percent": 2.41890867410226,
+          "period_evolution": -22763.33943355107,
+          "period_evolution_percent": -12.66683574959762
+        },
+        "fonds_euro": {
+          "upnl": 9442.0,
+          "share": 1.3350339584819289,
+          "amount": 27292.0,
+          "evolution": 0.0,
+          "upnl_percent": 52.896358543417364,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "startups": {
+          "upnl": 323317.83,
+          "share": 16.157605574272267,
+          "amount": 330308.73,
+          "evolution": 0.0,
+          "upnl_percent": 4624.838432819832,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "commodities": {
+          "upnl": 133058.6,
+          "share": 7.141277244292647,
+          "amount": 145988.6,
+          "evolution": -818.6999999999825,
+          "upnl_percent": 1029.0688321732405,
+          "evolution_percent": -0.5576698161467328,
+          "period_evolution": -818.6999999999825,
+          "period_evolution_percent": -0.5576698161467328
+        },
+        "other_assets": {
+          "upnl": 36000.0,
+          "share": 7.459793297248064,
+          "amount": 152500.0,
+          "evolution": 0.0,
+          "upnl_percent": 30.90128755364807,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "real_estates": {
+          "upnl": 80939.5,
+          "share": 40.89187197992046,
+          "amount": 835949.5,
+          "evolution": -2340.0,
+          "upnl_percent": 10.720321585144568,
+          "evolution_percent": -0.27913984369361655,
+          "period_evolution": -2340.0,
+          "period_evolution_percent": -0.2791398436936166
+        }
+      }
+    ],
+    [
+      "2022-07-09T21:00:59.508Z",
+      {
+        "checking_accounts": {
+          "upnl": null,
+          "share": 0.23484516950999007,
+          "amount": 4647.01,
+          "evolution": null,
+          "upnl_percent": 0.0,
+          "evolution_percent": null,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "savings_accounts": {
+          "upnl": null,
+          "share": 0.4813127999322458,
+          "amount": 9524.0,
+          "evolution": null,
+          "upnl_percent": 0.0,
+          "evolution_percent": null,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "investment_accounts": {
+          "upnl": 32571.27402224467,
+          "share": 19.40904737219592,
+          "amount": 384057.4512018285,
+          "evolution": 2944.582797577663,
+          "upnl_percent": 9.266729714267859,
+          "evolution_percent": 0.7725767647418037,
+          "period_evolution": 33226.88423059171,
+          "period_evolution_percent": 9.470920540773701
+        },
+        "cryptos": {
+          "upnl": 9781.488657131058,
+          "share": 5.060878832763175,
+          "amount": 100142.3814409705,
+          "evolution": -4228.824975720952,
+          "upnl_percent": 10.824913694168842,
+          "evolution_percent": -2.6944658254791483,
+          "period_evolution": -73194.40889546591,
+          "period_evolution_percent": -42.22670141370445
+        },
+        "fonds_euro": {
+          "upnl": 0.0,
+          "share": 1.3792512532287748,
+          "amount": 27292.0,
+          "evolution": 0.0,
+          "upnl_percent": 0.0,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "startups": {
+          "upnl": 0.0,
+          "share": 16.692757211084018,
+          "amount": 330308.73,
+          "evolution": 0.0,
+          "upnl_percent": 0.0,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "commodities": {
+          "upnl": -1475.799999999988,
+          "share": 7.395241796665822,
+          "amount": 146333.7,
+          "evolution": 345.1000000000058,
+          "upnl_percent": -0.9984473257808114,
+          "evolution_percent": 0.23638832073189672,
+          "period_evolution": -1475.799999999988,
+          "period_evolution_percent": -0.9984473257808114
+        },
+        "other_assets": {
+          "upnl": 0.0,
+          "share": 7.7068670715736545,
+          "amount": 152500.0,
+          "evolution": 0.0,
+          "upnl_percent": 0.0,
+          "evolution_percent": 0.0,
+          "period_evolution": 0.0,
+          "period_evolution_percent": 0.0
+        },
+        "real_estates": {
+          "upnl": -11000.0,
+          "share": 41.639798493046406,
+          "amount": 823949.5,
+          "evolution": -12000.0,
+          "upnl_percent": -1.317444947269266,
+          "evolution_percent": -1.4354934119824223,
+          "period_evolution": -11000.0,
+          "period_evolution_percent": -1.317444947269266
+        }
+      }
+    ]
+  ],
+  "data": {
+    "assets": {
+      "checking_accounts": {
+        "upnl": null,
+        "share": 0.23484516950999007,
+        "amount": 4647.01,
+        "evolution": null,
+        "upnl_percent": 0.0,
+        "evolution_percent": null,
+        "period_evolution": 0.0,
+        "period_evolution_percent": 0.0
+      },
+      "savings_accounts": {
+        "upnl": null,
+        "share": 0.4813127999322458,
+        "amount": 9524.0,
+        "evolution": null,
+        "upnl_percent": 0.0,
+        "evolution_percent": null,
+        "period_evolution": 0.0,
+        "period_evolution_percent": 0.0
+      },
+      "investment_accounts": {
+        "upnl": 32571.27402224467,
+        "share": 19.40904737219592,
+        "amount": 384057.4512018285,
+        "evolution": 2944.582797577663,
+        "upnl_percent": 9.266729714267859,
+        "evolution_percent": 0.7725767647418037,
+        "period_evolution": 33226.88423059171,
+        "period_evolution_percent": 9.470920540773701
+      },
+      "cryptos": {
+        "upnl": 9781.488657131058,
+        "share": 5.060878832763175,
+        "amount": 100142.3814409705,
+        "evolution": -4228.824975720952,
+        "upnl_percent": 10.824913694168842,
+        "evolution_percent": -2.6944658254791483,
+        "period_evolution": -73194.40889546591,
+        "period_evolution_percent": -42.22670141370445
+      },
+      "fonds_euro": {
+        "upnl": 0.0,
+        "share": 1.3792512532287748,
+        "amount": 27292.0,
+        "evolution": 0.0,
+        "upnl_percent": 0.0,
+        "evolution_percent": 0.0,
+        "period_evolution": 0.0,
+        "period_evolution_percent": 0.0
+      },
+      "real_estates": {
+        "upnl": -11000.0,
+        "share": 41.639798493046406,
+        "amount": 823949.5,
+        "evolution": -12000.0,
+        "upnl_percent": -1.317444947269266,
+        "evolution_percent": -1.4354934119824223,
+        "period_evolution": -11000.0,
+        "period_evolution_percent": -1.317444947269266
+      },
+      "startups": {
+        "upnl": 0.0,
+        "share": 16.692757211084018,
+        "amount": 330308.73,
+        "evolution": 0.0,
+        "upnl_percent": 0.0,
+        "evolution_percent": 0.0,
+        "period_evolution": 0.0,
+        "period_evolution_percent": 0.0
+      },
+      "commodities": {
+        "upnl": -1475.799999999988,
+        "share": 7.395241796665822,
+        "amount": 146333.7,
+        "evolution": 345.1000000000058,
+        "upnl_percent": -0.9984473257808114,
+        "evolution_percent": 0.23638832073189672,
+        "period_evolution": -1475.799999999988,
+        "period_evolution_percent": -0.9984473257808114
+      },
+      "other_assets": {
+        "upnl": 0.0,
+        "share": 7.7068670715736545,
+        "amount": 152500.0,
+        "evolution": 0.0,
+        "upnl_percent": 0.0,
+        "evolution_percent": 0.0,
+        "period_evolution": 0.0,
+        "period_evolution_percent": 0.0
+      }
+    },
+    "liabilities": {
+      "loans": {
+        "upnl": null,
+        "share": null,
+        "amount": 723627.8003648017,
+        "evolution": null,
+        "upnl_percent": 0.0,
+        "evolution_percent": null,
+        "period_evolution": 0.0,
+        "period_evolution_percent": 0.0
+      },
+      "credit_accounts": {
+        "upnl": null,
+        "share": null,
+        "amount": 2555.0,
+        "evolution": null,
+        "upnl_percent": 0.0,
+        "evolution_percent": null,
+        "period_evolution": 0.0,
+        "period_evolution_percent": 0.0
+      }
+    },
+    "unqualified_loans": []
+  },
+  "last_user_sync_at": "2022-06-23T09:19:41.144Z"
+}

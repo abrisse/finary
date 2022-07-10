@@ -1,0 +1,57 @@
+{
+  "assets": {
+    "checking_accounts": {
+      "upnl": null,
+      "share": 0.23484516950999007,
+      "amount": 4647.01,
+      "evolution": null,
+      "upnl_percent": 0.0,
+      "evolution_percent": null,
+      "period_evolution": 0.0,
+      "period_evolution_percent": 0.0
+    },
+    "savings_accounts": {
+      "upnl": null,
+      "share": 0.4813127999322458,
+      "amount": 9524.0,
+      "evolution": null,
+      "upnl_percent": 0.0,
+      "evolution_percent": null,
+      "period_evolution": 0.0,
+      "period_evolution_percent": 0.0
+    },
+    "investment_accounts": {
+      "upnl": 32571.27402224467,
+      "share": 19.40904737219592,
+      "amount": 384057.4512018285,
+      "evolution": 2944.582797577663,
+      "upnl_percent": 9.266729714267859,
+      "evolution_percent": 0.7725767647418037,
+      "period_evolution": 33226.88423059171,
+      "period_evolution_percent": 9.470920540773701
+    }
+  },
+  "liabilities": {
+    "loans": {
+      "upnl": null,
+      "share": null,
+      "amount": 723627.8003648017,
+      "evolution": null,
+      "upnl_percent": 0.0,
+      "evolution_percent": null,
+      "period_evolution": 0.0,
+      "period_evolution_percent": 0.0
+    },
+    "credit_accounts": {
+      "upnl": null,
+      "share": null,
+      "amount": 2555.0,
+      "evolution": null,
+      "upnl_percent": 0.0,
+      "evolution_percent": null,
+      "period_evolution": 0.0,
+      "period_evolution_percent": 0.0
+    }
+  },
+  "unqualified_loans": []
+}
