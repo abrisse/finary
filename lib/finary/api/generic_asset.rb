@@ -4,7 +4,7 @@ module Finary
     attribute :id, Types::Integer
     attribute :name, Types::String
     attribute :updated_at, Types::Params::DateTime
-    attribute :category, Types::String
+    attribute :category, Types::String.optional
 
     attribute :quantity, Types::Coercible::Float
     attribute :buying_price, Types::Coercible::Float

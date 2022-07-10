@@ -5,11 +5,11 @@ module Finary
     attribute :owning_type, Types::String
 
     attribute :quantity, Types::Coercible::Float
-    attribute :buying_price, Types::Coercible::Float
-    attribute :current_value, Types::Coercible::Float
-    attribute :current_price, Types::Coercible::Float
-    attribute :unrealized_pnl, Types::Coercible::Float
-    attribute :unrealized_pnl_percent, Types::Coercible::Float
+    attribute :buying_price, Types::Coercible::Float.optional
+    attribute :current_value, Types::Coercible::Float.optional
+    attribute :current_price, Types::Coercible::Float.optional
+    attribute :unrealized_pnl, Types::Coercible::Float.optional
+    attribute :unrealized_pnl_percent, Types::Coercible::Float.optional
 
     attribute :crypto, Crypto
     attribute? :account, Account

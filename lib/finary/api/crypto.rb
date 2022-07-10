@@ -2,7 +2,7 @@ module Finary
   # Crypto
   class Crypto < Dry::Struct
     attribute :id, Types::Integer
-    attribute :name, Types::String
+    attribute :name, Types::String.optional
     attribute :code, Types::String.optional
     attribute :symbol, Types::String.optional
 
