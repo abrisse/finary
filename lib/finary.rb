@@ -17,7 +17,8 @@ module Finary
   def self.client
     @client ||= Client.new(
       login: configuration.login,
-      password: configuration.password
+      password: configuration.password,
+      access_token: configuration.access_token
     )
   end
 

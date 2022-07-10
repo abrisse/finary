@@ -7,15 +7,15 @@ module Finary
 
     DEVICE_ID = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
 
-    attr_reader :login, :password
-
     # Instanciates a new Finary HTTP client
     #
     # @param [String] login the user login
     # @param [String] password the user password
-    def initialize(login:, password:)
+    # @param [String] access_token a user access token
+    def initialize(login: nil, password: nil, access_token: nil)
       @login = login
       @password = password
+      @access_token = access_token
     end
 
     # Retrieves the user generic assets
@@ -84,6 +84,7 @@ module Finary
 
     protected
 
+    attr_reader :login, :password, :access_token
     def parse_response(response)
       if response.success?
         JSON.parse(response.body, symbolize_names: true)[:result]
@@ -103,8 +104,14 @@ module Finary
 
     def build_auth_cookie_hash
       HTTParty::CookieHash.new.tap do |cookie_hash|
-        signin.get_fields('Set-Cookie').each do |c|
-          cookie_hash.add_cookies(c)
+        if access_token
+          cookie_hash.add_cookies("finary_access_token=#{access_token}")
+        elsif login && password
+          signin.get_fields('Set-Cookie').each do |c|
+            cookie_hash.add_cookies(c)
+          end
+        else
+          fail StandardError, 'To authenticate to Finary API, please provide either a access_token or a login/password.'
         end
       end
     end
