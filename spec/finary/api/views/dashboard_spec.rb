@@ -9,6 +9,12 @@ describe Finary::Views::Dashboard do
     described_class.new(dasboard_attributes)
   end
 
+  describe '#last_user_sync_at' do
+    it 'returns a date' do
+      expect(dashboard.last_user_sync_at).to be_a(Date)
+    end
+  end
+
   describe '#total' do
     it 'returns a status' do
       expect(dashboard.total).to be_a(Finary::Status)
