@@ -21,6 +21,12 @@ describe Finary::SecurityEntry do
     end
   end
 
+  describe '#account' do
+    it 'returns a account' do
+      expect(security_entry.account).to be_a(Finary::Account)
+    end
+  end
+
   describe '#quantity' do
     it 'returns a float' do
       expect(security_entry.quantity).to be_a(Float)

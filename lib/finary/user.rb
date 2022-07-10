@@ -29,6 +29,15 @@ module Finary
       end
     end
 
+    # Returns the user securities
+    #
+    # @return [Array<Finary::SecurityEntry>] the user securities
+    def get_securities
+      Finary.client.get_user_securities.map do |security_attributes|
+        SecurityEntry.new(security_attributes)
+      end
+    end
+
     # Returns the user dashboard view
     #
     # @param [String] type the type ("gross", "net", "finary")

@@ -11,5 +11,6 @@ module Finary
     attribute :buying_price, Types::RoundedFloat.optional
 
     attribute :security, Security
+    attribute? :account, Account
   end
 end

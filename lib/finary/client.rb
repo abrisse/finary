@@ -38,6 +38,18 @@ module Finary
       )
     end
 
+    # Retrieves the user securities
+    #
+    # @return [Hash] the user securities
+    def get_user_securities
+      parse_response(
+        self.class.get(
+          "/users/me/securities",
+          headers: auth_headers
+        )
+      )
+    end
+
     def get_user_view(type, params)
       parse_response(
         self.class.get(

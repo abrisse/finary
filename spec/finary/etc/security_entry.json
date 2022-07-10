@@ -35,5 +35,79 @@
   "display_unrealized_pnl": -212.368786312137,
   "unrealized_pnl_percent": -6.803706990453006,
   "buying_price": 312.1368786312137,
-  "display_buying_price": 312.1368786312137
+  "display_buying_price": 312.1368786312137,
+  "account": {
+    "slug": "compte-titres-7ced8a9b-cd27-4952-a782-ed9cf5e4018c",
+    "id": "9a3547fa-226f-4422-a8a6-d9db3292d00e",
+    "name": "Compte Titres",
+    "manual_type": "stocks",
+    "connection_id": null,
+    "connection_state": null,
+    "last_sync_at": "2021-05-12T08:12:20.942Z",
+    "last_sync": null,
+    "currency": {
+      "id": 1,
+      "name": "Euro",
+      "code": "EUR",
+      "symbol": "€",
+      "correlation_id": "6246d83d2a89de8c1452c622",
+      "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/toz8479pw1hfk5as1j77pt80lxsb?response-content-disposition=inline%3B%20filename%3D%22EUR.png%22%3B%20filename%2A%3DUTF-8%27%27EUR.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220710%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220710T123036Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=13e992293e82f2a371d46b943b5c3f7c48108700d5789291245cbc779a594df4"
+    },
+    "display_currency": {
+      "id": 1,
+      "name": "Euro",
+      "code": "EUR",
+      "symbol": "€",
+      "correlation_id": "6246d83d2a89de8c1452c622",
+      "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/toz8479pw1hfk5as1j77pt80lxsb?response-content-disposition=inline%3B%20filename%3D%22EUR.png%22%3B%20filename%2A%3DUTF-8%27%27EUR.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220710%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220710T123036Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=13e992293e82f2a371d46b943b5c3f7c48108700d5789291245cbc779a594df4"
+    },
+    "annual_yield": null,
+    "balance": 243808.30456329737,
+    "display_balance": 243808.30456329737,
+    "transactions_count": 0,
+    "bank_account_type": {
+      "id": "36bad646-3288-48e6-8075-6b6bad5a110b",
+      "slug": "investment-personal-compte_titres",
+      "account_type": "investment",
+      "subtype": "personal",
+      "name": "compte_titres",
+      "display_name": "Compte-Titres",
+      "priority": 0
+    },
+    "upnl": null,
+    "display_upnl": null,
+    "upnl_percent": null,
+    "unrealized_pnl": 236888.04401373895,
+    "display_unrealized_pnl": 236888.04401373895,
+    "unrealized_pnl_percent": 3423.108744494525,
+    "bank": {
+      "id": "48899f91-89fc-44ae-acd1-39c1d98649fe",
+      "slug": "default",
+      "name": "Default",
+      "countries": [],
+      "twitter_handle": null,
+      "logo_url": null,
+      "is_requestable": false
+    },
+    "exchange": {
+      "id": "48899f91-89fc-44ae-acd1-39c1d98649fe",
+      "slug": "default",
+      "name": "Default",
+      "countries": [],
+      "twitter_handle": null,
+      "logo_url": null,
+      "is_requestable": false
+    },
+    "institution": {
+      "id": "48899f91-89fc-44ae-acd1-39c1d98649fe",
+      "slug": "default",
+      "name": "Default",
+      "countries": [],
+      "twitter_handle": null,
+      "logo_url": null,
+      "is_requestable": false
+    },
+    "institution_connection": null,
+    "provider_connection": null
+  }
 }
