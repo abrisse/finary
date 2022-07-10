@@ -36,6 +36,37 @@ module Finary
       end
     end
 
+    # Add a new generic asset
+    #
+    # @param [Hash] attributes the asset attributes
+    #
+    # @return [Finary::GenericAsset] the user generic asset
+    def add_generic_asset(attributes)
+      GenericAsset.new(
+        Finary.client.add_user_generic_asset(attributes)
+      )
+    end
+
+    # Update a generic asset
+    #
+    # @param [Integer] id the asset ID
+    # @param [Hash] attributes the asset attributes
+    #
+    # @return [Finary::GenericAsset] the user generic asset
+    def update_generic_asset(id, attributes)
+      GenericAsset.new(
+        Finary.client.update_user_generic_asset(id, attributes)
+      )
+    end
+
+    # Delete a generic asset
+    #
+    # @param [Integer] id the asset ID
+    # @return [Bool] returns true if successful
+    def delete_generic_asset(id)
+      Finary.client.delete_user_generic_asset(id)
+    end
+
     # Returns the user holdings accounts
     #
     # @return [Array<Finary::Account>] the user holdings accounts

@@ -19,6 +19,57 @@ module Finary
       @access_token = access_token
     end
 
+    #######################################
+    # Routes /users/me/generic_assets
+    #######################################
+
+    # Add a new user generic asset
+    #
+    # @param [Hash] attributes the generic asset attributes
+    #
+    # @return [Hash] the user generic asset
+    def add_user_generic_asset(attributes)
+      parse_response(
+        self.class.post(
+          "/users/me/generic_assets",
+          headers: common_headers,
+          body: attributes.to_json
+        )
+      )
+    end
+
+    # Update an existing user generic asset
+    #
+    # @param [Integer] id the generic asset id
+    # @param [Hash] attributes the generic asset attributes
+    #
+    # @return [Hash] the user generic asset
+    def update_user_generic_asset(id, attributes)
+      parse_response(
+        self.class.put(
+          "/users/me/generic_assets/#{id}",
+          headers: common_headers,
+          body: attributes.to_json
+        )
+      )
+    end
+
+    # Delete an existing user generic asset
+    #
+    # @param [Integer] id the generic asset id
+    #
+    # @return [Bool] returns true if successful
+    def delete_user_generic_asset(id)
+      parse_response(
+        self.class.delete(
+          "/users/me/generic_assets/#{id}",
+          headers: common_headers
+        )
+      )
+
+      true
+    end
+
     # Retrieves the user generic assets
     #
     # @return [Hash] the user generic assets
@@ -30,6 +81,11 @@ module Finary
         )
       )
     end
+
+    #######################################
+    # Routes /users/me/holdings_accounts
+    #######################################
+
 
     # Retrieves the user holdings accounts
     #
@@ -43,6 +99,10 @@ module Finary
       )
     end
 
+    #######################################
+    # Routes /users/me/securities
+    #######################################
+
     # Retrieves the user securities
     #
     # @return [Hash] the user securities
@@ -54,6 +114,10 @@ module Finary
         )
       )
     end
+
+    #######################################
+    # Routes /users/me/cryptos
+    #######################################
 
     # Retrieves the user cryptos
     #
@@ -67,6 +131,10 @@ module Finary
       )
     end
 
+    #######################################
+    # Routes /users/me/loans
+    #######################################
+
     # Retrieves the user loans
     #
     # @return [Hash] the user loans
@@ -78,6 +146,10 @@ module Finary
         )
       )
     end
+
+    #######################################
+    # Routes /users/me/views
+    #######################################
 
     # Get a specific user view
     #
