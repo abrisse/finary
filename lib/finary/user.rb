@@ -40,5 +40,16 @@ module Finary
 
       Views::Dashboard.new(attributes)
     end
+
+    # Returns the user portfolio view
+    #
+    # @param [String] type the period ("all", "1w", "1m", "ytd", "1y")
+    #
+    # @return [Finary::Views::Portfolio] the user portfolio view
+    def get_view_portfolio(period: '1w')
+      attributes = Finary.client.get_user_view(:portfolio, period: period)
+
+      Views::Portfolio.new(attributes)
+    end
   end
 end

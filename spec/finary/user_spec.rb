@@ -102,4 +102,28 @@ describe Finary::User do
       expect(get_view_dashboard).to be_a(Finary::Views::Dashboard)
     end
   end
+
+  describe '#get_view_portfolio' do
+    subject(:get_view_portfolio) do
+      user.get_view_portfolio(period: 'ytd')
+    end
+
+    let(:finary_client) do
+      instance_double(Finary::Client, get_user_view: attributes)
+    end
+
+    let(:attributes) do
+      load_json('finary', 'etc', 'views', 'portfolio.json')
+    end
+
+    it 'uses the HTTP client' do
+      get_view_portfolio
+
+      expect(finary_client).to have_received(:get_user_view).with(:portfolio, period: 'ytd')
+    end
+
+    it 'returns the dashboard' do
+      expect(get_view_portfolio).to be_a(Finary::Views::Portfolio)
+    end
+  end
 end
