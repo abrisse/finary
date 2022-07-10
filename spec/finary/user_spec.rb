@@ -40,7 +40,7 @@ describe Finary::User do
       expect(finary_client).to have_received(:get_user_generic_assets)
     end
 
-    it 'returns the generic_assets' do
+    it 'returns the generic assets' do
       expect(get_generic_assets).to match_array(
         [
           an_instance_of(Finary::GenericAsset)
@@ -70,7 +70,7 @@ describe Finary::User do
       expect(finary_client).to have_received(:get_user_holdings_accounts)
     end
 
-    it 'returns the generic_assets' do
+    it 'returns the accounts' do
       expect(get_holdings_accounts).to match_array(
         [
           an_instance_of(Finary::Account)
@@ -152,7 +152,7 @@ describe Finary::User do
       expect(finary_client).to have_received(:get_user_view).with(:portfolio, period: 'ytd')
     end
 
-    it 'returns the dashboard' do
+    it 'returns the portfolio' do
       expect(get_view_portfolio).to be_a(Finary::Views::Portfolio)
     end
   end

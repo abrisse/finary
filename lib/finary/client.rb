@@ -19,6 +19,8 @@ module Finary
     end
 
     # Retrieves the user generic assets
+    #
+    # @return [Hash] the user generic assets
     def get_user_generic_assets
       parse_response(
         self.class.get(
@@ -29,6 +31,8 @@ module Finary
     end
 
     # Retrieves the user holdings accounts
+    #
+    # @return [Hash] the user holdings accounts
     def get_user_holdings_accounts
       parse_response(
         self.class.get(
@@ -50,6 +54,12 @@ module Finary
       )
     end
 
+    # Get a specific user view
+    #
+    # @param [String] the view type
+    # @param [Hash] the view parameters
+    #
+    # @return [Hash] the user view
     def get_user_view(type, params)
       parse_response(
         self.class.get(
