@@ -15,8 +15,17 @@ module Finary
     #
     # @return [Array<Finary::GenericAsset>] the user generic assets
     def get_generic_assets
-      Finary.client.get_user_generic_assets.map do |attributes|
-        GenericAsset.new(attributes)
+      Finary.client.get_user_generic_assets.map do |generic_assets_attributes|
+        GenericAsset.new(generic_assets_attributes)
+      end
+    end
+
+    # Returns the user holdings accounts
+    #
+    # @return [Array<Finary::Account>] the user holdings accounts
+    def get_holdings_accounts
+      Finary.client.get_user_holdings_accounts.map do |account_attributes|
+        Account.new(account_attributes)
       end
     end
 

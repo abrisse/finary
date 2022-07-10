@@ -49,6 +49,36 @@ describe Finary::User do
     end
   end
 
+  describe '#get_holdings_accounts' do
+    subject(:get_holdings_accounts) do
+      user.get_holdings_accounts
+    end
+
+    let(:finary_client) do
+      instance_double(Finary::Client, get_user_holdings_accounts: attributes)
+    end
+
+    let(:attributes) do
+      [
+        load_json('finary', 'etc', 'account.json')
+      ]
+    end
+
+    it 'uses the HTTP client' do
+      get_holdings_accounts
+
+      expect(finary_client).to have_received(:get_user_holdings_accounts)
+    end
+
+    it 'returns the generic_assets' do
+      expect(get_holdings_accounts).to match_array(
+        [
+          an_instance_of(Finary::Account)
+        ]
+      )
+    end
+  end
+
   describe '#get_view_dashboard' do
     subject(:get_view_dashboard) do
       user.get_view_dashboard(type: 'gross', period: 'ytd')

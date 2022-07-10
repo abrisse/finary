@@ -18,11 +18,21 @@ module Finary
       @password = password
     end
 
-    # Retrieves the user_generic_assets
+    # Retrieves the user generic assets
     def get_user_generic_assets
       parse_response(
         self.class.get(
           "/users/me/generic_assets",
+          headers: auth_headers
+        )
+      )
+    end
+
+    # Retrieves the user holdings accounts
+    def get_user_holdings_accounts
+      parse_response(
+        self.class.get(
+          "/users/me/holdings_accounts",
           headers: auth_headers
         )
       )
