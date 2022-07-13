@@ -61,6 +61,18 @@ module Finary
       parse_response(
         self.class.get(
           "/users/me/cryptos",
+          headers: common_headers
+        )
+      )
+    end
+
+    # Retrieves the user loans
+    #
+    # @return [Hash] the user loans
+    def get_user_loans
+      parse_response(
+        self.class.get(
+          "/users/me/loans",
           headers: auth_headers
         )
       )

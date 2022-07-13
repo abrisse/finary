@@ -24,6 +24,7 @@ module Finary
   class FondsEuro < Dry::Struct; end
   class GenericAsset < Dry::Struct; end
   class Investments < Dry::Struct; end
+  class Loan < Dry::Struct; end
   class SecurityEntry < Dry::Struct; end
   class Security < Dry::Struct; end
   class Status < Dry::Struct; end
@@ -37,6 +38,7 @@ require_relative 'api/crypto_entry'
 require_relative 'api/fonds_euro'
 require_relative 'api/generic_asset'
 require_relative 'api/investments'
+require_relative 'api/loan'
 require_relative 'api/security'
 require_relative 'api/security_entry'
 require_relative 'api/status'

@@ -38,6 +38,15 @@ module Finary
       end
     end
 
+    # Returns the user loans
+    #
+    # @return [Array<Finary::Loan>] the user loans
+    def get_loans
+      Finary.client.get_user_loans.map do |loan_attributes|
+        Loan.new(loan_attributes)
+      end
+    end
+
     # Returns the user securities
     #
     # @return [Array<Finary::SecurityEntry>] the user securities

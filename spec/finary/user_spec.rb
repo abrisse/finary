@@ -109,6 +109,36 @@ describe Finary::User do
     end
   end
 
+  describe '#get_loans' do
+    subject(:get_loans) do
+      user.get_loans
+    end
+
+    let(:finary_client) do
+      instance_double(Finary::Client, get_user_loans: attributes)
+    end
+
+    let(:attributes) do
+      [
+        load_json('finary', 'etc', 'loan.json')
+      ]
+    end
+
+    it 'uses the HTTP client' do
+      get_loans
+
+      expect(finary_client).to have_received(:get_user_loans)
+    end
+
+    it 'returns the loans' do
+      expect(get_loans).to match_array(
+        [
+          an_instance_of(Finary::Loan)
+        ]
+      )
+    end
+  end
+
   describe '#get_securities' do
     subject(:get_securities) do
       user.get_securities
