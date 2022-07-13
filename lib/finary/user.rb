@@ -4,10 +4,17 @@ module Finary
   class User
     attr_reader :id
 
+    # Returns the special user <me>
+    #
+    # @return [User] the user
+    def self.me
+      new('me')
+    end
+
     # Instantiates a new user
     #
     # @param [String] id the user ID
-    def initialize(id = 'me')
+    def initialize(id)
       @id = id
     end
 

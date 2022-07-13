@@ -24,7 +24,7 @@ module Finary
 
   # @return [Finary::User] the user <me>
   def self.me
-    @user ||= User.new('me')
+    @user ||= User.me
   end
 end
 

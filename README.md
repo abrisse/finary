@@ -41,13 +41,12 @@ end
 
 ### User class
 
-The `User` class is the main class and represents a specific user, generally the current user `me`.
+The `User` class is the main class and represents a specific user. To work with the loggued user `me`, you can call `Finary.me`.
 
 It allows to use the Finary API with a high level abstraction and returns only high level Ruby classes that relies on `Dry::Struct`.
 
 ```ruby
-u = User.new('me')
-pp u.get_cryptos[0].attributes.keys
+pp Finary.me.get_cryptos[0].attributes.keys
 
 # [:id,
 #  :crypto,
@@ -60,7 +59,7 @@ pp u.get_cryptos[0].attributes.keys
 #  :unrealized_pnl_percent,
 #  :account]
 
-pp u.get_generic_assets[0].attributes.keys
+pp Finary.me.get_generic_assets[0].attributes.keys
 
 # [:id,
 #  :name,
@@ -73,7 +72,7 @@ pp u.get_generic_assets[0].attributes.keys
 #  :unrealized_pnl,
 #  :unrealized_pnl_percent]
 
-pp u.get_holdings_accounts[0].attributes.keys
+pp Finary.me.get_holdings_accounts[0].attributes.keys
 
 # [:slug,
 #  :id,
@@ -91,7 +90,7 @@ pp u.get_holdings_accounts[0].attributes.keys
 #  :securities,
 #  :fonds_euro]
 
-pp u.get_loans[0].attributes.keys
+pp Finary.me.get_loans[0].attributes.keys
 
 # [:id,
 #  :loan_type,
@@ -112,7 +111,7 @@ pp u.get_loans[0].attributes.keys
 #  :outstanding_capital,
 #  :contribution]
 
-pp u.get_securities[0].attributes.keys
+pp Finary.me.get_securities[0].attributes.keys
 
 # [:id,
 #  :security,
@@ -123,11 +122,11 @@ pp u.get_securities[0].attributes.keys
 #  :buying_price,
 #  :account]
 
-pp u.get_view_dashboard(type: 'finary', period: '1w').attributes.keys
+pp Finary.me.get_view_dashboard(type: 'finary', period: '1w').attributes.keys
 
 # [:timeseries, :data, :last_user_sync_at]
 
-pp u.get_view_portfolio(period: '1m').attributes.keys
+pp Finary.me.get_view_portfolio(period: '1m').attributes.keys
 
 # [:timeseries, :data, :last_user_sync_at]
 ```

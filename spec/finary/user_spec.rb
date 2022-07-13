@@ -13,6 +13,12 @@ describe Finary::User do
     instance_double(Finary::Client)
   end
 
+  describe '.me' do
+    it 'returns the user <me>' do
+      expect(Finary.me.id).to eq('me')
+    end
+  end
+
   describe '#id' do
     it 'returns the ID' do
       expect(user.id).to eq('me')
