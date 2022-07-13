@@ -1,9 +1,11 @@
 # frozen_string_literal: true
-
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', '..', 'lib'))
+
+require 'coveralls'
+Coveralls.wear!
+
 require 'finary'
 require 'json'
-
 require 'pp'
 require 'rspec'
 
