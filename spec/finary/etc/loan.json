@@ -1,0 +1,222 @@
+{
+  "id": 106,
+  "qualified": true,
+  "loan_type": "loan",
+  "loan_category": "amortizing",
+  "name": "BNP - Prêt Immo",
+  "month_duration": 180,
+  "start_date": "2020-04-01T00:00:00.000Z",
+  "deferred_start_date": null,
+  "end_date": "2035-04-01T00:00:00.000Z",
+  "fundable_type": "UserScpi",
+  "ownership_percentage": 100,
+  "interest_rate": 1,
+  "fundable": {
+    "id": 16,
+    "correlation_id": null,
+    "bought_at": null,
+    "property_type": "full_ownership",
+    "dismemberment_month_period": null,
+    "months_until_dismemberment_ends": 0,
+    "scpi": {
+      "id": 56,
+      "name": "Epargne Pierre",
+      "scpi_type": "yield",
+      "category": "diversified",
+      "current_price": 187.2,
+      "display_current_price": 187.2,
+      "withdrawal_value": 187.2,
+      "subscription_price": 208,
+      "display_subscription_price": 208,
+      "subscription_fees_ratio": 0.1196,
+      "management_fees_ratio": 0.1196,
+      "exit_fees_ratio": null,
+      "tdvm_ratio": 0.0536,
+      "currency": {
+        "id": 1,
+        "name": "Euro",
+        "code": "EUR",
+        "symbol": "€",
+        "correlation_id": "6246d83d2a89de8c1452c622",
+        "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/toz8479pw1hfk5as1j77pt80lxsb?response-content-disposition=inline%3B%20filename%3D%22EUR.png%22%3B%20filename%2A%3DUTF-8%27%27EUR.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220713%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220713T170144Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=cb9059fa16620026cf9704700d22efe4dddf5a0798f013d2189c27366a4da8f3"
+      },
+      "display_currency": {
+        "id": 1,
+        "name": "Euro",
+        "code": "EUR",
+        "symbol": "€",
+        "correlation_id": "6246d83d2a89de8c1452c622",
+        "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/toz8479pw1hfk5as1j77pt80lxsb?response-content-disposition=inline%3B%20filename%3D%22EUR.png%22%3B%20filename%2A%3DUTF-8%27%27EUR.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220713%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220713T170144Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=cb9059fa16620026cf9704700d22efe4dddf5a0798f013d2189c27366a4da8f3"
+      }
+    },
+    "current_value": 37440,
+    "display_current_value": 37440,
+    "unrealized_pnl": -3560,
+    "display_unrealized_pnl": -3560,
+    "unrealized_pnl_percent": -8.682926829268293,
+    "shares": 200,
+    "buying_price": 205,
+    "display_buying_price": 205,
+    "taxes": 51.94887102996109,
+    "display_taxes": 51.94887102996109,
+    "monthly_revenue": 185.81333333333333,
+    "display_monthly_revenue": 185.81333333333333,
+    "reimbursed_percent": 44.217488460978174,
+    "loans": [
+      {
+        "id": 106,
+        "qualified": true,
+        "loan_type": "loan",
+        "loan_category": "amortizing",
+        "name": "BNP - Prêt Immo",
+        "month_duration": 180,
+        "start_date": "2020-04-01T00:00:00.000Z",
+        "deferred_start_date": null,
+        "end_date": "2035-04-01T00:00:00.000Z",
+        "fundable_type": "UserScpi",
+        "ownership_percentage": 100,
+        "interest_rate": 1,
+        "total_amount": 90000,
+        "display_total_amount": "90000.0",
+        "loan_to_value": "2.195121951219512195",
+        "monthly_repayment": "550.0",
+        "display_monthly_repayment": "550.0",
+        "insurance_rate": 0.14,
+        "fixed_costs": 1000,
+        "display_fixed_costs": 1000,
+        "paid": {
+          "total": 15400,
+          "percent": 15.4,
+          "capital": 13129.170269001052,
+          "interest": 1998.9811242623823,
+          "insurance": 271.84860673656607
+        },
+        "display_paid": {
+          "total": 15400,
+          "percent": 15.4,
+          "capital": 13129.170269001052,
+          "interest": 1998.9811242623823,
+          "insurance": 271.84860673656607
+        },
+        "current_month": {
+          "repayment": 550,
+          "capital": 474.68680469552186,
+          "interests": 66.34493183586162,
+          "insurance": 8.968263468616543
+        },
+        "display_current_month": {
+          "repayment": 550,
+          "capital": 474.68680469552186,
+          "interests": 66.34493183586162,
+          "insurance": 8.968263468616543
+        },
+        "elapsed_months": 28,
+        "remaining_months": 152,
+        "outstanding_amount": 83600,
+        "display_outstanding_amount": 83600,
+        "outstanding_capital": 76870.82973099894,
+        "display_outstanding_capital": 76870.82973099894,
+        "repartition": {
+          "total_cost": 100000,
+          "capital": 90000,
+          "interest_insurance": 9000,
+          "fixed_costs": 1000
+        },
+        "display_repartition": {
+          "total_cost": 100000,
+          "capital": 90000,
+          "interest_insurance": 9000,
+          "fixed_costs": 1000
+        },
+        "contribution": 5000,
+        "display_contribution": 5000,
+        "currency": {
+          "id": 1,
+          "name": "Euro",
+          "code": "EUR",
+          "symbol": "€",
+          "correlation_id": "6246d83d2a89de8c1452c622",
+          "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/toz8479pw1hfk5as1j77pt80lxsb?response-content-disposition=inline%3B%20filename%3D%22EUR.png%22%3B%20filename%2A%3DUTF-8%27%27EUR.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220713%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220713T170145Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=758757f6a2dee3ff9a45c7b92d2f374bade1b678b9c1f3a743b757edf13dc7d6"
+        },
+        "display_currency": {
+          "id": 1,
+          "name": "Euro",
+          "code": "EUR",
+          "symbol": "€",
+          "correlation_id": "6246d83d2a89de8c1452c622",
+          "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/toz8479pw1hfk5as1j77pt80lxsb?response-content-disposition=inline%3B%20filename%3D%22EUR.png%22%3B%20filename%2A%3DUTF-8%27%27EUR.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220713%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220713T170145Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=758757f6a2dee3ff9a45c7b92d2f374bade1b678b9c1f3a743b757edf13dc7d6"
+        }
+      }
+    ]
+  },
+  "total_amount": 90000,
+  "display_total_amount": "90000.0",
+  "loan_to_value": "2.195121951219512195",
+  "monthly_repayment": "550.0",
+  "display_monthly_repayment": "550.0",
+  "insurance_rate": 0.14,
+  "fixed_costs": 1000,
+  "display_fixed_costs": 1000,
+  "paid": {
+    "total": 15400,
+    "percent": 15.4,
+    "capital": 13129.170269001052,
+    "interest": 1998.9811242623823,
+    "insurance": 271.84860673656607
+  },
+  "display_paid": {
+    "total": 15400,
+    "percent": 15.4,
+    "capital": 13129.170269001052,
+    "interest": 1998.9811242623823,
+    "insurance": 271.84860673656607
+  },
+  "current_month": {
+    "repayment": 550,
+    "capital": 474.68680469552186,
+    "interests": 66.34493183586162,
+    "insurance": 8.968263468616543
+  },
+  "display_current_month": {
+    "repayment": 550,
+    "capital": 474.68680469552186,
+    "interests": 66.34493183586162,
+    "insurance": 8.968263468616543
+  },
+  "elapsed_months": 28,
+  "remaining_months": 152,
+  "outstanding_amount": 83600,
+  "display_outstanding_amount": 83600,
+  "outstanding_capital": 76870.82973099894,
+  "display_outstanding_capital": 76870.82973099894,
+  "repartition": {
+    "total_cost": 100000,
+    "capital": 90000,
+    "interest_insurance": 9000,
+    "fixed_costs": 1000
+  },
+  "display_repartition": {
+    "total_cost": 100000,
+    "capital": 90000,
+    "interest_insurance": 9000,
+    "fixed_costs": 1000
+  },
+  "contribution": 5000,
+  "display_contribution": 5000,
+  "currency": {
+    "id": 1,
+    "name": "Euro",
+    "code": "EUR",
+    "symbol": "€",
+    "correlation_id": "6246d83d2a89de8c1452c622",
+    "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/toz8479pw1hfk5as1j77pt80lxsb?response-content-disposition=inline%3B%20filename%3D%22EUR.png%22%3B%20filename%2A%3DUTF-8%27%27EUR.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220713%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220713T170145Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=758757f6a2dee3ff9a45c7b92d2f374bade1b678b9c1f3a743b757edf13dc7d6"
+  },
+  "display_currency": {
+    "id": 1,
+    "name": "Euro",
+    "code": "EUR",
+    "symbol": "€",
+    "correlation_id": "6246d83d2a89de8c1452c622",
+    "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/toz8479pw1hfk5as1j77pt80lxsb?response-content-disposition=inline%3B%20filename%3D%22EUR.png%22%3B%20filename%2A%3DUTF-8%27%27EUR.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220713%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220713T170145Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=758757f6a2dee3ff9a45c7b92d2f374bade1b678b9c1f3a743b757edf13dc7d6"
+  }
+}
