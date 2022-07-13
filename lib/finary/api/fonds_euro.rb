@@ -1,5 +1,5 @@
 module Finary
-  # Generic Assets are set manually by the User
+  # FondsEuro
   class FondsEuro < Dry::Struct
     attribute :id, Types::Integer
     attribute :name, Types::String

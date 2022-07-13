@@ -4,6 +4,7 @@ module Finary
   class Client
     include HTTParty
     base_uri 'https://api.finary.com/'
+    #debug_output $stdout
 
     DEVICE_ID = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
 
@@ -25,7 +26,7 @@ module Finary
       parse_response(
         self.class.get(
           "/users/me/generic_assets",
-          headers: auth_headers
+          headers: common_headers
         )
       )
     end
@@ -37,7 +38,7 @@ module Finary
       parse_response(
         self.class.get(
           "/users/me/holdings_accounts",
-          headers: auth_headers
+          headers: common_headers
         )
       )
     end
@@ -49,7 +50,7 @@ module Finary
       parse_response(
         self.class.get(
           "/users/me/securities",
-          headers: auth_headers
+          headers: common_headers
         )
       )
     end
@@ -73,7 +74,7 @@ module Finary
       parse_response(
         self.class.get(
           "/users/me/loans",
-          headers: auth_headers
+          headers: common_headers
         )
       )
     end
@@ -89,7 +90,7 @@ module Finary
         self.class.get(
           "/users/me/views/#{type}",
           query: params,
-          headers: auth_headers
+          headers: common_headers
         )
       )
     end
@@ -97,16 +98,35 @@ module Finary
     protected
 
     attr_reader :login, :password, :access_token
+
+    # @private
+    #
+    # @return [Logger] a usable logger
+    def logger
+      @logger ||= ::Logger.new(STDOUT)
+    end
+
     def parse_response(response)
       if response.success?
-        JSON.parse(response.body, symbolize_names: true)[:result]
+        if runtime = response.headers[:'x-runtime']
+          logger.debug "Request took #{(runtime.to_f * 1_000).to_i}ms"
+        end
+
+        if response.body
+          JSON.parse(response.body, symbolize_names: true)[:result]
+        end
+      else
+        logger.debug "Request error #{response.code}"
+        logger.debug  response.body
+        fail StandardError, "Request error #{response.code}"
       end
     end
 
-    def auth_headers
+    def common_headers
       {
-        accept: 'application/json',
-        cookie: auth_cookie_hash.to_cookie_string
+        'accept' => 'application/json',
+        'content-type' => 'application/json',
+        'cookie' => auth_cookie_hash.to_cookie_string
       }
     end
 
