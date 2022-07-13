@@ -1,4 +1,4 @@
-# finary
+# finary [![Build Status](https://app.travis-ci.com/abrisse/finary.svg?branch=master)](https://app.travis-ci.com/abrisse/finary) [![Coverage Status](https://coveralls.io/repos/github/abrisse/finary/badge.svg?branch=main)](https://coveralls.io/github/abrisse/finary?branch=main) [![Maintainability](https://api.codeclimate.com/v1/badges/360633b09e5ae57b49af/maintainability)](https://codeclimate.com/github/abrisse/finary/maintainability)
 
 `finary` allows you to manipulate directly the [Finary](https://finary.com/) API, which is not officially released yet.
 
