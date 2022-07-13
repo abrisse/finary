@@ -181,9 +181,7 @@ module Finary
 
     def parse_response(response)
       if response.success?
-        if (runtime = response.headers[:'x-runtime'])
-          logger.debug "Request took #{(runtime.to_f * 1_000).to_i}ms"
-        end
+        log_x_runtime(response)
 
         JSON.parse(response.body, symbolize_names: true)[:result] if response.body
       else
@@ -191,6 +189,12 @@ module Finary
         logger.debug response.body
         raise StandardError, "Request error #{response.code}"
       end
+    end
+
+    def log_x_runtime(response)
+      return unless (runtime = response.headers[:'x-runtime'])
+
+      logger.debug "Request took #{(runtime.to_f * 1_000).to_i}ms"
     end
 
     def common_headers
