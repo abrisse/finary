@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Finary
   # Generic Assets are set manually by the User
   class GenericAsset < Dry::Struct

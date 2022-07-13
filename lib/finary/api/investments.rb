@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Finary
   # Investments returns the investment accounts
   class Investments < Dry::Struct

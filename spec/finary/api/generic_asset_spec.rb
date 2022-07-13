@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Finary::GenericAsset do
-  let(:generic_asset_attributes) do
-    load_json('finary', 'etc', 'generic_asset.json')
-  end
-
   subject(:generic_asset) do
     described_class.new(generic_asset_attributes)
+  end
+
+  let(:generic_asset_attributes) do
+    load_json('finary', 'etc', 'generic_asset.json')
   end
 
   describe '#id' do

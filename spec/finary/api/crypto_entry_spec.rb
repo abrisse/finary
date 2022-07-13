@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Finary::CryptoEntry do
-  let(:crypto_entry_attributes) do
-    load_json('finary', 'etc', 'crypto_entry.json')
-  end
-
   subject(:crypto_entry) do
     described_class.new(crypto_entry_attributes)
+  end
+
+  let(:crypto_entry_attributes) do
+    load_json('finary', 'etc', 'crypto_entry.json')
   end
 
   describe '#id' do

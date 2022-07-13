@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Finary::Loan do
-  let(:loan_attributes) do
-    load_json('finary', 'etc', 'loan.json')
-  end
-
   subject(:loan) do
     described_class.new(loan_attributes)
+  end
+
+  let(:loan_attributes) do
+    load_json('finary', 'etc', 'loan.json')
   end
 
   describe '#id' do

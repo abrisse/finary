@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Finary
   # Status gives financial details on a given set of assets
   class Status < Dry::Struct

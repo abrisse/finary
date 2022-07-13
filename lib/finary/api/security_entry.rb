@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Finary
   # Security entry contained in a Account and linked
   # to a Security

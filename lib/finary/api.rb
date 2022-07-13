@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 module Finary
   module Types
     include Dry.Types
 
     StatusHash = Types::Hash.constructor do |hash|
-      hash.each_with_object({}) do |(k, v), h|
-        h[k] = Status.new(v)
+      hash.transform_values do |v|
+        Status.new(v)
       end
     end
 

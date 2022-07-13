@@ -1,0 +1,57 @@
+---
+require:
+  - rubocop-rspec
+  - rubocop-performance
+
+AllCops:
+  DisplayCopNames: true
+  Exclude:
+    - 'scripts/*.rb'
+  NewCops: enable
+  TargetRubyVersion: 2.6
+
+Layout/ArgumentAlignment:
+  # https://www.rubydoc.info/github/bbatsov/RuboCop/RuboCop/Cop/Layout/ArgumentAlignment
+  EnforcedStyle: with_fixed_indentation
+Layout/EndAlignment:
+  # https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/EndAlignment
+  EnforcedStyleAlignWith: variable
+Layout/FirstArgumentIndentation:
+  # https://www.rubydoc.info/github/bbatsov/RuboCop/RuboCop/Cop/Layout/FirstArgumentIndentation
+  Enabled: false
+Layout/HashAlignment:
+  EnforcedLastArgumentHashStyle: ignore_implicit
+Layout/LineLength:
+  Max: 120
+Layout/MultilineMethodCallIndentation:
+  # https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/MultilineMethodCallIndentation
+  EnforcedStyle: indented
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - 'spec/**/*.rb'
+Metrics/MethodLength:
+  CountComments: false  # count full line comments?
+  Max: 20
+
+Style/Documentation:
+  Enabled: false
+Style/DoubleNegation:
+  Enabled: false
+Style/FormatStringToken:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 20
+RSpec/FilePath:
+  Enabled: false
+RSpec/ImplicitSubject:
+  Enabled: false
+RSpec/LetSetup:
+  # Disabling this one because it interferes with `let!` overrides in contexts
+  Enabled: false
+RSpec/MultipleMemoizedHelpers:
+  Max: 10
+RSpec/NestedGroups:
+  Max: 5

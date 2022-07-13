@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Finary
   # Security
   class Security < Dry::Struct

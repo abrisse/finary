@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Finary
   module Views
     # Dashboard gives a high view of the user assets

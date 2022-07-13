@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Finary::Status do
-  let(:dasboard_attributes) do
-    load_json('finary', 'etc', 'status.json')
-  end
-
   subject(:status) do
     described_class.new(dasboard_attributes)
+  end
+
+  let(:dasboard_attributes) do
+    load_json('finary', 'etc', 'status.json')
   end
 
   describe '#upnl' do

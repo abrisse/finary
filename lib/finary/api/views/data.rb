@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Finary
   module Views
     # Data classifies the assets into 3 categories

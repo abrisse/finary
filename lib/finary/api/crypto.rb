@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Finary
   # Crypto
   class Crypto < Dry::Struct

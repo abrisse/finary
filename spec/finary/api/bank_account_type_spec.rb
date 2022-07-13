@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Finary::BankAccountType do
-  let(:bank_attributes) do
-    load_json('finary', 'etc', 'bank_account_type.json')
-  end
-
   subject(:bank_account_type) do
     described_class.new(bank_attributes)
+  end
+
+  let(:bank_attributes) do
+    load_json('finary', 'etc', 'bank_account_type.json')
   end
 
   describe '#id' do

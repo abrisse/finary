@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'dry-struct'
 
 module Finary
@@ -24,7 +26,7 @@ module Finary
 
   # @return [Finary::User] the user <me>
   def self.me
-    @user ||= User.me
+    @me ||= User.me
   end
 end
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Finary
   # Loan
   class Loan < Dry::Struct

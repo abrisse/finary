@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Finary::Views::Data do
-  let(:data_attributes) do
-    load_json('finary', 'etc', 'views', 'data.json')
-  end
-
   subject(:data) do
     described_class.new(data_attributes)
+  end
+
+  let(:data_attributes) do
+    load_json('finary', 'etc', 'views', 'data.json')
   end
 
   describe '#assets' do

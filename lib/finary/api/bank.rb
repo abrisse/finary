@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Finary
   class Bank < Dry::Struct
     attribute :id, Types::String

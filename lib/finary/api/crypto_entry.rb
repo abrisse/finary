@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Finary
   # Crypto entry owned by the user and linkedto a Crypto
   class CryptoEntry < Dry::Struct

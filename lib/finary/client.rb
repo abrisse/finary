@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require 'httparty'
 
 module Finary
   class Client
     include HTTParty
     base_uri 'https://api.finary.com/'
-    #debug_output $stdout
+    # debug_output $stdout
 
     DEVICE_ID = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
 
@@ -31,7 +33,7 @@ module Finary
     def add_user_generic_asset(attributes)
       parse_response(
         self.class.post(
-          "/users/me/generic_assets",
+          '/users/me/generic_assets',
           headers: common_headers,
           body: attributes.to_json
         )
@@ -76,7 +78,7 @@ module Finary
     def get_user_generic_assets
       parse_response(
         self.class.get(
-          "/users/me/generic_assets",
+          '/users/me/generic_assets',
           headers: common_headers
         )
       )
@@ -86,14 +88,13 @@ module Finary
     # Routes /users/me/holdings_accounts
     #######################################
 
-
     # Retrieves the user holdings accounts
     #
     # @return [Hash] the user holdings accounts
     def get_user_holdings_accounts
       parse_response(
         self.class.get(
-          "/users/me/holdings_accounts",
+          '/users/me/holdings_accounts',
           headers: common_headers
         )
       )
@@ -109,7 +110,7 @@ module Finary
     def get_user_securities
       parse_response(
         self.class.get(
-          "/users/me/securities",
+          '/users/me/securities',
           headers: common_headers
         )
       )
@@ -125,7 +126,7 @@ module Finary
     def get_user_cryptos
       parse_response(
         self.class.get(
-          "/users/me/cryptos",
+          '/users/me/cryptos',
           headers: common_headers
         )
       )
@@ -141,7 +142,7 @@ module Finary
     def get_user_loans
       parse_response(
         self.class.get(
-          "/users/me/loans",
+          '/users/me/loans',
           headers: common_headers
         )
       )
@@ -175,22 +176,20 @@ module Finary
     #
     # @return [Logger] a usable logger
     def logger
-      @logger ||= ::Logger.new(STDOUT)
+      @logger ||= ::Logger.new($stdout)
     end
 
     def parse_response(response)
       if response.success?
-        if runtime = response.headers[:'x-runtime']
+        if (runtime = response.headers[:'x-runtime'])
           logger.debug "Request took #{(runtime.to_f * 1_000).to_i}ms"
         end
 
-        if response.body
-          JSON.parse(response.body, symbolize_names: true)[:result]
-        end
+        JSON.parse(response.body, symbolize_names: true)[:result] if response.body
       else
         logger.debug "Request error #{response.code}"
-        logger.debug  response.body
-        fail StandardError, "Request error #{response.code}"
+        logger.debug response.body
+        raise StandardError, "Request error #{response.code}"
       end
     end
 
@@ -215,7 +214,8 @@ module Finary
             cookie_hash.add_cookies(c)
           end
         else
-          fail StandardError, 'To authenticate to Finary API, please provide either a access_token or a login/password.'
+          raise StandardError,
+            'To authenticate to Finary API, please provide either a access_token or a login/password.'
         end
       end
     end
@@ -230,8 +230,7 @@ module Finary
         headers: {
           'content-type': 'application/json',
           accept: 'application/json'
-        }
-      )
+        })
     end
   end
 end

@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    ast (2.4.2)
     concurrent-ruby (1.1.10)
     coveralls (0.8.23)
       json (>= 1.8, < 3)
@@ -45,9 +46,15 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2022.0105)
     multi_xml (0.6.0)
+    parallel (1.22.1)
+    parser (3.1.2.0)
+      ast (~> 2.4.1)
+    rainbow (3.1.1)
     rake (13.0.6)
+    regexp_parser (2.5.0)
     reline (0.3.1)
       io-console (~> 0.5)
+    rexml (3.2.5)
     rspec (3.11.0)
       rspec-core (~> 3.11.0)
       rspec-expectations (~> 3.11.0)
@@ -61,6 +68,24 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.11.0)
     rspec-support (3.11.0)
+    rubocop (1.31.2)
+      json (~> 2.3)
+      parallel (~> 1.10)
+      parser (>= 3.1.0.0)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 1.8, < 3.0)
+      rexml (>= 3.2.5, < 4.0)
+      rubocop-ast (>= 1.18.0, < 2.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 3.0)
+    rubocop-ast (1.19.1)
+      parser (>= 3.1.1.0)
+    rubocop-performance (1.14.2)
+      rubocop (>= 1.7.0, < 2.0)
+      rubocop-ast (>= 0.4.0)
+    rubocop-rspec (2.12.1)
+      rubocop (~> 1.31)
+    ruby-progressbar (1.11.0)
     simplecov (0.16.1)
       docile (~> 1.1)
       json (>= 1.8, < 3)
@@ -73,6 +98,7 @@ GEM
     thread (0.2.2)
     tins (1.31.1)
       sync
+    unicode-display_width (2.2.0)
 
 PLATFORMS
   ruby
@@ -85,6 +111,9 @@ DEPENDENCIES
   irb (~> 1.4)
   rake (~> 13)
   rspec (~> 3)
+  rubocop (~> 1.30)
+  rubocop-performance (~> 1.10)
+  rubocop-rspec (~> 2)
   thread (~> 0.2)
 
 BUNDLED WITH

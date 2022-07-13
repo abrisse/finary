@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Finary
   # Represents the User. This class allows to manipulate directly high level
   # Ruby classes, by relying on the finary http client wrapper that uses JSON.

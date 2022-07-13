@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Finary::Security do
-  let(:security_attributes) do
-    load_json('finary', 'etc', 'security.json')
-  end
-
   subject(:security) do
     described_class.new(security_attributes)
+  end
+
+  let(:security_attributes) do
+    load_json('finary', 'etc', 'security.json')
   end
 
   describe '#slug' do

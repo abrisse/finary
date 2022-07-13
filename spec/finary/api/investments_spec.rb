@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Finary::Investments do
-  let(:dasboard_attributes) do
-    load_json('finary', 'etc', 'investments.json')
-  end
-
   subject(:investments) do
     described_class.new(dasboard_attributes)
+  end
+
+  let(:dasboard_attributes) do
+    load_json('finary', 'etc', 'investments.json')
   end
 
   describe '#total' do
