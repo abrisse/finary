@@ -2,13 +2,13 @@
 
 require 'spec_helper'
 
-describe Finary::FondsEuro do
+describe Finary::User::FondsEuro do
   subject(:fonds_euro) do
     described_class.new(fonds_euro_attributes)
   end
 
   let(:fonds_euro_attributes) do
-    load_json('finary', 'etc', 'fonds_euro.json')
+    load_json('user', 'fonds_euro.json')
   end
 
   describe '#id' do

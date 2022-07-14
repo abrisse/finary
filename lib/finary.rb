@@ -23,15 +23,9 @@ module Finary
       access_token: configuration.access_token
     )
   end
-
-  # @return [Finary::User] the user <me>
-  def self.me
-    @me ||= User.me
-  end
 end
 
 require_relative 'finary/configuration'
 require_relative 'finary/api'
 
 require_relative 'finary/client'
-require_relative 'finary/user'

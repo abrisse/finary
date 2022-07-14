@@ -8,7 +8,7 @@ describe Finary::Status do
   end
 
   let(:dasboard_attributes) do
-    load_json('finary', 'etc', 'status.json')
+    load_json('status.json')
   end
 
   describe '#upnl' do

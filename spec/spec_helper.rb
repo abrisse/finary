@@ -12,7 +12,7 @@ require 'rspec'
 
 module SpecHelper
   def fixture_path(*path)
-    File.join(File.dirname(__FILE__), path)
+    File.join(File.dirname(__FILE__), 'finary', 'etc', path)
   end
 
   def load_json(*path, symbolize_names: true)

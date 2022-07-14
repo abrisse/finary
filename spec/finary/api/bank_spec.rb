@@ -8,7 +8,7 @@ describe Finary::Bank do
   end
 
   let(:bank_attributes) do
-    load_json('finary', 'etc', 'bank.json')
+    load_json('bank.json')
   end
 
   describe '#id' do

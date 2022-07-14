@@ -2,13 +2,21 @@
 
 require 'spec_helper'
 
-describe Finary::Account do
+describe Finary::User::Account do
   subject(:account) do
     described_class.new(account_attributes)
   end
 
   let(:account_attributes) do
-    load_json('finary', 'etc', 'account.json')
+    load_json('user', 'account.json')
+  end
+
+  let(:finary_client) do
+    instance_double(Finary::Client)
+  end
+
+  before do
+    allow(Finary).to receive(:client).and_return(finary_client)
   end
 
   describe '#id' do
@@ -75,7 +83,7 @@ describe Finary::Account do
     it 'returns the securities entries' do
       expect(account.securities).to match_array(
         [
-          an_instance_of(Finary::SecurityEntry)
+          an_instance_of(Finary::User::Security)
         ]
       )
     end
@@ -85,7 +93,7 @@ describe Finary::Account do
     it 'returns the cryptos entries' do
       expect(account.cryptos).to match_array(
         [
-          an_instance_of(Finary::CryptoEntry)
+          an_instance_of(Finary::User::Crypto)
         ]
       )
     end
@@ -95,7 +103,31 @@ describe Finary::Account do
     it 'returns the fonds euro' do
       expect(account.fonds_euro).to match_array(
         [
-          an_instance_of(Finary::FondsEuro)
+          an_instance_of(Finary::User::FondsEuro)
+        ]
+      )
+    end
+  end
+
+  describe '.all' do
+    subject(:get_holdings_accounts) do
+      described_class.all
+    end
+
+    let(:finary_client) do
+      instance_double(Finary::Client, get_user_holdings_accounts: [account_attributes])
+    end
+
+    it 'uses the HTTP client' do
+      get_holdings_accounts
+
+      expect(finary_client).to have_received(:get_user_holdings_accounts)
+    end
+
+    it 'returns the accounts' do
+      expect(get_holdings_accounts).to match_array(
+        [
+          an_instance_of(described_class)
         ]
       )
     end

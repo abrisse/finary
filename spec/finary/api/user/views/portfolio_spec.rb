@@ -2,13 +2,13 @@
 
 require 'spec_helper'
 
-describe Finary::Views::Portfolio do
+describe Finary::User::Views::Portfolio do
   subject(:portfolio) do
     described_class.new(portfolio_attributes)
   end
 
   let(:portfolio_attributes) do
-    load_json('finary', 'etc', 'views', 'portfolio.json')
+    load_json('user', 'views', 'portfolio.json')
   end
 
   describe '#last_user_sync_at' do
@@ -19,7 +19,7 @@ describe Finary::Views::Portfolio do
 
   describe '#data' do
     it 'returns a data' do
-      expect(portfolio.data).to be_a(Finary::Views::Data)
+      expect(portfolio.data).to be_a(Finary::User::Views::Data)
     end
   end
 

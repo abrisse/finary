@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe Finary::GenericAsset do
+describe Finary::User::GenericAsset do
   subject(:generic_asset) do
     described_class.new(generic_asset_attributes)
   end
@@ -16,7 +16,7 @@ describe Finary::GenericAsset do
   end
 
   let(:generic_asset_attributes) do
-    load_json('finary', 'etc', 'generic_asset.json')
+    load_json('user', 'generic_asset.json')
   end
 
   describe '#id' do
@@ -85,13 +85,7 @@ describe Finary::GenericAsset do
     end
 
     let(:finary_client) do
-      instance_double(Finary::Client, get_user_generic_assets: attributes)
-    end
-
-    let(:attributes) do
-      [
-        load_json('finary', 'etc', 'generic_asset.json')
-      ]
+      instance_double(Finary::Client, get_user_generic_assets: [generic_asset_attributes])
     end
 
     it 'uses the HTTP client' do
@@ -106,6 +100,26 @@ describe Finary::GenericAsset do
           an_instance_of(described_class)
         ]
       )
+    end
+  end
+
+  describe '.get' do
+    subject(:get_generic_asset) do
+      described_class.get(42)
+    end
+
+    let(:finary_client) do
+      instance_double(Finary::Client, get_user_generic_asset: generic_asset_attributes)
+    end
+
+    it 'uses the HTTP client' do
+      get_generic_asset
+
+      expect(finary_client).to have_received(:get_user_generic_asset).with(42)
+    end
+
+    it 'returns the generic asset' do
+      expect(get_generic_asset).to be_an_instance_of(described_class)
     end
   end
 
@@ -125,11 +139,7 @@ describe Finary::GenericAsset do
     end
 
     let(:finary_client) do
-      instance_double(Finary::Client, add_user_generic_asset: attributes)
-    end
-
-    let(:attributes) do
-      load_json('finary', 'etc', 'generic_asset.json')
+      instance_double(Finary::Client, add_user_generic_asset: generic_asset_attributes)
     end
 
     it 'uses the HTTP client' do

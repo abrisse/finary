@@ -8,7 +8,7 @@ describe Finary::Security do
   end
 
   let(:security_attributes) do
-    load_json('finary', 'etc', 'security.json')
+    load_json('security.json')
   end
 
   describe '#slug' do

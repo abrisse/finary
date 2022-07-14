@@ -8,7 +8,7 @@ describe Finary::Crypto do
   end
 
   let(:crypto_attributes) do
-    load_json('finary', 'etc', 'crypto.json')
+    load_json('crypto.json')
   end
 
   describe '#id' do

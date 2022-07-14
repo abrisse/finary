@@ -2,13 +2,13 @@
 
 require 'spec_helper'
 
-describe Finary::Investments do
+describe Finary::User::Investments do
   subject(:investments) do
     described_class.new(dasboard_attributes)
   end
 
   let(:dasboard_attributes) do
-    load_json('finary', 'etc', 'investments.json')
+    load_json('user', 'investments.json')
   end
 
   describe '#total' do
@@ -21,8 +21,8 @@ describe Finary::Investments do
     it 'returns an array of accounts' do
       expect(investments.accounts).to match_array(
         [
-          an_instance_of(Finary::Account),
-          an_instance_of(Finary::Account)
+          an_instance_of(Finary::User::Account),
+          an_instance_of(Finary::User::Account)
         ]
       )
     end

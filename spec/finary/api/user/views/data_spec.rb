@@ -2,13 +2,13 @@
 
 require 'spec_helper'
 
-describe Finary::Views::Data do
+describe Finary::User::Views::Data do
   subject(:data) do
     described_class.new(data_attributes)
   end
 
   let(:data_attributes) do
-    load_json('finary', 'etc', 'views', 'data.json')
+    load_json('user', 'views', 'data.json')
   end
 
   describe '#assets' do

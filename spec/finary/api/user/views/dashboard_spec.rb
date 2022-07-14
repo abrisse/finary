@@ -2,13 +2,13 @@
 
 require 'spec_helper'
 
-describe Finary::Views::Dashboard do
+describe Finary::User::Views::Dashboard do
   subject(:dashboard) do
     described_class.new(dasboard_attributes)
   end
 
   let(:dasboard_attributes) do
-    load_json('finary', 'etc', 'views', 'dashboard.json')
+    load_json('user', 'views', 'dashboard.json')
   end
 
   describe '#last_user_sync_at' do

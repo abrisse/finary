@@ -1,0 +1,192 @@
+{
+  "profile": {
+    "safety_net": 10.518857142857144,
+    "debt_ratio": 86.36030769230769,
+    "risk_rating": 4.439322571310492
+  },
+  "ranking": {
+    "france_ranking": 1,
+    "finary_ranking": 5
+  },
+  "performance": {
+    "total": {
+      "gross": "1992390.813638043",
+      "net": "1266208.013273242",
+      "finary": "680985.5736380434",
+      "evolution": "-17632.26527704438",
+      "evolution_percent": -0.8469895710468162
+    },
+    "losers": [
+      {
+        "name": "Résidence Principale",
+        "start_value": 479200.0,
+        "end_value": 467200.0,
+        "upnl": 17200.0,
+        "upnl_percent": 3.8222222222222224,
+        "evolution": -12000.0,
+        "evolution_percent": -2.5041736227045077,
+        "logo_url": null
+      },
+      {
+        "name": "Bitcoin",
+        "start_value": 135561.9234203163,
+        "end_value": 84419.64036589436,
+        "upnl": -2915.9216489727455,
+        "upnl_percent": -3.3387563802204374,
+        "evolution": -10524.445228187487,
+        "evolution_percent": -7.763570302522145,
+        "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/7eay4nsnqs7498qebixj5lxi4mnn?response-content-disposition=inline%3B%20filename%3D%22BTC.png%22%3B%20filename%2A%3DUTF-8%27%27BTC.png\u0026response-content-type=image%2Fpng\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220713%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20220713T221239Z\u0026X-Amz-Expires=300\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=bd03580d8b071aebe6f4dfc323f2ac6f9f2ff4ef52682d3e113f8d5cb5b9139e"
+      },
+      {
+        "name": "Alphabet Inc Class C",
+        "start_value": 225868.5256032961,
+        "end_value": 222780.27079688245,
+        "upnl": 218803.8114362971,
+        "upnl_percent": 5502.47825,
+        "evolution": -3140.837376730179,
+        "evolution_percent": -1.3905600031438576,
+        "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/y4isz0bigvehl1ff8u5cnd5u3pi4?response-content-disposition=inline%3B%20filename%3D%2260d9c219c14858517749cb02.png%22%3B%20filename%2A%3DUTF-8%27%2760d9c219c14858517749cb02.png\u0026response-content-type=image%2Fpng\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220713%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20220713T221239Z\u0026X-Amz-Expires=300\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=5ce05bbc08ff41749b690f939f8a1e794ba1af36e8c4aacb5f17493bd3de54c8"
+      },
+      {
+        "name": "Corum XL",
+        "start_value": 19500.0,
+        "end_value": 17160.0,
+        "upnl": -840.0,
+        "upnl_percent": -4.666666666666667,
+        "evolution": -2340.0,
+        "evolution_percent": -12.0,
+        "logo_url": null
+      },
+      {
+        "name": "Ethereum",
+        "start_value": 11614.96958995488,
+        "end_value": 10802.44949896612,
+        "upnl": 8402.44949896612,
+        "upnl_percent": 350.1020624569217,
+        "evolution": -812.5200909887544,
+        "evolution_percent": -6.995456033664147,
+        "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/ppvthrxc6p52ptcfiwge604e4hbj?response-content-disposition=inline%3B%20filename%3D%22ETH.png%22%3B%20filename%2A%3DUTF-8%27%27ETH.png\u0026response-content-type=image%2Fpng\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220713%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20220713T221239Z\u0026X-Amz-Expires=300\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=00685a95b9e497c242be69a449697c60ca190235d7bb73de9a825da71e1b7018"
+      }
+    ],
+    "gainers": [
+      {
+        "name": "Comgest Monde C",
+        "start_value": 48881.2,
+        "end_value": 50250.6,
+        "upnl": 250.6,
+        "upnl_percent": 0.5012,
+        "evolution": 1369.4,
+        "evolution_percent": 2.801486051897253,
+        "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/s1ny80bq91cjd2x7pw5e4fu7vv7p?response-content-disposition=inline%3B%20filename%3D%2260dac0b9fe43d817b02b10a0.png%22%3B%20filename%2A%3DUTF-8%27%2760dac0b9fe43d817b02b10a0.png\u0026response-content-type=image%2Fpng\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220713%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20220713T221239Z\u0026X-Amz-Expires=300\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=95cd4604c654b8dea1ab4e416f2023f3e3757ee6e999c9fa8f6c0d68ad1399c6"
+      },
+      {
+        "name": "Set 12 signes du Zodiaque",
+        "start_value": 31617.3,
+        "end_value": 32089.2,
+        "upnl": 31847.2,
+        "upnl_percent": 13160.0,
+        "evolution": 471.9,
+        "evolution_percent": 1.492537313432836,
+        "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/lxucyg0dvqdro3ybhydc7y7qyi3c?response-content-disposition=inline%3B%20filename%3D%22set%2012%20signes%20du%20zodiaque.png%22%3B%20filename%2A%3DUTF-8%27%27set%252012%2520signes%2520du%2520zodiaque.png\u0026response-content-type=image%2Fpng\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220713%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20220713T221239Z\u0026X-Amz-Expires=300\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=08ed0817499491e4d5915f63c413d874e02fc0f6fb2f7350ef6bf9ef1839db1d"
+      },
+      {
+        "name": "Amundi MSCI World UCITS ETF",
+        "start_value": 57714.0,
+        "end_value": 58024.5,
+        "upnl": 13024.5,
+        "upnl_percent": 28.94333333333333,
+        "evolution": 310.5,
+        "evolution_percent": 0.5379977128599647,
+        "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/v5d6tj3uiuepf7gibz72xgjh3n97?response-content-disposition=inline%3B%20filename%3D%2260d5b0e11afe104bb345a051.png%22%3B%20filename%2A%3DUTF-8%27%2760d5b0e11afe104bb345a051.png\u0026response-content-type=image%2Fpng\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220713%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20220713T221239Z\u0026X-Amz-Expires=300\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=07061207d79d57327c4920b4f6353223054d866645633334d0ffb3a41d345a64"
+      },
+      {
+        "name": "Uniris",
+        "start_value": 589.5405393192322,
+        "end_value": 867.6409476597977,
+        "upnl": 857.6409476597977,
+        "upnl_percent": 8576.409476597977,
+        "evolution": 278.1004083405655,
+        "evolution_percent": 47.17239778992976,
+        "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/01pyvxory57q45jf4o2fqfaj33n1?response-content-disposition=inline%3B%20filename%3D%22UCO.png%22%3B%20filename%2A%3DUTF-8%27%27UCO.png\u0026response-content-type=image%2Fpng\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220713%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20220713T221239Z\u0026X-Amz-Expires=300\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=25ff6fd76144515b292dcaba544c68df8752378a9ae4f0c88b2c9194375ecaa6"
+      },
+      {
+        "name": "Uniswap",
+        "start_value": 2624.09260349225,
+        "end_value": 2848.1390170192462,
+        "upnl": 1848.139017019246,
+        "upnl_percent": 184.8139017019246,
+        "evolution": 224.04641352699605,
+        "evolution_percent": 8.538052857922235,
+        "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/vrl3k8nz409ulpelcgs4bl4ni0zh?response-content-disposition=inline%3B%20filename%3D%22UNI.png%22%3B%20filename%2A%3DUTF-8%27%27UNI.png\u0026response-content-type=image%2Fpng\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=YLOINY6I2L3J622CI45G%2F20220713%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20220713T221239Z\u0026X-Amz-Expires=300\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=0ebce828e6ddd550e97b9ba1e87054c1f1860dd21b4a1d1dc217f55a2e7b346c"
+      }
+    ]
+  },
+  "fees": {
+    "total": {
+      "scpis": {
+        "amount": 783.31957746155,
+        "percent": 12.219738500196703
+      },
+      "securities": {
+        "amount": 1574.97413,
+        "percent": 1.2684361198231957
+      }
+    },
+    "worst": {
+      "scpis": [
+        {
+          "name": "Iroko Zen",
+          "amount": 59.71962616822429,
+          "ratio": 14.4
+        },
+        {
+          "name": "Corum XL",
+          "amount": 173.1815668202765,
+          "ratio": 13.2
+        },
+        {
+          "name": "Immorente",
+          "amount": 215.12727272727273,
+          "ratio": 12.0
+        },
+        {
+          "name": "Epargne Pierre",
+          "amount": 302.9069695592912,
+          "ratio": 11.96
+        },
+        {
+          "name": "Buroboutic",
+          "amount": 19.78434080717489,
+          "ratio": 10.8
+        }
+      ],
+      "securities": [
+        {
+          "name": "XBT Provider Bitcoin Tracker Euro Acc",
+          "amount": 110.33375,
+          "ratio": 2.5
+        },
+        {
+          "name": "SCI Viagénérations",
+          "amount": 30.25152,
+          "ratio": 2.34
+        },
+        {
+          "name": "Comgest Monde C",
+          "amount": 1135.66356,
+          "ratio": 2.26
+        },
+        {
+          "name": "Allianz Actions Euro PME-ETI",
+          "amount": 59.32728,
+          "ratio": 2.04
+        },
+        {
+          "name": "Amundi MSCI World UCITS ETF",
+          "amount": 220.4931,
+          "ratio": 0.38
+        }
+      ]
+    }
+  }
+}

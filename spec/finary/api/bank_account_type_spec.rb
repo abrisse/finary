@@ -8,7 +8,7 @@ describe Finary::BankAccountType do
   end
 
   let(:bank_attributes) do
-    load_json('finary', 'etc', 'bank_account_type.json')
+    load_json('bank_account_type.json')
   end
 
   describe '#id' do

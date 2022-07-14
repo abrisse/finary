@@ -72,6 +72,18 @@ module Finary
       true
     end
 
+    # Retrieves a specific user generic asset
+    #
+    # @return [Hash] the user generic asset
+    def get_user_generic_asset(id)
+      parse_response(
+        self.class.get(
+          "/users/me/generic_assets/#{id}",
+          headers: common_headers
+        )
+      )
+    end
+
     # Retrieves the user generic assets
     #
     # @return [Hash] the user generic assets
@@ -120,6 +132,65 @@ module Finary
     # Routes /users/me/cryptos
     #######################################
 
+    # Add a new user crypto
+    #
+    # @param [Hash] attributes the crypto attributes
+    #
+    # @return [Hash] the user crypto
+    def add_user_crypto(attributes)
+      parse_response(
+        self.class.post(
+          '/users/me/cryptos',
+          headers: common_headers,
+          body: attributes.to_json
+        )
+      )
+    end
+
+    # Update an existing user crypto
+    #
+    # @param [Integer] id the crypto id
+    # @param [Hash] attributes the crypto attributes
+    #
+    # @return [Hash] the user crypto
+    def update_user_crypto(id, attributes)
+      parse_response(
+        self.class.put(
+          "/users/me/cryptos/#{id}",
+          headers: common_headers,
+          body: attributes.to_json
+        )
+      )
+    end
+
+    # Delete an existing user crypto
+    #
+    # @param [Integer] id the crypto id
+    #
+    # @return [Bool] returns true if successful
+    def delete_user_crypto(id)
+      parse_response(
+        self.class.delete(
+          "/users/me/cryptos/#{id}",
+          headers: common_headers
+        )
+      )
+
+      true
+    end
+
+    # Retrieves a specific user crypto
+    #
+    # @return [Hash] the user crypto
+    def get_user_crypto(id)
+      parse_response(
+        self.class.get(
+          "/users/me/cryptos/#{id}",
+          headers: common_headers
+        )
+      )
+    end
+
     # Retrieves the user cryptos
     #
     # @return [Hash] the user cryptos
@@ -158,7 +229,7 @@ module Finary
     # @param [Hash] the view parameters
     #
     # @return [Hash] the user view
-    def get_user_view(type, params)
+    def get_user_view(type, params = {})
       parse_response(
         self.class.get(
           "/users/me/views/#{type}",
