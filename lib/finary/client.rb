@@ -243,21 +243,14 @@ module Finary
 
     attr_reader :login, :password, :access_token
 
-    # @private
-    #
-    # @return [Logger] a usable logger
-    def logger
-      @logger ||= ::Logger.new($stdout)
-    end
-
     def parse_response(response)
       if response.success?
         log_x_runtime(response)
 
         JSON.parse(response.body, symbolize_names: true)[:result] if response.body
       else
-        logger.debug "Request error #{response.code}"
-        logger.debug response.body
+        Finary.logger.debug "Request error #{response.code}"
+        Finary.logger.debug response.body
         raise StandardError, "Request error #{response.code}"
       end
     end
@@ -265,7 +258,7 @@ module Finary
     def log_x_runtime(response)
       return unless (runtime = response.headers[:'x-runtime'])
 
-      logger.debug "Request took #{(runtime.to_f * 1_000).to_i}ms"
+      Finary.logger.debug "Request took #{(runtime.to_f * 1_000).to_i}ms"
     end
 
     def common_headers

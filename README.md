@@ -10,6 +10,8 @@ This gem is a working in progress project and has not a stable API yet. Its matu
 * import any data from any source not yet supported by Finary
 * build extra reporting features
 
+It includes some extra features like external providers import (see [External Providers import](https://github.com/abrisse/finary#external-providers-import))
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -232,6 +234,33 @@ client.get_user_loans
 client.get_user_view(:dashboard, type: 'finary', period: '1w')
 # ...
 ````
+
+### External Providers import
+
+This gem allows the user to synchronize his Finary account with an external provider.
+
+Currently supported providers:
+
+| Provider   |      Sync Type      |
+|----------|:-------------:|
+| [Anaxago](https://www.anaxago.com/) |  CSV |
+
+### Axanago
+
+The Anaxago Provider allows to automatically sync your Anaxago investments with your Finary Account.
+
+Each waiting & ongoing Anaxago investment will be synchonized with a dedicated `Generic Asset` on Finary side:
+
+* new investments are created
+* ongoing investments are updated (notably the current price)
+* finished invesments are removed
+
+To run a sync, you need to download your Anaxago table investments as CSV file using [this link](https://app.anaxago.com/investments/table)
+(click on the upper button `Télécharger`)
+
+```ruby
+Finary::Providers::Anaxago.new('Portefeuille Anaxago 01-01-2022.csv').sync
+```
 
 ## Development
 

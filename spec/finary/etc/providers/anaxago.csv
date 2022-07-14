@@ -1,0 +1,22 @@
+Portefeuille Anaxago
+--------------------
+John Doe : Portefeuille en date du 01 janvier 2020
+Investissements terminés : 1
+Investissements en cours : 3
+Investissements en attente : 1
+
+Investissements terminés
+------------------------
+Opération,Emetteur,Cible,Classe d'actif,Date de jouissance,Durée (en mois),Multiple,TRI brut constaté,Capital investi,Intérêts/plus-value,Total
+Opé A,OBJECTIF CONSTRUCTION 156,HOLDINVAL,Crowdfunding immobilier,24 juil. 2020,24,1.12,8.7%,2500,304.21,2804.21
+
+Investissements en cours
+------------------------
+Opération,Emetteur,Cible,Classe d'actif,Date de jouissance,Durée restante (en mois),Rendement cible,Santé,Capital restant,Plus-value latente,Versés,Valeur
+Opé B,OBJECTIF CONSTRUCTION 154,BRICQUEVILLE,Crowdfunding immobilier,19 juin 2020,12,11%,Prorogation demandée,1663,532.07,837,3032.07
+Opé C,OBJECTIF CONSTRUCTION 153,SIGLA NEUF,Crowdfunding immobilier,16 juil. 2020,1,9%,Rien à signaler,1475,432.85,1025,2932.85
+
+Investissements en attente
+--------------------------
+Opération,Emetteur,Cible,Classe d'actif,Date de jouissance,Durée cible (en mois),Rendement cible,Capital investi
+Opé E,OBJECTIF CONSTRUCTION 188,MEAUX,Crowdfunding immobilier,sept.-2022,,10%,2000

@@ -23,9 +23,16 @@ module Finary
       access_token: configuration.access_token
     )
   end
+
+  # Returns a usable logger
+  #
+  # @return [Logger] a usable logger
+  def self.logger
+    @logger ||= ::Logger.new($stdout)
+  end
 end
 
 require_relative 'finary/configuration'
 require_relative 'finary/api'
-
 require_relative 'finary/client'
+require_relative 'finary/providers'
