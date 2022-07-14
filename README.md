@@ -17,7 +17,9 @@ It includes some extra features like external providers import (see [External Pr
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'finary', github: 'abrisse/finary'
+source 'https://rubygems.org'
+
+gem 'finary', git: 'https://github.com/abrisse/finary.git', branch: 'main'
 ```
 
 And then execute:
