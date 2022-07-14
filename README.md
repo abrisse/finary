@@ -39,14 +39,41 @@ Finary.configure do |config|
 end
 ```
 
-### User class
+### Overview
 
-The `User` class is the main class and represents a specific user. To work with the loggued user `me`, you can call `Finary.me`.
+This gem provides one class to interact with a CRUD set of routes (like `users/generic_assets`).
 
-It allows to use the Finary API with a high level abstraction and returns only high level Ruby classes that relies on `Dry::Struct`.
+Generally each class has 5 methods:
+
+| Method   |      Description      |
+|----------|:-------------:|
+| `.all` |  retrieve all the items |
+| `.get(:id)` |  get a specific item |
+| `.create(params)` |  create a new item |
+| `#update(:id, params)` |  updates the item |
+| `#delete` |  deletes the item |
+
+### User > Views
 
 ```ruby
-pp Finary.me.get_cryptos[0].attributes.keys
+# Get the dashboard view, net amounts on the last month
+Finary::User::Views.dashboard(type: 'net', period: '1m')
+
+# Get the portfolio view on the last week
+Finary::User::Views.portfolio(period: '1w')
+```
+
+### User > Cryptos
+
+```ruby
+# Retrieve all the cryptos
+cryptos = Finary::User::Crypto.all
+
+# Get a specific crypto
+Finary::User::Crypto.get(42)
+
+# List the attributes
+securities[0].attributes.keys
 
 # [:id,
 #  :crypto,
@@ -59,7 +86,34 @@ pp Finary.me.get_cryptos[0].attributes.keys
 #  :unrealized_pnl_percent,
 #  :account]
 
-pp Finary.me.get_generic_assets[0].attributes.keys
+# Create a new crypto
+crypto = Finary::User::Crypto.add(
+  quantity: 100, 
+  buying_price: 10,
+  correlation_id: '61a8d7bd2c1653d2c4808e8a',
+  holdings_account: {
+    id: 'edd89abd-48a7-426e-9626-c6bb52063de0'
+  }
+)
+
+# Update the crypto
+updated_crypto = crypto.update(quantity: 110, buying_price: 11)
+
+# Delete the crypto
+updated_crypto.delete
+```
+
+### User > Generic Assets
+
+```ruby
+# Retrieve all the generic assets
+assets = Finary::User::GenericAsset.all
+
+# Get a specific generic asset
+Finary::User::GenericAsset.get(42)
+
+# List the attributes
+securities[0].attributes.keys
 
 # [:id,
 #  :name,
@@ -72,7 +126,30 @@ pp Finary.me.get_generic_assets[0].attributes.keys
 #  :unrealized_pnl,
 #  :unrealized_pnl_percent]
 
-pp Finary.me.get_holdings_accounts[0].attributes.keys
+# Create a new generic asset
+asset = Finary::User::GenericAsset.add(
+  buying_price: 1000,
+  category: 'real_estate_crowdfunding',
+  current_price: 1000,
+  name: 'Anaxago - Projet X',
+  quantity: 2
+)
+
+# Update the generic asset
+updated_asset = asset.update(current_price: 1200, name: 'Anaxago > Projet X')
+
+# Delete the generic asset
+updated_asset.delete
+```
+
+### User > Holding Accounts
+
+```ruby
+# Retrieve all the holding accounts
+accounts = Finary::User::Account.all
+
+# List the attributes
+securities[0].attributes.keys
 
 # [:slug,
 #  :id,
@@ -89,8 +166,16 @@ pp Finary.me.get_holdings_accounts[0].attributes.keys
 #  :cryptos,
 #  :securities,
 #  :fonds_euro]
+```
 
-pp Finary.me.get_loans[0].attributes.keys
+### User > Loans
+
+```ruby
+# Retrieve all the loans
+loans = Finary::User::Loan.all
+
+# List the attributes
+securities[0].attributes.keys
 
 # [:id,
 #  :loan_type,
@@ -110,8 +195,16 @@ pp Finary.me.get_loans[0].attributes.keys
 #  :outstanding_amount,
 #  :outstanding_capital,
 #  :contribution]
+```
 
-pp Finary.me.get_securities[0].attributes.keys
+### User > Securities
+
+```ruby
+# Retrieve all the securities
+securities = Finary::User::Security.all
+
+# List the attributes
+securities[0].attributes.keys
 
 # [:id,
 #  :security,
@@ -121,19 +214,11 @@ pp Finary.me.get_securities[0].attributes.keys
 #  :unrealized_pnl_percent,
 #  :buying_price,
 #  :account]
-
-pp Finary.me.get_view_dashboard(type: 'finary', period: '1w').attributes.keys
-
-# [:timeseries, :data, :last_user_sync_at]
-
-pp Finary.me.get_view_portfolio(period: '1m').attributes.keys
-
-# [:timeseries, :data, :last_user_sync_at]
 ```
 
 ### HTTP Client
 
-The `Finary::Client` allows to request the Finary API directly
+The `Finary::Client` allows to request the Finary API routes directly
 and returns the parsed JSON body.
 
 ```ruby
@@ -145,6 +230,7 @@ client.get_user_securities
 client.get_user_cryptos
 client.get_user_loans
 client.get_user_view(:dashboard, type: 'finary', period: '1w')
+# ...
 ````
 
 ## Development
