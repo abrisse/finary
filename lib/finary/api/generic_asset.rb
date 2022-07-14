@@ -14,5 +14,43 @@ module Finary
     attribute :current_price, Types::Coercible::Float
     attribute :unrealized_pnl, Types::RoundedFloat.optional
     attribute :unrealized_pnl_percent, Types::RoundedFloat.optional
+
+    # Returns all the generic assets
+    #
+    # @return [Array<Finary::GenericAsset>] the generic assets
+    def self.all
+      Finary.client.get_user_generic_assets.map do |generic_asset_attributes|
+        new(generic_asset_attributes)
+      end
+    end
+
+    # Add a new generic asset
+    #
+    # @param [Hash] attributes the asset attributes
+    #
+    # @return [Finary::GenericAsset] the user generic asset
+    def self.create(attributes)
+      new(
+        Finary.client.add_user_generic_asset(attributes)
+      )
+    end
+
+    # Update a generic asset
+    #
+    # @param [Hash] attributes the asset attributes
+    #
+    # @return [Finary::GenericAsset] the user generic asset
+    def update(attributes)
+      new(
+        Finary.client.update_user_generic_asset(id, attributes)
+      )
+    end
+
+    # Delete a generic asset
+    #
+    # @return [Bool] returns true if successful
+    def delete
+      Finary.client.delete_user_generic_asset(id)
+    end
   end
 end

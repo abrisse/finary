@@ -29,46 +29,6 @@ module Finary
       end
     end
 
-    # Returns the user generic assets
-    #
-    # @return [Array<Finary::GenericAsset>] the user generic assets
-    def get_generic_assets
-      Finary.client.get_user_generic_assets.map do |generic_asset_attributes|
-        GenericAsset.new(generic_asset_attributes)
-      end
-    end
-
-    # Add a new generic asset
-    #
-    # @param [Hash] attributes the asset attributes
-    #
-    # @return [Finary::GenericAsset] the user generic asset
-    def add_generic_asset(attributes)
-      GenericAsset.new(
-        Finary.client.add_user_generic_asset(attributes)
-      )
-    end
-
-    # Update a generic asset
-    #
-    # @param [Integer] id the asset ID
-    # @param [Hash] attributes the asset attributes
-    #
-    # @return [Finary::GenericAsset] the user generic asset
-    def update_generic_asset(id, attributes)
-      GenericAsset.new(
-        Finary.client.update_user_generic_asset(id, attributes)
-      )
-    end
-
-    # Delete a generic asset
-    #
-    # @param [Integer] id the asset ID
-    # @return [Bool] returns true if successful
-    def delete_generic_asset(id)
-      Finary.client.delete_user_generic_asset(id)
-    end
-
     # Returns the user holdings accounts
     #
     # @return [Array<Finary::Account>] the user holdings accounts
@@ -117,6 +77,17 @@ module Finary
       attributes = Finary.client.get_user_view(:portfolio, period: period)
 
       Views::Portfolio.new(attributes)
+    end
+
+    # Returns the user insights view
+    #
+    # @param [String] type the period ("all", "1w", "1m", "ytd", "1y")
+    #
+    # @return [Finary::Views::Portfolio] the user portfolio view
+    def get_view_insights
+      attributes = Finary.client.get_user_view(:insights)
+
+      Views::Insights.new(attributes)
     end
   end
 end
