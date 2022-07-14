@@ -15,5 +15,14 @@ module Finary
 
     attribute :crypto, Crypto
     attribute? :account, Account
+
+    # Returns the user cryptos
+    #
+    # @return [Array<Finary::CryptoEntry>] the user cryptos
+    def self.all
+      Finary.client.get_user_cryptos.map do |crypto_attributes|
+        new(crypto_attributes)
+      end
+    end
   end
 end

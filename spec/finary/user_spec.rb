@@ -27,36 +27,6 @@ describe Finary::User do
     end
   end
 
-  describe '#get_cryptos' do
-    subject(:get_cryptos) do
-      user.get_cryptos
-    end
-
-    let(:finary_client) do
-      instance_double(Finary::Client, get_user_cryptos: attributes)
-    end
-
-    let(:attributes) do
-      [
-        load_json('finary', 'etc', 'crypto_entry.json')
-      ]
-    end
-
-    it 'uses the HTTP client' do
-      get_cryptos
-
-      expect(finary_client).to have_received(:get_user_cryptos)
-    end
-
-    it 'returns the security entries' do
-      expect(get_cryptos).to match_array(
-        [
-          an_instance_of(Finary::CryptoEntry)
-        ]
-      )
-    end
-  end
-
   describe '#get_holdings_accounts' do
     subject(:get_holdings_accounts) do
       user.get_holdings_accounts
