@@ -6,6 +6,7 @@ PATH
       httparty (~> 0.20)
       irb (~> 1.4)
       mongoid (>= 6, < 8)
+      nokogiri (~> 1)
       rake (~> 13)
 
 GEM
@@ -74,9 +75,12 @@ GEM
       mongo (>= 2.10.5, < 3.0.0)
       ruby2_keywords (~> 0.0.5)
     multi_xml (0.6.0)
+    nokogiri (1.13.7-x86_64-linux)
+      racc (~> 1.4)
     parallel (1.22.1)
     parser (3.1.2.0)
       ast (~> 2.4.1)
+    racc (1.6.0)
     rainbow (3.1.1)
     rake (13.0.6)
     regexp_parser (2.5.0)
@@ -144,6 +148,7 @@ DEPENDENCIES
   rubocop (~> 1.30)
   rubocop-performance (~> 1.10)
   rubocop-rspec (~> 2)
+  simplecov
 
 BUNDLED WITH
    1.17.3
