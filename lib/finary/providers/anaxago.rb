@@ -40,14 +40,23 @@ module Finary
         end
       end
 
+      # The ongoing / waiting Anaxago investments
+      #
+      # @return [Array<Hash>] the Anaxago investments
       def investments
-        ongoing_investments.concat(waiting_investments)
+        ongoing_investments + waiting_investments
       end
 
+      # The ongoing Anaxago investments
+      #
+      # @return [Array<Hash>] the Anaxago investments
       def ongoing_investments
         @ongoing_investments ||= build_investments(:ongoing)
       end
 
+      # The waiting Anaxago investments
+      #
+      # @return [Array<Hash>] the Anaxago investments
       def waiting_investments
         @waiting_investments ||= build_investments(:waiting)
       end

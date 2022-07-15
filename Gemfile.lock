@@ -148,6 +148,7 @@ DEPENDENCIES
   rubocop (~> 1.30)
   rubocop-performance (~> 1.10)
   rubocop-rspec (~> 2)
+  simplecov
 
 BUNDLED WITH
    1.17.3

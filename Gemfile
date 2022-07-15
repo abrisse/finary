@@ -11,6 +11,7 @@ group :test do
   gem 'rubocop', '~> 1.30'
   gem 'rubocop-performance', '~> 1.10'
   gem 'rubocop-rspec', '~> 2'
+  gem 'simplecov'
 end
 
 gemspec
