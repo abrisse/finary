@@ -265,14 +265,14 @@ To run a sync, you need to download your Anaxago table investments as CSV file u
 Finary::Providers::Anaxago.new('Portefeuille Anaxago 01-01-2022.csv').sync
 ```
 
-## Homunity
+### Homunity
 
 The Homunity Provider allows to automatically sync your Homunity investments with your Finary Account.
 
 Each Homunity investment will be synchonized with a dedicated `Generic Asset` on Finary side:
 
 * new investments are created
-* ongoing investments are updated (notably the current price)
+* ongoing investments are updated
 * finished investments are removed
 
 To run a sync, you need to provide the PHPSESSID contained in the website cookie after the login
