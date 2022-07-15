@@ -6,3 +6,4 @@ module Finary
 end
 
 require_relative 'providers/anaxago'
+require_relative 'providers/homunity'

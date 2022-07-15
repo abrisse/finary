@@ -243,9 +243,10 @@ This gem allows the user to synchronize his Finary account with an external prov
 
 Currently supported providers:
 
-| Provider   |      Sync Type      |
-|----------|:-------------:|
-| [Anaxago](https://www.anaxago.com/) |  CSV |
+| Provider   |      Sync Type      |      Unrealized capital gains?      |
+|----------|:-------------:|:-------------:|
+| [Anaxago](https://www.anaxago.com/) |  CSV | Yes |
+| [Homunity](https://www.homunity.com/) |  Website | No |
 
 ### Axanago
 
@@ -262,6 +263,23 @@ To run a sync, you need to download your Anaxago table investments as CSV file u
 
 ```ruby
 Finary::Providers::Anaxago.new('Portefeuille Anaxago 01-01-2022.csv').sync
+```
+
+## Homunity
+
+The Homunity Provider allows to automatically sync your Homunity investments with your Finary Account.
+
+Each Homunity investment will be synchonized with a dedicated `Generic Asset` on Finary side:
+
+* new investments are created
+* ongoing investments are updated (notably the current price)
+* finished investments are removed
+
+To run a sync, you need to provide the PHPSESSID contained in the website cookie after the login
+on the website ([link](https://www.homunity.com/fr/login)).
+
+```ruby
+Finary::Providers::Homunity.new('tgA584JGXxus5FQTWGovPBrjvM').sync
 ```
 
 ## Development
