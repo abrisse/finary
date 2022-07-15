@@ -14,7 +14,7 @@ It includes some extra features like external providers import (see [External Pr
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add these lines to your application's Gemfile:
 
 ```ruby
 source 'https://rubygems.org'
@@ -77,7 +77,7 @@ cryptos = Finary::User::Crypto.all
 Finary::User::Crypto.get(42)
 
 # List the attributes
-securities[0].attributes.keys
+cryptos[0].attributes.keys
 
 # [:id,
 #  :crypto,
@@ -117,7 +117,7 @@ assets = Finary::User::GenericAsset.all
 Finary::User::GenericAsset.get(42)
 
 # List the attributes
-securities[0].attributes.keys
+assets[0].attributes.keys
 
 # [:id,
 #  :name,
@@ -153,7 +153,7 @@ updated_asset.delete
 accounts = Finary::User::Account.all
 
 # List the attributes
-securities[0].attributes.keys
+accounts[0].attributes.keys
 
 # [:slug,
 #  :id,
@@ -179,7 +179,7 @@ securities[0].attributes.keys
 loans = Finary::User::Loan.all
 
 # List the attributes
-securities[0].attributes.keys
+loans[0].attributes.keys
 
 # [:id,
 #  :loan_type,
@@ -255,7 +255,7 @@ Each waiting & ongoing Anaxago investment will be synchonized with a dedicated `
 
 * new investments are created
 * ongoing investments are updated (notably the current price)
-* finished invesments are removed
+* finished investments are removed
 
 To run a sync, you need to download your Anaxago table investments as CSV file using [this link](https://app.anaxago.com/investments/table)
 (click on the upper button `Télécharger`)
