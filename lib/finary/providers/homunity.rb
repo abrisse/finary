@@ -32,12 +32,9 @@ module Finary
       end
 
       def retrieve_page_projects(page)
-        html = HTTParty.get("https://www.homunity.com/fr/user/projects?page=#{page}",
-          headers: common_headers).body
+        html = get_page_projects(page)
 
-        parsed_data = Nokogiri::HTML.parse(html)
-
-        parsed_data.xpath('//*[@id="projects"]/div[contains(@class, "invest")]').map do |xml_project|
+        html.xpath('//*[@id="projects"]/div[contains(@class, "invest")]').map do |xml_project|
           name = xml_project
             .at_xpath('.//div[contains(@class, "preview")]//span[contains(@class, "name")]/@title')
             .value
@@ -47,6 +44,23 @@ module Finary
 
           build_investment(name, amount)
         end
+      end
+
+      def get_page_projects(page)
+        response = HTTParty.get(
+          "https://www.homunity.com/fr/user/projects?page=#{page}",
+          headers: common_headers
+        )
+
+        html = Nokogiri::HTML.parse(response.body)
+
+        if html.at_xpath('//*[@id="login"]')
+          Finary.logger.debug '[Homunity] Invalid or expired PHPSESSID'
+
+          raise StandardError, '[Homunity] Invalid or expired PHPSESSID'
+        end
+
+        html
       end
 
       def common_headers
