@@ -246,6 +246,7 @@ Currently supported providers:
 | Provider   |      Sync Type      |      Unrealized capital gains?      |
 |----------|:-------------:|:-------------:|
 | [Anaxago](https://www.anaxago.com/) |  CSV | Yes |
+| [ClubFunding](https://www.clubfunding.fr/) |  API | No |
 | [Homunity](https://www.homunity.com/) |  Website | No |
 
 ### Axanago
@@ -263,6 +264,22 @@ To run a sync, you need to download your Anaxago table investments as CSV file u
 
 ```ruby
 Finary::Providers::Anaxago.new('Portefeuille Anaxago 01-01-2022.csv').sync
+```
+
+### ClubFunding
+
+The ClubFunding Provider allows to automatically sync your ClubFunding investments with your Finary Account.
+
+Each ClubFunding investment will be synchonized with a dedicated `Generic Asset` on Finary side:
+
+* new investments are created
+* ongoing investments are updated
+* finished investments are removed
+
+To run a sync, you need to provide your login/password.
+
+```ruby
+Finary::Providers::ClubFunding.new(email: 'john.doe@gmail.com', password: 'password').sync
 ```
 
 ### Homunity

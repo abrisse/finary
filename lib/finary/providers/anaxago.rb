@@ -4,7 +4,7 @@ require 'csv'
 
 module Finary
   module Providers
-    class Anaxago
+    class Anaxago < Base
       attr_reader :path
 
       LABEL_MAPPING = {
@@ -13,57 +13,37 @@ module Finary
         finished: 'Investissements terminés'
       }.freeze
 
+      PROVIDER_NAME = 'Anaxago'
+
       # Instanciate an Anaxago Provider
       #
       # @param [String] path the CSV path
       def initialize(path)
         @path = path
-      end
-
-      # Run the synchronization
-      def sync
-        current_anaxago_assets = build_current_anaxago_assets
-
-        investments.each do |asset_attributes|
-          if (asset = current_anaxago_assets.delete(asset_attributes[:name]))
-            Finary.logger.debug "Update generic asset #{asset_attributes[:name]}"
-            asset.update(asset_attributes)
-          else
-            Finary.logger.debug "Add generic asset #{asset_attributes[:name]}"
-            Finary::User::GenericAsset.create(asset_attributes)
-          end
-        end
-
-        current_anaxago_assets.each_value do |asset|
-          Finary.logger.debug "Remove generic asset #{asset.name}"
-          asset.delete
-        end
-      end
-
-      # The ongoing / waiting Anaxago investments
-      #
-      # @return [Array<Hash>] the Anaxago investments
-      def investments
-        ongoing_investments + waiting_investments
+        super()
       end
 
       # The ongoing Anaxago investments
       #
       # @return [Array<Hash>] the Anaxago investments
       def ongoing_investments
-        @ongoing_investments ||= build_investments(:ongoing)
+        build_anaxago_investments(:ongoing)
       end
 
       # The waiting Anaxago investments
       #
       # @return [Array<Hash>] the Anaxago investments
       def waiting_investments
-        @waiting_investments ||= build_investments(:waiting)
+        build_anaxago_investments(:waiting)
       end
 
       private
 
-      def build_investments(type)
+      def build_investments
+        ongoing_investments + waiting_investments
+      end
+
+      def build_anaxago_investments(type)
         step = 0
         invests = []
 
@@ -87,7 +67,7 @@ module Finary
         parts = CSV.new(str).first
 
         attributes = {
-          name: "[Anaxago] #{clean_name(parts[0])}",
+          name: [prefix, clean_name(parts[0])].join(' '),
           category: 'real_estate_crowdfunding',
           buying_price: 1
         }
@@ -103,20 +83,6 @@ module Finary
             quantity: parts[7].to_i,
             current_price: 1
           })
-        end
-      end
-
-      def clean_name(name)
-        name.tr('&', '-')
-      end
-
-      def build_current_anaxago_assets
-        anaxago_assets = Finary::User::GenericAsset.all.keep_if do |a|
-          a.name.start_with?('[Anaxago]')
-        end
-
-        anaxago_assets.each_with_object({}) do |a, h|
-          h[a.name] = a
         end
       end
     end
