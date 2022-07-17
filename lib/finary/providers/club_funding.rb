@@ -4,8 +4,10 @@ require 'nokogiri'
 
 module Finary
   module Providers
-    class ClubFunding
+    class ClubFunding < Base
       attr_reader :jwt_token
+
+      PROVIDER_NAME = 'ClubFunding'
 
       # Instanciate a ClubFunding Provider
       #
@@ -14,33 +16,7 @@ module Finary
       def initialize(email:, password:)
         @email = email
         @password = password
-      end
-
-      # Run the synchronization
-      def sync
-        current_club_funding_assets = build_current_club_funding_assets
-
-        investments.each do |asset_attributes|
-          if (asset = current_club_funding_assets.delete(asset_attributes[:name]))
-            Finary.logger.debug "Update generic asset #{asset_attributes[:name]}"
-            asset.update(asset_attributes)
-          else
-            Finary.logger.debug "Add generic asset #{asset_attributes[:name]}"
-            Finary::User::GenericAsset.create(asset_attributes)
-          end
-        end
-
-        current_club_funding_assets.each_value do |asset|
-          Finary.logger.debug "Remove generic asset #{asset.name}"
-          asset.delete
-        end
-      end
-
-      # Retrieve and return the ClubFunding investments
-      #
-      # @return [Array<Hash>] the ClubFunding investments
-      def investments
-        @investments ||= build_investments
+        super()
       end
 
       private
@@ -63,7 +39,7 @@ module Finary
 
       def build_investment(invest)
         {
-          name: "[ClubFunding] #{clean_name(invest[:project_name])}",
+          name: [prefix, clean_name(invest[:project_name])].join(' '),
           category: 'real_estate_crowdfunding',
           buying_price: 1_000,
           quantity: clean_amount(invest[:amount_outstanding]) / 1_000,
@@ -73,20 +49,6 @@ module Finary
 
       def clean_amount(amount)
         amount.tr('^[0-9,]', '').to_i
-      end
-
-      def clean_name(name)
-        name.tr('&', '-')
-      end
-
-      def build_current_club_funding_assets
-        club_funding_assets = Finary::User::GenericAsset.all.keep_if do |a|
-          a.name.start_with?('[ClubFunding]')
-        end
-
-        club_funding_assets.each_with_object({}) do |a, h|
-          h[a.name] = a
-        end
       end
 
       class Client
