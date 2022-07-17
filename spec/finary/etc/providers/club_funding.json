@@ -1,0 +1,60 @@
+{
+  "avg_taux": "10,75 %",
+  "total_invested": "2 000 €",
+  "total_outstanding": "2 000,00 €",
+  "total_reimbursed": "0,00 €",
+  "ongoing_list": [
+    {
+      "invest_id": 22042,
+      "desc_date_emission": "29/06/2022",
+      "project_name": "Opé A",
+      "invested_amount": 2000,
+      "envelope_id": "404cc0a5-e46f-4c79-b09e-84d4c5275051",
+      "taux": 10.5,
+      "slug": "office-montaigne",
+      "reference": "CF-2022-000",
+      "code_isin": null,
+      "company_name": "FONCIERE X",
+      "capital_reimbursed": 0,
+      "amount_outstanding": "2 000,00 €",
+      "months_remaining": 8,
+      "payment_status": 1,
+      "duration": 9,
+      "maturity_date": "29/03/2023",
+      "public_reimbursement_date": "-",
+      "stat": null,
+      "project": null,
+      "envelopes": [
+        "7404cc0a5-e46f-4c79-b09e-84d4c5275051"
+      ],
+      "invested_amount_string": "1 000 €",
+      "taux_string": "10,50 %"
+    },
+    {
+      "invest_id": 22142,
+      "desc_date_emission": "13/07/2022",
+      "project_name": "Opé B",
+      "invested_amount": 2000,
+      "envelope_id": "8b9b6858-f51b-4a92-a157-703c6db52188",
+      "taux": 11,
+      "slug": "paris-tolbiac",
+      "reference": "CF-2022-001",
+      "code_isin": null,
+      "company_name": "SAS Y",
+      "capital_reimbursed": "1 000,00 €",
+      "amount_outstanding": "1 000,00 €",
+      "months_remaining": 23,
+      "payment_status": 1,
+      "duration": 24,
+      "maturity_date": "13/07/2024",
+      "public_reimbursement_date": "-",
+      "stat": null,
+      "project": null,
+      "envelopes": [
+        "8b9b6858-f51b-4a92-a157-703c6db52188"
+      ],
+      "invested_amount_string": "1 000 €",
+      "taux_string": "11,00 %"
+    }
+  ]
+}
