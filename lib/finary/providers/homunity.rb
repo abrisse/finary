@@ -42,8 +42,11 @@ module Finary
           amount = xml_project
             .xpath('.//div[contains(@class, "bloc")]//strong/text()')[0]
 
-          build_investment(name, amount)
-        end
+          status = xml_project
+            .xpath('.//div[@class="status"]//p/text()')[0]
+
+          build_investment(name, amount) unless status.to_s == 'Remboursé'
+        end.compact
       end
 
       def get_page_projects(page)
