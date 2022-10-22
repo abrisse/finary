@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency('httparty', '~> 0.20')
   gem.add_dependency('irb', '~> 1.4')
   gem.add_dependency('mongoid', '>= 6', '< 8')
-  gem.add_dependency('nokogiri', '~> 1')
+  gem.add_dependency('nokogiri', '~> 1', '>= 1.13.9')
   gem.add_dependency('rake', '~> 13')
 
   gem.metadata['rubygems_mfa_required'] = 'true'
