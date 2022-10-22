@@ -8,7 +8,7 @@ module Finary
       attribute :id, Types::String
       attribute :name, Types::String
       attribute :manual_type, Types::String.optional
-      attribute :last_sync_at, Types::Params::DateTime
+      attribute :last_sync_at, Types::Params::DateTime.optional
       attribute :balance, Types::RoundedFloat.optional
       attribute :upnl, Types::RoundedFloat.optional
       attribute :upnl_percent, Types::RoundedFloat.optional
