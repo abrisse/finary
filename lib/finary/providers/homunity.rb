@@ -39,13 +39,22 @@ module Finary
             .at_xpath('.//div[contains(@class, "preview")]//span[contains(@class, "name")]/@title')
             .value
 
+          annual_yield = xml_project
+          .at_xpath('.//div[contains(@class, "preview")]//a//span/text()[2]').content.strip
+
           amount = xml_project
             .xpath('.//div[contains(@class, "bloc")]//strong/text()')[0]
 
           status = xml_project
             .xpath('.//div[@class="status"]//p/text()')[0]
 
-          build_investment(name, amount) unless status.to_s == 'Remboursé'
+          attributes = {
+            amount: amount,
+            name: name,
+            annual_yield: annual_yield
+          }
+
+          build_investment(attributes) unless status.to_s == 'Remboursé'
         end.compact
       end
 
@@ -75,13 +84,14 @@ module Finary
         }
       end
 
-      def build_investment(label, amount)
-        amount = amount.text.tr('^[0-9]', '').to_i
+      def build_investment(attributes)
+        amount = attributes[:amount].text.tr('^[0-9]', '').to_i
 
         {
-          name: clean_name(label),
+          name: clean_name(attributes[:name]),
           initial_investment: amount,
-          current_price: amount
+          current_price: amount,
+          annual_yield: attributes[:annual_yield].delete(' %').to_f
         }
       end
     end
