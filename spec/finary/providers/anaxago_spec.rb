@@ -94,12 +94,16 @@ describe Finary::Providers::Anaxago do
         [
           {
             name: 'Opé B',
-            initial_investment: 1663.0,
+            annual_yield: 11.0,
+            start_date: Date.parse('2020-06-19'),
+            initial_investment: 1663,
             current_price: 2195.07
           },
           {
             name: 'Opé C',
-            initial_investment: 1475.0,
+            annual_yield: 9.0,
+            start_date: Date.parse('2023-01-16'),
+            initial_investment: 1475,
             current_price: 1907.85
           }
         ]
@@ -117,6 +121,8 @@ describe Finary::Providers::Anaxago do
         [
           {
             name: 'Opé E',
+            annual_yield: 10.0,
+            start_date: Date.parse('2022-09-01'),
             initial_investment: 2000.0,
             current_price: 2000.0
           }

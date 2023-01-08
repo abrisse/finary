@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'csv'
+require 'date'
 
 module Finary
   module Providers
@@ -14,6 +15,21 @@ module Finary
       }.freeze
 
       PROVIDER_NAME = 'Anaxago'
+
+      MONTH_MAPPING = {
+        'janv.' => 'january',
+        'févr.' => 'february',
+        'mars' => 'march',
+        'avr.' => 'april',
+        'mai' => 'may',
+        'juin' => 'june',
+        'juill.' => 'july',
+        'août' => 'august',
+        'sept.' => 'september',
+        'oct.' => 'october',
+        'nov.' => 'november',
+        'déc.' => 'december'
+      }.freeze
 
       # Instanciate an Anaxago Provider
       #
@@ -67,21 +83,28 @@ module Finary
         parts = CSV.new(str).first
 
         attributes = {
-          name: clean_name(parts[0])
+          name: clean_name(parts[0]),
+          annual_yield: parts[6].delete('%').to_f,
+          start_date: parse_date(parts[4])
         }
 
         case type
         when :ongoing
           attributes.merge({
-            initial_investment: parts[8].to_f,
+            initial_investment: parts[8].to_i,
             current_price: parts[8].to_f + parts[9].to_f
           })
         when :waiting
           attributes.merge({
-            initial_investment: parts[7].to_f,
-            current_price: parts[7].to_f,
+            initial_investment: parts[7].to_i,
+            current_price: parts[7].to_i
           })
         end
+      end
+
+      def parse_date(string)
+        MONTH_MAPPING.each { |fr, en| string.gsub!(fr, en) }
+        Date.parse(string)
       end
     end
   end
