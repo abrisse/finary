@@ -96,11 +96,17 @@ describe Finary::Providers::ClubFunding do
         [
           {
             name: 'Opé A',
+            annual_yield: 10.5,
+            month_duration: 9,
+            start_date: Date.parse('29/06/2022'),
             current_price: 2_000,
             initial_investment: 2_000
           },
           {
             name: 'Opé B',
+            annual_yield: 11.0,
+            month_duration: 24,
+            start_date: Date.parse('13/07/2022'),
             current_price: 1_000,
             initial_investment: 1_000
           }

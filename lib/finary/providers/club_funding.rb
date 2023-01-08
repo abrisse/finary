@@ -40,6 +40,9 @@ module Finary
       def build_investment(invest)
         {
           name: clean_name(invest[:project_name]),
+          annual_yield: invest[:taux],
+          start_date: Date.parse(invest[:desc_date_emission]),
+          month_duration: invest[:duration],
           initial_investment: clean_amount(invest[:amount_outstanding]),
           current_price: clean_amount(invest[:amount_outstanding])
         }
