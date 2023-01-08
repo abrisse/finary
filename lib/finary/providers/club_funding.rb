@@ -39,11 +39,9 @@ module Finary
 
       def build_investment(invest)
         {
-          name: [prefix, clean_name(invest[:project_name])].join(' '),
-          category: 'real_estate_crowdfunding',
-          buying_price: 1_000,
-          quantity: clean_amount(invest[:amount_outstanding]) / 1_000,
-          current_price: 1_000
+          name: clean_name(invest[:project_name]),
+          initial_investment: clean_amount(invest[:amount_outstanding]),
+          current_price: clean_amount(invest[:amount_outstanding])
         }
       end
 

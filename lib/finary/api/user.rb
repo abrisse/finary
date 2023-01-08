@@ -4,6 +4,7 @@ module Finary
   module User
     # Declare main classes here to deal with circular references
     class Account < Dry::Struct; end
+    class Crowdlending < Dry::Struct; end
     class Crypto < Dry::Struct; end
     class FondsEuro < Dry::Struct; end
     class GenericAsset < Dry::Struct; end
@@ -14,6 +15,7 @@ module Finary
 end
 
 require_relative 'user/account'
+require_relative 'user/crowdlending'
 require_relative 'user/crypto'
 require_relative 'user/fonds_euro'
 require_relative 'user/generic_asset'

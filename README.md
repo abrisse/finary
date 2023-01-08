@@ -67,6 +67,47 @@ Finary::User::Views.dashboard(type: 'net', period: '1m')
 Finary::User::Views.portfolio(period: '1w')
 ```
 
+### User > Crowdlendings
+
+```ruby
+# Retrieve all the crowdlendings
+crowdlendings = Finary::User::Crowdlending.all
+
+# Get a specific crowdlending
+Finary::User::Crowdlending.get('16d9552d-38db-4e20-8bca-d7897c06126a')
+
+# List the attributes
+crowdlendings[0].attributes.keys
+
+# [:id,
+#  :name,
+#  :annual_yield,
+#  :start_date,
+#  :month_duration,
+#  :initial_investment,
+#  :current_value,
+#  :current_price,
+#  :unrealized_pnl,
+#  :unrealized_pnl_percent]
+
+# Create a new crowdlending
+crowdlending = Finary::User::Crowdlending.add(
+  current_price: 1000,
+  initial_investment: 1000,
+  name: 'Projet X',
+  annual_yield: 10,
+  month_duration: 24,
+  currency: { code: 'EUR' },
+  account: { id: '71c78123-9e3a-415c-9ab3-0228db0c241c' }
+)
+
+# Update the crowdlending
+updated_crowdlending = crowdlending.update(current_price: 1200, name: 'Projet X')
+
+# Delete the crowdlending
+updated_crowdlending.delete
+```
+
 ### User > Cryptos
 
 ```ruby
@@ -263,7 +304,7 @@ To run a sync, you need to download your Anaxago table investments as CSV file u
 (click on the upper button `Télécharger`)
 
 ```ruby
-Finary::Providers::Anaxago.new('Portefeuille Anaxago 01-01-2022.csv').sync
+Finary::Providers::Anaxago.new('Portefeuille Anaxago 01-01-2022.csv').sync(account_id: '71c78123-9e3a-415c-9ab3-0228db0c241c')
 ```
 
 ### ClubFunding
@@ -279,7 +320,7 @@ Each ClubFunding investment will be synchonized with a dedicated `Generic Asset`
 To run a sync, you need to provide your login/password.
 
 ```ruby
-Finary::Providers::ClubFunding.new(email: 'john.doe@gmail.com', password: 'password').sync
+Finary::Providers::ClubFunding.new(email: 'john.doe@gmail.com', password: 'password').sync(account_id: '71c78123-9e3a-415c-9ab3-0228db0c241c')
 ```
 
 ### Homunity
@@ -296,7 +337,7 @@ To run a sync, you need to provide the PHPSESSID contained in the website cookie
 on the website ([link](https://www.homunity.com/fr/login)).
 
 ```ruby
-Finary::Providers::Homunity.new('tgA584JGXxus5FQTWGovPBrjvM').sync
+Finary::Providers::Homunity.new('tgA584JGXxus5FQTWGovPBrjvM').sync(account_id: '71c78123-9e3a-415c-9ab3-0228db0c241c')
 ```
 
 ## Development

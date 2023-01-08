@@ -19,6 +19,7 @@ module Finary
       attribute :bank, Finary::Bank
       attribute? :securities, Types::Array.of(User::Security)
       attribute? :cryptos, Types::Array.of(User::Crypto)
+      attribute? :crowdlendings, Types::Array.of(User::Crowdlending)
       attribute? :fonds_euro, Types::Array.of(User::FondsEuro)
 
       # Returns the user holdings accounts
@@ -28,6 +29,17 @@ module Finary
         Finary.client.get_user_holdings_accounts.map do |account_attributes|
           new(account_attributes)
         end
+      end
+
+      # Get a specific account
+      #
+      # @param [Integer] id account ID
+      #
+      # @return [Finary::User::Account] the account
+      def self.get(id)
+        new(
+          Finary.client.get_user_holding_account(id)
+        )
       end
     end
   end

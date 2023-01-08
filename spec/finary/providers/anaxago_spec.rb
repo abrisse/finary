@@ -13,71 +13,74 @@ describe Finary::Providers::Anaxago do
 
   describe '#sync' do
     subject(:sync) do
-      anaxago.sync
+      anaxago.sync(account_id: account_id)
     end
 
     before do
-      allow(Finary::User::GenericAsset).to receive(:all).and_return(current_assets)
-      allow(Finary::User::GenericAsset).to receive(:create).and_return(random_asset)
+      allow(Finary::User::Account).to receive(:get).with(account_id).and_return(account)
+      allow(Finary::User::Crowdlending).to receive(:create).and_return(random_crowdlending)
 
-      allow(asset_to_update).to receive(:update)
-      allow(asset_to_delete).to receive(:delete)
+      allow(crowdlending_to_update).to receive(:update)
+      allow(crowdlending_to_delete).to receive(:delete)
     end
 
-    let(:current_assets) do
+    let(:account) do
+      instance_double(Finary::User::Account, crowdlendings: current_crowdlendings)
+    end
+
+    let(:account_id) do
+      'd2b7f41b-2dc5-4132-83fd-cd0a409c4f6e'
+    end
+
+    let(:current_crowdlendings) do
       [
-        asset_to_update,
-        asset_to_delete,
-        asset_to_ignore
+        crowdlending_to_update,
+        crowdlending_to_delete
       ]
     end
 
-    let(:random_asset) do
-      Finary::User::GenericAsset.new(generic_asset_attributes)
+    let(:random_crowdlending) do
+      Finary::User::Crowdlending.new(crowdlending_attributes)
     end
 
-    let(:asset_to_update) do
-      Finary::User::GenericAsset.new(generic_asset_attributes.merge(name: '[Anaxago] Opé B'))
+    let(:crowdlending_to_update) do
+      Finary::User::Crowdlending.new(crowdlending_attributes.merge(name: 'Opé B'))
     end
 
-    let(:asset_to_delete) do
-      Finary::User::GenericAsset.new(generic_asset_attributes.merge(name: '[Anaxago] Opé Z'))
+    let(:crowdlending_to_delete) do
+      Finary::User::Crowdlending.new(crowdlending_attributes.merge(name: 'Opé Z'))
     end
 
-    let(:asset_to_ignore) do
-      Finary::User::GenericAsset.new(generic_asset_attributes)
+    let(:crowdlending_attributes) do
+      load_json('user', 'crowdlending.json')
     end
 
-    let(:generic_asset_attributes) do
-      load_json('user', 'generic_asset.json')
-    end
-
-    it 'adds the new ongoing assets' do
+    it 'adds the new ongoing crowdlendings' do
       sync
 
-      expect(Finary::User::GenericAsset)
+      expect(Finary::User::Crowdlending)
         .to have_received(:create)
-        .with(hash_including(name: '[Anaxago] Opé C'))
+        .with(hash_including(name: 'Opé C'))
     end
 
-    it 'adds the new waiting assets' do
+    it 'adds the new waiting crowdlendings' do
       sync
 
-      expect(Finary::User::GenericAsset)
+      expect(Finary::User::Crowdlending)
         .to have_received(:create)
-        .with(hash_including(name: '[Anaxago] Opé E'))
+        .with(hash_including(name: 'Opé E'))
     end
 
-    it 'updates the current assets' do
+    it 'updates the current crowdlendings' do
       sync
 
-      expect(asset_to_update).to have_received(:update)
+      expect(crowdlending_to_update).to have_received(:update)
     end
 
-    it 'removes the legacy assets' do
+    it 'removes the legacy crowdlendings' do
       sync
 
-      expect(asset_to_delete).to have_received(:delete)
+      expect(crowdlending_to_delete).to have_received(:delete)
     end
   end
 
@@ -90,18 +93,14 @@ describe Finary::Providers::Anaxago do
       expect(ongoing_investments).to match_array(
         [
           {
-            name: '[Anaxago] Opé B',
-            current_price: 1.3199458809380638,
-            quantity: 1663,
-            category: 'real_estate_crowdfunding',
-            buying_price: 1
+            name: 'Opé B',
+            initial_investment: 1663.0,
+            current_price: 2195.07
           },
           {
-            name: '[Anaxago] Opé C',
-            current_price: 1.293457627118644,
-            quantity: 1475,
-            category: 'real_estate_crowdfunding',
-            buying_price: 1
+            name: 'Opé C',
+            initial_investment: 1475.0,
+            current_price: 1907.85
           }
         ]
       )
@@ -117,11 +116,9 @@ describe Finary::Providers::Anaxago do
       expect(waiting_investments).to match_array(
         [
           {
-            name: '[Anaxago] Opé E',
-            current_price: 1,
-            quantity: 2000,
-            category: 'real_estate_crowdfunding',
-            buying_price: 1
+            name: 'Opé E',
+            initial_investment: 2000.0,
+            current_price: 2000.0
           }
         ]
       )

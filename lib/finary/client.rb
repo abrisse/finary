@@ -97,6 +97,81 @@ module Finary
     end
 
     #######################################
+    # Routes /users/me/crowdlendings
+    #######################################
+
+    # Add a new user crowdlending
+    #
+    # @param [Hash] attributes the crowdlending attributes
+    #
+    # @return [Hash] the user crowdlending
+    def add_user_crowdlending(attributes)
+      parse_response(
+        self.class.post(
+          '/users/me/crowdlendings',
+          headers: common_headers,
+          body: attributes.to_json
+        )
+      )
+    end
+
+    # Update an existing user crowdlending
+    #
+    # @param [Integer] id the crowdlending id
+    # @param [Hash] attributes the crowdlending attributes
+    #
+    # @return [Hash] the user crowdlending
+    def update_user_crowdlending(id, attributes)
+      parse_response(
+        self.class.put(
+          "/users/me/crowdlendings/#{id}",
+          headers: common_headers,
+          body: attributes.to_json
+        )
+      )
+    end
+
+    # Delete an existing user crowdlending
+    #
+    # @param [Integer] id the crowdlending id
+    #
+    # @return [Bool] returns true if successful
+    def delete_user_crowdlending(id)
+      parse_response(
+        self.class.delete(
+          "/users/me/crowdlendings/#{id}",
+          headers: common_headers
+        )
+      )
+
+      true
+    end
+
+    # Retrieves a specific user crowdlending
+    #
+    # @return [Hash] the user crowdlending
+    def get_user_crowdlending(id)
+      parse_response(
+        self.class.get(
+          "/users/me/crowdlendings/#{id}",
+          headers: common_headers
+        )
+      )
+    end
+
+    # Retrieves the user crowdlendings
+    #
+    # @return [Hash] the user crowdlendings
+    def get_user_crowdlendings
+      parse_response(
+        self.class.get(
+          '/users/me/crowdlendings',
+          headers: common_headers
+        )
+      )
+    end
+
+    #######################################
     # Routes /users/me/holdings_accounts
     #######################################
 
@@ -107,6 +182,18 @@ module Finary
       parse_response(
         self.class.get(
           '/users/me/holdings_accounts',
+          headers: common_headers
+        )
+      )
+    end
+
+    # Retrieves a user holding account
+    #
+    # @return [Hash] the user holding account
+    def get_user_holding_account(id)
+      parse_response(
+        self.class.get(
+          "/users/me/holdings_accounts/#{id}",
           headers: common_headers
         )
       )

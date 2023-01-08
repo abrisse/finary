@@ -1,0 +1,99 @@
+{
+    "id": "f78687d5-3cae-4005-8d13-8db97f1361c8",
+    "correlation_id": null,
+    "name": "[ClubFunding] Projet X",
+    "start_date": "2000-03-12T00:00:00.000Z",
+    "month_duration": 24,
+    "initial_investment": 1000,
+    "display_initial_investment": 1000,
+    "current_price": 1000,
+    "display_current_price": 1000,
+    "annual_yield": 0,
+    "current_value": 1000,
+    "display_current_value": 1000,
+    "unrealized_pnl": null,
+    "display_unrealized_pnl": null,
+    "unrealized_pnl_percent": null,
+    "currency": {
+        "id": 1,
+        "name": "Euro",
+        "code": "EUR",
+        "symbol": "€",
+        "correlation_id": "6246d83d2a89de8c1452c622",
+        "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/5otvp6w32o9jxpoy6xkadiu85ula"
+    },
+    "display_currency": {
+        "id": 1,
+        "name": "Euro",
+        "code": "EUR",
+        "symbol": "€",
+        "correlation_id": "6246d83d2a89de8c1452c622",
+        "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/5otvp6w32o9jxpoy6xkadiu85ula"
+    },
+    "account": {
+        "slug": "crowdlending-60eb33bf-33fa-45a6-b791-dea623483100",
+        "id": "8330f772-c43b-4579-9656-6fc00b3d1780",
+        "name": "Crowdlending",
+        "manual_type": "crowdlending",
+        "connection_id": null,
+        "connection_state": null,
+        "last_sync_at": null,
+        "last_sync": null,
+        "currency": {
+            "id": 1,
+            "name": "Euro",
+            "code": "EUR",
+            "symbol": "€",
+            "correlation_id": "6246d83d2a89de8c1452c622",
+            "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/5otvp6w32o9jxpoy6xkadiu85ula"
+        },
+        "display_currency": {
+            "id": 1,
+            "name": "Euro",
+            "code": "EUR",
+            "symbol": "€",
+            "correlation_id": "6246d83d2a89de8c1452c622",
+            "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/5otvp6w32o9jxpoy6xkadiu85ula"
+        },
+        "annual_yield": null,
+        "balance": 1024.83,
+        "display_balance": 1024.83,
+        "transactions_count": 0,
+        "upnl": null,
+        "display_upnl": null,
+        "upnl_percent": null,
+        "unrealized_pnl": null,
+        "display_unrealized_pnl": null,
+        "unrealized_pnl_percent": null,
+        "ownership_repartition": [],
+        "bank": {
+            "id": "48899f90-89fc-44ae-acd1-39c1d98649fe",
+            "slug": "default",
+            "name": "Default",
+            "countries": [],
+            "twitter_handle": null,
+            "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/n2c0y088qlbltch5q1xrnoeohtfd",
+            "is_requestable": false
+        },
+        "exchange": {
+            "id": "48899f90-89fc-44ae-acd1-39c1d98649fe",
+            "slug": "default",
+            "name": "Default",
+            "countries": [],
+            "twitter_handle": null,
+            "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/n2c0y088qlbltch5q1xrnoeohtfd",
+            "is_requestable": false
+        },
+        "institution": {
+            "id": "48899f90-89fc-44ae-acd1-39c1d98649fe",
+            "slug": "default",
+            "name": "Default",
+            "countries": [],
+            "twitter_handle": null,
+            "logo_url": "https://finary-cdn-api-production.ams3.digitaloceanspaces.com/n2c0y088qlbltch5q1xrnoeohtfd",
+            "is_requestable": false
+        },
+        "institution_connection": null,
+        "provider_connection": null
+    }
+}
