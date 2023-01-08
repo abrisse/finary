@@ -6,22 +6,22 @@ module Finary
   module Providers
     class Base
       # Run the synchronization
-      def sync
-        current_assets = build_current_assets
+      def sync(account_id:)
+        current_crowdlendings = build_current_crowdlendings(account_id)
 
-        investments.each do |asset_attributes|
-          if (asset = current_assets.delete(asset_attributes[:name]))
-            Finary.logger.debug "Update generic asset #{asset_attributes[:name]}"
-            asset.update(asset_attributes)
+        investments.each do |crowdlending_attributes|
+          if (crowdlending = current_crowdlendings.delete(crowdlending_attributes[:name]))
+            Finary.logger.debug "Update crowdlending #{crowdlending_attributes[:name]}"
+            crowdlending.update(crowdlending_attributes)
           else
-            Finary.logger.debug "Add generic asset #{asset_attributes[:name]}"
-            Finary::User::GenericAsset.create(asset_attributes)
+            Finary.logger.debug "Add crowdlending #{crowdlending_attributes[:name]}"
+            Finary::User::Crowdlending.create(full_attributes(crowdlending_attributes, account_id))
           end
         end
 
-        current_assets.each_value do |asset|
-          Finary.logger.debug "Remove generic asset #{asset.name}"
-          asset.delete
+        current_crowdlendings.each_value do |crowdlending|
+          Finary.logger.debug "Remove crowdlending #{crowdlending.name}"
+          crowdlending.delete
         end
       end
 
@@ -34,18 +34,19 @@ module Finary
 
       protected
 
-      def build_current_assets
-        assets = Finary::User::GenericAsset.all.keep_if do |a|
-          a.name.start_with?(prefix)
-        end
-
-        assets.each_with_object({}) do |a, h|
-          h[a.name] = a
-        end
+      def full_attributes(attributes, account_id)
+        {
+          currency: { code: 'EUR' },
+          account: { id: account_id }
+        }.merge(attributes)
       end
 
-      def prefix
-        "[#{self.class::PROVIDER_NAME}]"
+      def build_current_crowdlendings(account_id)
+        account = Finary::User::Account.get(account_id)
+
+        account.crowdlendings.each_with_object({}) do |a, h|
+          h[a.name] = a
+        end
       end
 
       def clean_name(name)

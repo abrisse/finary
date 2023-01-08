@@ -67,21 +67,19 @@ module Finary
         parts = CSV.new(str).first
 
         attributes = {
-          name: [prefix, clean_name(parts[0])].join(' '),
-          category: 'real_estate_crowdfunding',
-          buying_price: 1
+          name: clean_name(parts[0])
         }
 
         case type
         when :ongoing
           attributes.merge({
-            quantity: parts[8].to_i,
-            current_price: (parts[8].to_f + parts[9].to_f) / parts[8].to_f
+            initial_investment: parts[8].to_f,
+            current_price: parts[8].to_f + parts[9].to_f
           })
         when :waiting
           attributes.merge({
-            quantity: parts[7].to_i,
-            current_price: 1
+            initial_investment: parts[7].to_f,
+            current_price: parts[7].to_f,
           })
         end
       end

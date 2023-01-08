@@ -79,11 +79,9 @@ module Finary
         amount = amount.text.tr('^[0-9]', '').to_i
 
         {
-          name: [prefix, clean_name(label)].join(' '),
-          category: 'real_estate_crowdfunding',
-          buying_price: 1_000,
-          quantity: amount / 1_000,
-          current_price: 1_000
+          name: clean_name(label),
+          initial_investment: amount,
+          current_price: amount
         }
       end
     end
