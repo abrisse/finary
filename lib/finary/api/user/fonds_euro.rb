@@ -8,7 +8,7 @@ module Finary
       attribute :name, Types::String
 
       attribute :annual_yield, Types::Coercible::Float
-      attribute :buying_price, Types::Coercible::Float
+      attribute :buying_price, Types::Coercible::Float.optional
       attribute :current_value, Types::Coercible::Float
       attribute :current_price, Types::Coercible::Float
       attribute :unrealized_pnl, Types::RoundedFloat.optional
