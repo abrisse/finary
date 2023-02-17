@@ -41,6 +41,29 @@ module Finary
           Finary.client.get_user_holding_account(id)
         )
       end
+
+      # Add a new account
+      #
+      # @param [Hash] attributes the account attributes
+      #
+      # @return [Finary::User::Account] the user account
+      def self.create(attributes)
+        new(
+          Finary.client.add_user_holding_account(attributes)
+        )
+      end
+
+      # Find a specific account
+      #
+      # @param [String] name the account name
+      # @param [String] manual_type the account type
+      #
+      # @return [Finary::User::Account] the account
+      def self.find(name, manual_type: nil)
+        Finary::User::Account.all.detect do |a|
+          (manual_type.nil? || a.manual_type == manual_type) && a.name.casecmp(name).zero?
+        end or raise StandardError, "Account #{name} not found"
+      end
     end
   end
 end

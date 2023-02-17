@@ -12,9 +12,9 @@ module Finary
       # Instanciate a Homunity Provider
       #
       # @param [String] path the PHPSESSID value stored in the web cookie
-      def initialize(phpsessid)
+      def initialize(phpsessid, **kargs)
         @phpsessid = phpsessid
-        super()
+        super(**kargs)
       end
 
       private

@@ -175,6 +175,21 @@ module Finary
     # Routes /users/me/holdings_accounts
     #######################################
 
+    # Add a new user holding account
+    #
+    # @param [Hash] attributes the user holding account attributes
+    #
+    # @return [Hash] the user holding account
+    def add_user_holding_account(attributes)
+      parse_response(
+        self.class.post(
+          '/users/me/holdings_accounts',
+          headers: common_headers,
+          body: attributes.to_json
+        )
+      )
+    end
+
     # Retrieves the user holdings accounts
     #
     # @return [Hash] the user holdings accounts

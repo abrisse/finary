@@ -7,16 +7,16 @@ module Finary
     class ClubFunding < Base
       attr_reader :jwt_token
 
-      PROVIDER_NAME = 'ClubFunding'
+      PROVIDER_NAME = 'Club Funding'
 
       # Instanciate a ClubFunding Provider
       #
       # @param [String] email the user email
       # @param [String] password the user password
-      def initialize(email:, password:)
+      def initialize(email:, password:, **kargs)
         @email = email
         @password = password
-        super()
+        super(**kargs)
       end
 
       private
