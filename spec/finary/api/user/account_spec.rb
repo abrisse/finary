@@ -132,4 +132,70 @@ describe Finary::User::Account do
       )
     end
   end
+
+  describe '.create' do
+    subject(:create_holding_account) do
+      described_class.create(params)
+    end
+
+    let(:params) do
+      {
+        name: 'my account',
+        manual_type: 'crowdlending',
+        bank_account_type: {
+          name: 'crowdlending'
+        },
+        currency: { code: 'EUR' }
+      }
+    end
+
+    let(:finary_client) do
+      instance_double(Finary::Client, add_user_holding_account: account_attributes)
+    end
+
+    it 'uses the HTTP client' do
+      create_holding_account
+
+      expect(finary_client).to have_received(:add_user_holding_account).with(params)
+    end
+
+    it 'returns the account' do
+      expect(create_holding_account).to be_an_instance_of(described_class)
+    end
+  end
+
+  describe '.find' do
+    subject(:find_holding_account) do
+      described_class.find('Assurance vie Linxea', manual_type: 'stocks')
+    end
+
+    let(:finary_client) do
+      instance_double(Finary::Client, get_user_holdings_accounts: [account_attributes])
+    end
+
+    it 'uses the HTTP client' do
+      find_holding_account
+
+      expect(finary_client).to have_received(:get_user_holdings_accounts)
+    end
+
+    context 'when an account is found' do
+      it 'returns the account' do
+        expect(find_holding_account).to have_attributes(
+          class: described_class,
+          name: 'Assurance vie Linxea'
+        )
+      end
+    end
+
+    context 'when no account is found' do
+      subject(:find_holding_account) do
+        described_class.find('Unknow', manual_type: 'stocks')
+      end
+
+      it 'returns the account' do
+        expect { find_holding_account }.to raise_error(StandardError, 'Account Unknow not found')
+      end
+    end
+  end
 end

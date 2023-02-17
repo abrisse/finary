@@ -193,8 +193,17 @@ updated_asset.delete
 # Retrieve all the holding accounts
 accounts = Finary::User::Account.all
 
+# Get a specific holding account
+account = Finary::User::Account.get('d2b7f41b-2dc5-4132-83fd-cd0a409c4f6e')
+
+# Find a specific holding account using its name (and type)
+account = Finary::User::Account.find(
+  'My Account',
+  manual_type: 'crowdlending'
+)
+
 # List the attributes
-accounts[0].attributes.keys
+account.attributes.keys
 
 # [:slug,
 #  :id,
@@ -211,6 +220,19 @@ accounts[0].attributes.keys
 #  :cryptos,
 #  :securities,
 #  :fonds_euro]
+
+# Create a new holding account
+
+Finary::User::Account.create(
+  name: 'My Account',
+  manual_type: 'crowdlending',
+  bank_account_type: {
+    name: 'crowdlending'
+  },
+  currency: {
+    code: 'EUR'
+  }
+)
 ```
 
 ### User > Loans
