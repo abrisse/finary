@@ -4,7 +4,11 @@ require 'spec_helper'
 
 describe Finary::Providers::Homunity do
   subject(:homunity) do
-    described_class.new('phpsessid')
+    described_class.new('phpsessid', account_name: account_name)
+  end
+
+  let(:account_name) do
+    'Homunity'
   end
 
   let(:body_response) do
@@ -23,13 +27,17 @@ describe Finary::Providers::Homunity do
     allow(HTTParty).to receive(:get).and_return(response, empty_response)
   end
 
-  describe '#sync' do
+  describe '#sync!' do
     subject(:sync) do
-      homunity.sync(account_id: account_id)
+      homunity.sync!
     end
 
     before do
-      allow(Finary::User::Account).to receive(:get).with(account_id).and_return(account)
+      allow(Finary::User::Account).to receive(:find).with(
+        account_name,
+        manual_type: 'crowdlending'
+      ).and_return(account)
+
       allow(Finary::User::Crowdlending).to receive(:create).and_return(random_crowdlending)
 
       allow(crowdlending_to_update).to receive(:update)
@@ -37,7 +45,7 @@ describe Finary::Providers::Homunity do
     end
 
     let(:account) do
-      instance_double(Finary::User::Account, crowdlendings: current_crowdlendings)
+      instance_double(Finary::User::Account, id: account_id, crowdlendings: current_crowdlendings)
     end
 
     let(:account_id) do

@@ -4,20 +4,28 @@ require 'spec_helper'
 
 describe Finary::Providers::Anaxago do
   subject(:anaxago) do
-    described_class.new(path)
+    described_class.new(path, account_name: account_name)
   end
 
   let(:path) do
     fixture_path('providers', 'anaxago.csv')
   end
 
-  describe '#sync' do
+  let(:account_name) do
+    'Anaxago'
+  end
+
+  describe '#sync!' do
     subject(:sync) do
-      anaxago.sync(account_id: account_id)
+      anaxago.sync!
     end
 
     before do
-      allow(Finary::User::Account).to receive(:get).with(account_id).and_return(account)
+      allow(Finary::User::Account).to receive(:find).with(
+        account_name,
+        manual_type: 'crowdlending'
+      ).and_return(account)
+
       allow(Finary::User::Crowdlending).to receive(:create).and_return(random_crowdlending)
 
       allow(crowdlending_to_update).to receive(:update)
@@ -25,7 +33,7 @@ describe Finary::Providers::Anaxago do
     end
 
     let(:account) do
-      instance_double(Finary::User::Account, crowdlendings: current_crowdlendings)
+      instance_double(Finary::User::Account, id: account_id, crowdlendings: current_crowdlendings)
     end
 
     let(:account_id) do
@@ -102,7 +110,7 @@ describe Finary::Providers::Anaxago do
           {
             name: 'Opé C',
             annual_yield: 9.0,
-            start_date: Date.parse('2023-01-16'),
+            start_date: Date.parse('2020-07-16'),
             initial_investment: 1475,
             current_price: 1907.85
           }

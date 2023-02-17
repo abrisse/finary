@@ -316,7 +316,7 @@ Currently supported providers:
 
 The Anaxago Provider allows to automatically sync your Anaxago investments with your Finary Account.
 
-Each waiting & ongoing Anaxago investment will be synchonized with a dedicated `Generic Asset` on Finary side:
+Each waiting & ongoing Anaxago investment will be synchonized with a dedicated `Crowlending` on Finary side:
 
 * new investments are created
 * ongoing investments are updated (notably the current price)
@@ -326,14 +326,14 @@ To run a sync, you need to download your Anaxago table investments as CSV file u
 (click on the upper button `Télécharger`)
 
 ```ruby
-Finary::Providers::Anaxago.new('Portefeuille Anaxago 01-01-2022.csv').sync(account_id: '71c78123-9e3a-415c-9ab3-0228db0c241c')
+Finary::Providers::Anaxago.new('Portefeuille Anaxago 01-01-2022.csv').sync!
 ```
 
 ### ClubFunding
 
 The ClubFunding Provider allows to automatically sync your ClubFunding investments with your Finary Account.
 
-Each ClubFunding investment will be synchonized with a dedicated `Generic Asset` on Finary side:
+Each ClubFunding investment will be synchonized with a dedicated `Crowlending` on Finary side:
 
 * new investments are created
 * ongoing investments are updated
@@ -342,14 +342,14 @@ Each ClubFunding investment will be synchonized with a dedicated `Generic Asset`
 To run a sync, you need to provide your login/password.
 
 ```ruby
-Finary::Providers::ClubFunding.new(email: 'john.doe@gmail.com', password: 'password').sync(account_id: '71c78123-9e3a-415c-9ab3-0228db0c241c')
+Finary::Providers::ClubFunding.new(email: 'john.doe@gmail.com', password: 'password').sync!
 ```
 
 ### Homunity
 
 The Homunity Provider allows to automatically sync your Homunity investments with your Finary Account.
 
-Each Homunity investment will be synchonized with a dedicated `Generic Asset` on Finary side:
+Each Homunity investment will be synchonized with a dedicated `Crowlending` on Finary side:
 
 * new investments are created
 * ongoing investments are updated
@@ -359,7 +359,7 @@ To run a sync, you need to provide the PHPSESSID contained in the website cookie
 on the website ([link](https://www.homunity.com/fr/login)).
 
 ```ruby
-Finary::Providers::Homunity.new('tgA584JGXxus5FQTWGovPBrjvM').sync(account_id: '71c78123-9e3a-415c-9ab3-0228db0c241c')
+Finary::Providers::Homunity.new('tgA584JGXxus5FQTWGovPBrjvM').sync!
 ```
 
 ## Development

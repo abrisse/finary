@@ -4,7 +4,15 @@ require 'spec_helper'
 
 describe Finary::Providers::ClubFunding do
   subject(:club_funding) do
-    described_class.new(email: 'john.doe@gmail.com', password: '12345')
+    described_class.new(
+      email: 'john.doe@gmail.com',
+      password: '12345',
+      account_name: account_name
+    )
+  end
+
+  let(:account_name) do
+    'Club Funding'
   end
 
   let(:get_ongoing_investments) do
@@ -21,13 +29,17 @@ describe Finary::Providers::ClubFunding do
     allow(club_funding).to receive(:client).and_return(club_funding_client)
   end
 
-  describe '#sync' do
+  describe '#sync!' do
     subject(:sync) do
-      club_funding.sync(account_id: account_id)
+      club_funding.sync!
     end
 
     before do
-      allow(Finary::User::Account).to receive(:get).with(account_id).and_return(account)
+      allow(Finary::User::Account).to receive(:find).with(
+        account_name,
+        manual_type: 'crowdlending'
+      ).and_return(account)
+
       allow(Finary::User::Crowdlending).to receive(:create).and_return(random_crowdlending)
 
       allow(crowdlending_to_update).to receive(:update)
@@ -35,7 +47,7 @@ describe Finary::Providers::ClubFunding do
     end
 
     let(:account) do
-      instance_double(Finary::User::Account, crowdlendings: current_crowdlendings)
+      instance_double(Finary::User::Account, id: account_id, crowdlendings: current_crowdlendings)
     end
 
     let(:account_id) do

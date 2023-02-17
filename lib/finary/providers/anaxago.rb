@@ -23,7 +23,7 @@ module Finary
         'avr.' => 'april',
         'mai' => 'may',
         'juin' => 'june',
-        'juill.' => 'july',
+        'juil.' => 'july',
         'août' => 'august',
         'sept.' => 'september',
         'oct.' => 'october',
@@ -34,9 +34,9 @@ module Finary
       # Instanciate an Anaxago Provider
       #
       # @param [String] path the CSV path
-      def initialize(path)
+      def initialize(path, **kargs)
         @path = path
-        super()
+        super(**kargs)
       end
 
       # The ongoing Anaxago investments
