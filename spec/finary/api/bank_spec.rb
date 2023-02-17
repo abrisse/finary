@@ -49,7 +49,7 @@ describe Finary::Bank do
 
   describe '#is_requestable' do
     it 'returns a boolean' do
-      expect([true, false]).to include(bank.is_requestable)
+      expect(bank.is_requestable).to be_falsey
     end
   end
 end

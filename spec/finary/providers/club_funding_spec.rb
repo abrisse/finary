@@ -26,7 +26,7 @@ describe Finary::Providers::ClubFunding do
   end
 
   before do
-    allow(club_funding).to receive(:client).and_return(club_funding_client)
+    allow(Finary::Providers::ClubFunding::Client).to receive(:new).and_return(club_funding_client)
   end
 
   describe '#sync!' do

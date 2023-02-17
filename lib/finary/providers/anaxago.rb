@@ -90,16 +90,24 @@ module Finary
 
         case type
         when :ongoing
-          attributes.merge({
-            initial_investment: parts[8].to_i,
-            current_price: parts[8].to_f + parts[9].to_f
-          })
+          attributes.merge(parse_ongoing_investment_parts(parts))
         when :waiting
-          attributes.merge({
-            initial_investment: parts[7].to_i,
-            current_price: parts[7].to_i
-          })
+          attributes.merge(parse_waiting_investment_parts(parts))
         end
+      end
+
+      def parse_ongoing_investment_parts(parts)
+        {
+          initial_investment: parts[8].to_i,
+          current_price: parts[8].to_f + parts[9].to_f
+        }
+      end
+
+      def parse_waiting_investment_parts(parts)
+        {
+          initial_investment: parts[7].to_i,
+          current_price: parts[7].to_i
+        }
       end
 
       def parse_date(string)

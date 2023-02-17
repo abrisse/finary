@@ -40,7 +40,7 @@ module Finary
             .value
 
           annual_yield = xml_project
-          .at_xpath('.//div[contains(@class, "preview")]//a//span/text()[2]').content.strip
+            .at_xpath('.//div[contains(@class, "preview")]//a//span/text()[2]').content.strip
 
           amount = xml_project
             .xpath('.//div[contains(@class, "bloc")]//strong/text()')[0]
