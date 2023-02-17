@@ -2,13 +2,17 @@
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', '..', 'lib'))
 
-require 'coveralls'
 require 'simplecov'
+require 'simplecov-lcov'
 
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-  SimpleCov::Formatter::HTMLFormatter,
-  Coveralls::SimpleCov::Formatter
-]
+SimpleCov::Formatter::LcovFormatter.config.report_with_single_file = true
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
+  [
+    SimpleCov::Formatter::HTMLFormatter,
+    SimpleCov::Formatter::LcovFormatter
+  ]
+)
 
 SimpleCov.start do
   add_filter '.bundle/'
