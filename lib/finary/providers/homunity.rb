@@ -34,28 +34,38 @@ module Finary
       def retrieve_page_projects(page)
         html = get_page_projects(page)
 
-        html.xpath('//*[@id="projects"]/div[contains(@class, "invest")]').map do |xml_project|
-          name = xml_project
-            .at_xpath('.//div[contains(@class, "preview")]//span[contains(@class, "name")]/@title')
-            .value
+        html.xpath('//div[@class="bg-white rounded-xl overflow-hidden shadow-sm"]').map do |xml_project|
 
-          annual_yield = xml_project
-            .at_xpath('.//div[contains(@class, "preview")]//a//span/text()[2]').content.strip
+          name = xml_project
+            .at_xpath('.//h3[@class="font-sans"]//a/text()').content.strip
+
+          annual_yield = parse_number(
+            xml_project.at_xpath('.//dd[@class="font-bold col-span-2"]//text()').content
+          )
+
+          month_duration = parse_number(
+            xml_project.at_xpath('.//dd[@class="font-bold col-span-3"]//text()').content
+          )
 
           amount = xml_project
-            .xpath('.//div[contains(@class, "bloc")]//strong/text()')[0]
+            .xpath('.//p[@class="mb-2"]//strong/text()')[0]
 
           status = xml_project
-            .xpath('.//div[@class="status"]//p/text()')[0]
+            .xpath('.//div[@class="w-full"]//div[@class="mb-4"]//p//text()')[0].content.include?('Remboursement prévu')
 
           attributes = {
             amount: amount,
             name: name,
-            annual_yield: annual_yield
+            annual_yield: annual_yield,
+            month_duration: month_duration
           }
 
-          build_investment(attributes) unless status.to_s == 'Remboursé'
+          build_investment(attributes) if status
         end.compact
+      end
+
+      def parse_number(str)
+        str.match(/[\d.]+/)[0]
       end
 
       def get_page_projects(page)
@@ -91,7 +101,8 @@ module Finary
           name: clean_name(attributes[:name]),
           initial_investment: amount,
           current_price: amount,
-          annual_yield: attributes[:annual_yield].delete(' %').to_f
+          annual_yield: attributes[:annual_yield].delete(' %').to_f,
+          month_duration: attributes[:month_duration]
         }
       end
     end

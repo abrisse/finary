@@ -108,13 +108,15 @@ describe Finary::Providers::Homunity do
             name: 'Les Pleiades',
             annual_yield: 9.0,
             initial_investment: 2000,
-            current_price: 2000
+            current_price: 2000,
+            month_duration: "30"
           },
           {
             name: 'Morel Lodge',
             annual_yield: 8.0,
             initial_investment: 2000,
-            current_price: 2000
+            current_price: 2000,
+            month_duration: "24"
           }
         ]
       )
