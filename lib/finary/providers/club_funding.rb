@@ -32,20 +32,32 @@ module Finary
       end
 
       def build_investments
-        client.get_ongoing_investments[:ongoing_list].map do |invest|
+        client.get_ongoing_investments[:data].map do |invest|
           build_investment(invest)
         end
       end
 
       def build_investment(invest)
         {
-          name: clean_name(invest[:project_name]),
-          annual_yield: invest[:taux],
-          start_date: Date.parse(invest[:desc_date_emission]),
-          month_duration: invest[:duration],
-          initial_investment: clean_amount(invest[:amount_outstanding]),
-          current_price: clean_amount(invest[:amount_outstanding])
+          name: clean_name(invest[:name]),
+          annual_yield: invest[:rate],
+          start_date: Date.parse(invest[:emissionDate]),
+          month_duration: month_duration(invest[:emissionDate]) + invest[:monthsRemaining],
+          initial_investment: invest[:outstandingAmount],
+          current_price: invest[:outstandingAmount]
         }
+      end
+
+      def month_duration(date_str)
+        date = Date.parse(date_str)
+
+        ((date_now.year - date.year) * 12) +
+          date_now.month - date.month +
+          (date_now.day < date.day ? 0 : 1)
+      end
+
+      def date_now
+        @date_now ||= Time.now.to_date
       end
 
       def clean_amount(amount)
@@ -54,7 +66,7 @@ module Finary
 
       class Client
         include HTTParty
-        base_uri 'https://api.clubfunding.fr/api/'
+        base_uri 'https://api.clubfunding.fr/v2/'
         # debug_output $stdout
 
         # Instanciates a new ClubFunding HTTP client
@@ -71,7 +83,7 @@ module Finary
         # @return [Hash] the ongoing investments
         def get_ongoing_investments
           parse_response(
-            self.class.post('/dashboard-ongoing-list',
+            self.class.get('/user-subscriptions/crowdfunding/ongoing',
               headers: common_headers)
           )
         end
@@ -95,7 +107,7 @@ module Finary
           result = signin
           raise StandardError, "[ClubFunding] #{result[:errmsg]}" if result[:errmsg] && !result[:errmsg].empty?
 
-          result[:response][:token]
+          result[:accessToken]
         end
 
         def signin
