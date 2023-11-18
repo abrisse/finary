@@ -99,7 +99,8 @@ module Finary
       def parse_ongoing_investment_parts(parts)
         {
           initial_investment: parts[8].to_i,
-          current_price: parts[8].to_f + parts[9].to_f
+          current_price: parts[8].to_f + parts[9].to_f,
+          month_duration: month_duration(parse_date(parts[4])) + parts[5].to_i
         }
       end
 

@@ -105,14 +105,16 @@ describe Finary::Providers::Anaxago do
             annual_yield: 11.0,
             start_date: Date.parse('2020-06-19'),
             initial_investment: 1663,
-            current_price: 2195.07
+            current_price: 2195.07,
+            month_duration: 53
           },
           {
             name: 'Opé C',
             annual_yield: 9.0,
             start_date: Date.parse('2020-07-16'),
             initial_investment: 1475,
-            current_price: 1907.85
+            current_price: 1907.85,
+            month_duration: 42
           }
         ]
       )

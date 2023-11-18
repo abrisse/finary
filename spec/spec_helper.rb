@@ -20,7 +20,6 @@ end
 
 require 'finary'
 require 'json'
-require 'pp'
 require 'rspec'
 
 module SpecHelper
@@ -33,10 +32,17 @@ module SpecHelper
   end
 end
 
+shared_context 'common' do
+  before do
+    allow(Time).to receive(:now).and_return(Time.new(2023, 11, 18))
+  end
+end
+
 RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
 
   config.include SpecHelper
+  config.include_context 'common'
 end

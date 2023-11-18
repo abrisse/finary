@@ -42,22 +42,10 @@ module Finary
           name: clean_name(invest[:name]),
           annual_yield: invest[:rate],
           start_date: Date.parse(invest[:emissionDate]),
-          month_duration: month_duration(invest[:emissionDate]) + invest[:monthsRemaining],
+          month_duration: month_duration(Date.parse(invest[:emissionDate])) + invest[:monthsRemaining],
           initial_investment: invest[:outstandingAmount],
           current_price: invest[:outstandingAmount]
         }
-      end
-
-      def month_duration(date_str)
-        date = Date.parse(date_str)
-
-        ((date_now.year - date.year) * 12) +
-          date_now.month - date.month +
-          (date_now.day < date.day ? 0 : 1)
-      end
-
-      def date_now
-        @date_now ||= Time.now.to_date
       end
 
       def clean_amount(amount)

@@ -85,6 +85,16 @@ module Finary
         name.tr('&', '-')
       end
 
+      def month_duration(date)
+        ((date_now.year - date.year) * 12) +
+          date_now.month - date.month +
+          (date_now.day < date.day ? 0 : 1)
+      end
+
+      def date_now
+        @date_now ||= Time.now.to_date
+      end
+
       def clean_old_crowlendings(old_crowlendings)
         old_crowlendings.each_value do |crowdlending|
           Finary.logger.debug "Remove crowdlending #{crowdlending.name}"
