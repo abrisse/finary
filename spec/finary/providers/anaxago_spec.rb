@@ -4,7 +4,7 @@ require 'spec_helper'
 
 describe Finary::Providers::Anaxago do
   subject(:anaxago) do
-    described_class.new(path, account_name: account_name)
+    described_class.new(path, account_name:)
   end
 
   let(:path) do

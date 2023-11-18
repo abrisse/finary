@@ -28,7 +28,7 @@ module Finary
       end
 
       def build_client
-        Client.new(email: email, password: password)
+        Client.new(email:, password:)
       end
 
       def build_investments
@@ -102,8 +102,8 @@ module Finary
           parse_response(
             self.class.post('/login',
               body: {
-                email: email,
-                password: password
+                email:,
+                password:
               }.to_json,
               headers: {
                 'content-type': 'application/json',

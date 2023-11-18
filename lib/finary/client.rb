@@ -394,7 +394,7 @@ module Finary
       self.class.post('/auth/signin',
         body: {
           email: login,
-          password: password,
+          password:,
           device_id: DEVICE_ID
         }.to_json,
         headers: {

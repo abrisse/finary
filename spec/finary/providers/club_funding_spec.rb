@@ -7,7 +7,7 @@ describe Finary::Providers::ClubFunding do
     described_class.new(
       email: 'john.doe@gmail.com',
       password: '12345',
-      account_name: account_name
+      account_name:
     )
   end
 
@@ -21,7 +21,7 @@ describe Finary::Providers::ClubFunding do
 
   let(:club_funding_client) do
     instance_double(
-      Finary::Providers::ClubFunding::Client, get_ongoing_investments: get_ongoing_investments
+      Finary::Providers::ClubFunding::Client, get_ongoing_investments:
     )
   end
 

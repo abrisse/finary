@@ -4,7 +4,7 @@ require 'spec_helper'
 
 describe Finary::Providers::Homunity do
   subject(:homunity) do
-    described_class.new('phpsessid', account_name: account_name)
+    described_class.new('phpsessid', account_name:)
   end
 
   let(:account_name) do

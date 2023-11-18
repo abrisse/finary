@@ -34,8 +34,7 @@ module Finary
       def retrieve_page_projects(page)
         html = get_page_projects(page)
 
-        html.xpath('//div[@class="bg-white rounded-xl overflow-hidden shadow-sm"]').map do |xml_project|
-
+        html.xpath('//div[@class="bg-white rounded-xl overflow-hidden shadow-sm"]').filter_map do |xml_project|
           name = xml_project
             .at_xpath('.//h3[@class="font-sans"]//a/text()').content.strip
 
@@ -54,14 +53,14 @@ module Finary
             .xpath('.//div[@class="w-full"]//div[@class="mb-4"]//p//text()')[0].content.include?('Remboursement prévu')
 
           attributes = {
-            amount: amount,
-            name: name,
-            annual_yield: annual_yield,
-            month_duration: month_duration
+            amount:,
+            name:,
+            annual_yield:,
+            month_duration:
           }
 
           build_investment(attributes) if status
-        end.compact
+        end
       end
 
       def parse_number(str)

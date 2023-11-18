@@ -10,7 +10,7 @@ module Finary
       #
       # @return [Finary::Views::Dashboard] the user dashboard view
       def self.dashboard(type: 'finary', period: '1w')
-        attributes = Finary.client.get_user_view(:dashboard, type: type, period: period)
+        attributes = Finary.client.get_user_view(:dashboard, type:, period:)
 
         Dashboard.new(attributes)
       end
@@ -21,7 +21,7 @@ module Finary
       #
       # @return [Finary::Views::Portfolio] the user portfolio view
       def self.portfolio(period: '1w')
-        attributes = Finary.client.get_user_view(:portfolio, period: period)
+        attributes = Finary.client.get_user_view(:portfolio, period:)
 
         Portfolio.new(attributes)
       end
